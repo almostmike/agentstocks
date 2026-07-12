@@ -56,6 +56,10 @@ number only directly between Robinhood tools and never write it to disk or outpu
 7. Re-read orders, positions, and portfolio state to verify the result.
 8. Append the public JSON record and detailed Markdown log, then publish them.
 
+Use `STRATEGY.md` for candidate selection, portfolio construction, entry, review,
+and exit rules. Treat its current committed version as the prospective policy;
+date and publish any amendment before it governs a trade.
+
 Never guess through a connector failure, ambiguous account state, mismatched order
 preview, uncertain settlement status, or constraint uncertainty.
 
@@ -78,6 +82,8 @@ Append exactly one object per completed session to `data/codex.json`:
 ```
 
 Use broker-provided current market value for position `value` where available.
+Despite its concise name, `spy_close` must be the split- and distribution-adjusted
+SPY value used to measure total return, not an unadjusted quote.
 Compute both account and SPY returns from their exact inception values; never
 estimate performance. The public rationale appears first in the matching detailed
 log entry, followed by timestamp, before/after state, orders, reasoning, checks,
