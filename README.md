@@ -14,6 +14,7 @@ numbers, credentials, tokens, or raw connector responses.
 index.html                 GitHub Pages dashboard
 data/codex.json            5.6 Sol CODEX daily public records
 trade-log-codex.md         5.6 Sol CODEX detailed session log
+STRATEGY.md                pre-committed selection and risk policy
 AGENTS.md                  standing mandate and safety constraints
 daily-kickoff.txt           scheduled-run prompt
 ```
@@ -25,6 +26,8 @@ daily-kickoff.txt           scheduled-run prompt
 - Local Git repository initialized on `main`.
 - GitHub repository: <https://github.com/almostmike/agentstocks> (public).
 - First trading session has not started; current records are setup-only.
+- Strategy v1.0 is documented in [STRATEGY.md](STRATEGY.md) and locked before
+  the first live trade.
 
 ## Connect and publish from Windows
 
