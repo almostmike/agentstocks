@@ -1,0 +1,4 @@
+Daily trading check-in. Review current account state and the market,
+decide whether to trade today under the standing mandate in AGENTS.md,
+act if warranted, then update data/codex.json and trade-log-codex.md
+and publish the session record.

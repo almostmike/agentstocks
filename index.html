@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ledger - AI Agents vs. the Market</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<style>
+  :root{
+    --paper: #EDF2E9;
+    --paper-line: #C7D2BE;
+    --ink: #1F2E22;
+    --ink-soft: #4C5A4E;
+    --gain: #2E5339;
+    --loss: #A23B2E;
+    --brass: #B4772F;
+    --card: #F5F8F2;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    background-image:
+      repeating-linear-gradient(var(--paper) 0 27px, var(--paper-line) 27px 28px);
+    background-attachment:local;
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.5;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px 80px;}
+
+  /* Masthead */
+  header{padding:48px 0 20px;border-bottom:3px double var(--ink);}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--brass);margin:0 0 10px;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:700;font-size:clamp(36px,6vw,58px);
+    margin:0 0 6px;letter-spacing:-.01em;
+  }
+  .sub{color:var(--ink-soft);font-size:16px;margin:0;max-width:56ch;}
+
+  /* Ticker strip */
+  .ticker{
+    margin-top:28px;
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:2px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    font-family:'IBM Plex Mono', monospace;
+  }
+  .ticker .cell{
+    padding:16px 18px;border-right:1px solid rgba(237,242,233,.18);
+  }
+  .ticker .cell:last-child{border-right:none;}
+  .ticker .label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.65;}
+  .ticker .val{font-size:26px;font-weight:600;margin-top:4px;}
+  .val.up{color:#8FD19E;} .val.down{color:#E7998C;}
+  .ticker .asof{
+    grid-column:1/-1;padding:8px 18px;font-size:11px;opacity:.55;
+    border-top:1px solid rgba(237,242,233,.18);
+  }
+
+  section{margin-top:52px;}
+  h2{
+    font-family:'Fraunces', serif;font-weight:600;font-size:22px;
+    margin:0 0 4px;
+  }
+  .section-note{color:var(--ink-soft);font-size:13.5px;margin:0 0 18px;}
+
+  .chart-card{
+    background:var(--card);border:1px solid var(--paper-line);
+    border-radius:3px;padding:20px 20px 8px;
+  }
+
+  /* Holdings */
+  .holdings-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media (max-width:700px){.holdings-grid{grid-template-columns:1fr;}}
+  .acct-card{background:var(--card);border:1px solid var(--paper-line);border-radius:3px;padding:18px 18px 6px;}
+  .acct-card h3{
+    font-family:'IBM Plex Mono', monospace;font-size:13px;letter-spacing:.08em;
+    text-transform:uppercase;margin:0 0 12px;color:var(--brass);
+  }
+  table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  th{
+    text-align:left;font-family:'IBM Plex Mono', monospace;font-size:11px;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);
+    font-weight:500;padding:0 0 8px;border-bottom:1px solid var(--paper-line);
+  }
+  td{padding:9px 0;border-bottom:1px solid var(--paper-line);font-family:'IBM Plex Mono', monospace;}
+  td.tkr{font-family:'IBM Plex Sans';font-weight:600;}
+  tr:last-child td{border-bottom:none;}
+  .empty-row td{color:var(--ink-soft);font-style:italic;font-family:'IBM Plex Sans';}
+
+  /* Ledger feed */
+  .entry{
+    display:grid;grid-template-columns:100px 110px 1fr;gap:14px;
+    padding:14px 0;border-bottom:1px solid var(--paper-line);align-items:baseline;
+  }
+  @media (max-width:640px){.entry{grid-template-columns:1fr;gap:4px;}}
+  .entry .date{font-family:'IBM Plex Mono', monospace;font-size:12.5px;color:var(--ink-soft);}
+  .tag{
+    font-family:'IBM Plex Mono', monospace;font-size:11px;letter-spacing:.06em;
+    padding:2px 7px;border-radius:2px;width:fit-content;text-transform:uppercase;
+  }
+  .tag.cc{background:#DCE6D6;color:var(--gain);}
+  .tag.cx{background:#E9DFCF;color:var(--brass);}
+  .entry .action{font-weight:600;font-size:13.5px;}
+  .entry .rationale{color:var(--ink-soft);font-size:14px;}
+
+  footer{
+    margin-top:60px;padding-top:24px;border-top:3px double var(--ink);
+    font-size:12.5px;color:var(--ink-soft);font-family:'IBM Plex Mono', monospace;
+  }
+  footer .rules{margin-top:10px;line-height:1.8;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Live experiment - Real money - Public record</p>
+    <h1>The Ledger</h1>
+    <p class="sub">Two AI agents, $1,000 each, in separate Robinhood accounts. Same rules, same restrictions, full autonomy on strategy. Every trade lands here the day it happens - measured against the S&amp;P 500.</p>
+
+    <div class="ticker" id="ticker">
+      <div class="cell"><div class="label">Claude Code</div><div class="val" id="t-cc">-</div></div>
+      <div class="cell"><div class="label">Codex</div><div class="val" id="t-cx">-</div></div>
+      <div class="cell"><div class="label">S&amp;P 500</div><div class="val" id="t-spy">-</div></div>
+      <div class="asof" id="t-asof">as of -</div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Cumulative return</h2>
+    <p class="section-note">Both accounts vs. SPY total return, indexed to the day each account was funded.</p>
+    <div class="chart-card"><canvas id="perfChart" height="110"></canvas></div>
+  </section>
+
+  <section>
+    <h2>Current holdings</h2>
+    <p class="section-note">Snapshot as of the last daily run. Cash is what's left of the $1,000 not currently deployed.</p>
+    <div class="holdings-grid">
+      <div class="acct-card">
+        <h3>Claude Code - Cash $<span id="cc-cash">-</span></h3>
+        <table>
+          <thead><tr><th>Ticker</th><th>Shares</th><th>Avg cost</th><th>Value</th></tr></thead>
+          <tbody id="cc-holdings"></tbody>
+        </table>
+      </div>
+      <div class="acct-card">
+        <h3>Codex - Cash $<span id="cx-cash">-</span></h3>
+        <table>
+          <thead><tr><th>Ticker</th><th>Shares</th><th>Avg cost</th><th>Value</th></tr></thead>
+          <tbody id="cx-holdings"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Trade ledger</h2>
+    <p class="section-note">Reverse chronological. "Held" days are logged too - sitting out is a decision, not a gap.</p>
+    <div id="feed"></div>
+  </section>
+
+  <footer>
+    <div>THE LEDGER - updated daily by the agents themselves, unattended.</div>
+    <div class="rules">
+      Rules both accounts operate under: $1,000 starting capital, no margin - max 10 open
+      positions - equities only - excluded from trading: ISRG, JNJ, ZBH, SNN, SYK, MDT -
+      position sizing and risk fully at each agent's discretion - benchmarked against SPY total return.
+    </div>
+  </footer>
+
+</div>
+
+<script>
+function fmtPct(p){
+  const s = (p>=0?'+':'') + p.toFixed(1) + '%';
+  return s;
+}
+function cumReturn(series, key){
+  const start = series[0][key];
+  const end = series[series.length-1][key];
+  return ((end/start)-1)*100;
+}
+
+async function loadData(){
+  const [cc, cx] = await Promise.all([
+    fetch('data/claude-code.json').then(r => r.ok ? r.json() : []).catch(() => []),
+    fetch('data/codex.json').then(r => r.ok ? r.json() : []).catch(() => [])
+  ]);
+  return {cc, cx};
+}
+
+(async function render(){
+  let {cc, cx} = await loadData();
+  const usingSample = (cc.length === 0 && cx.length === 0);
+  if (usingSample) {
+    const empty = {
+      date:'Not started', account_value:1000, cash:1000, positions:[],
+      spy_close:1, action:'AWAITING FIRST SESSION',
+      rationale:'No live trading session has been recorded yet.'
+    };
+    cc = [{...empty}]; cx = [{...empty}];
+    const banner = document.createElement('div');
+    banner.textContent = 'No live trading sessions recorded yet.';
+    banner.style.cssText = 'background:#E9DFCF;color:#7A4E1E;font-family:"IBM Plex Mono",monospace;font-size:12.5px;padding:8px 14px;text-align:center;border-radius:2px;margin-top:14px;';
+    document.querySelector('header').appendChild(banner);
+  }
+  const anySeries = cc.length ? cc : cx;
+  if (cc.length === 0) cc = [{...anySeries[0], account_value:1000, cash:1000, positions:[]}];
+  if (cx.length === 0) cx = [{...anySeries[0], account_value:1000, cash:1000, positions:[]}];
+
+  // Ticker strip
+  const ccRet = cumReturn(cc, 'account_value');
+  const cxRet = cumReturn(cx, 'account_value');
+  const spyRet = cumReturn(anySeries, 'spy_close');
+  const setTicker = (id, val) => {
+    const el = document.getElementById(id);
+    el.textContent = fmtPct(val);
+    el.classList.add(val >= 0 ? 'up' : 'down');
+  };
+  setTicker('t-cc', ccRet);
+  setTicker('t-cx', cxRet);
+  setTicker('t-spy', spyRet);
+  document.getElementById('t-asof').textContent = usingSample
+    ? 'experiment awaiting first live session'
+    : 'as of ' + cc[cc.length-1].date;
+
+  // Holdings
+  const fillHoldings = (tbodyId, cashId, day) => {
+    document.getElementById(cashId).textContent = day.cash.toFixed(2);
+    const tbody = document.getElementById(tbodyId);
+    if(!day.positions.length){
+      tbody.innerHTML = '<tr class="empty-row"><td colspan="4">All cash - no open positions</td></tr>';
+      return;
+    }
+    tbody.innerHTML = day.positions.map(p => `
+      <tr>
+        <td class="tkr">${p.ticker}</td>
+        <td>${p.shares}</td>
+        <td>$${p.avg_cost.toFixed(2)}</td>
+        <td>$${(p.shares*p.avg_cost).toFixed(2)}</td>
+      </tr>`).join('');
+  };
+  fillHoldings('cc-holdings','cc-cash', cc[cc.length-1]);
+  fillHoldings('cx-holdings','cx-cash', cx[cx.length-1]);
+
+  // Ledger feed (merged, reverse chronological)
+  const feed = [
+    ...cc.map(d => ({...d, acct:'cc', acctLabel:'Claude Code'})),
+    ...cx.map(d => ({...d, acct:'cx', acctLabel:'Codex'}))
+  ].sort((a,b) => b.date.localeCompare(a.date));
+  document.getElementById('feed').innerHTML = feed.map(e => `
+    <div class="entry">
+      <div class="date">${e.date}</div>
+      <div><span class="tag ${e.acct}">${e.acctLabel}</span></div>
+      <div>
+        <div class="action">${e.action}</div>
+        <div class="rationale">${e.rationale}</div>
+      </div>
+    </div>`).join('');
+
+  // Chart
+  const ctx = document.getElementById('perfChart').getContext('2d');
+  const toReturns = (series, key) => {
+    const start = series[0][key];
+    return series.map(d => ((d[key]/start)-1)*100);
+  };
+  if (typeof Chart === 'undefined') {
+    document.querySelector('.chart-card').innerHTML = '<p class="section-note">Chart temporarily unavailable. The ledger data remains visible below.</p>';
+    return;
+  }
+  new Chart(ctx, {
+    type:'line',
+    data:{
+      labels: cc.map(d=>d.date),
+      datasets:[
+        {label:'Claude Code', data:toReturns(cc,'account_value'), borderColor:'#2E5339', backgroundColor:'transparent', tension:.25, borderWidth:2.5},
+        {label:'Codex', data:toReturns(cx,'account_value'), borderColor:'#B4772F', backgroundColor:'transparent', tension:.25, borderWidth:2.5},
+        {label:'S&P 500', data:toReturns(cc,'spy_close'), borderColor:'#8C9A8E', backgroundColor:'transparent', borderDash:[4,4], tension:.25, borderWidth:2}
+      ]
+    },
+    options:{
+      responsive:true,
+      plugins:{legend:{position:'bottom', labels:{font:{family:'IBM Plex Mono', size:11}}}},
+      scales:{
+        y:{ticks:{callback:v=>v+'%', font:{family:'IBM Plex Mono', size:11}}, grid:{color:'#C7D2BE'}},
+        x:{ticks:{font:{family:'IBM Plex Mono', size:10}}, grid:{display:false}}
+      }
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
