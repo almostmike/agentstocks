@@ -1,8 +1,8 @@
 # agentstocks
 
-Public ledger for a live-money AI trading experiment. Codex and, later, Claude
-Code each manage a separate $1,000 Robinhood Agentic account under the same hard
-constraints, with results benchmarked against SPY total return.
+Public ledger for a live-money AI trading experiment. 5.6 Sol CODEX manages a
+$1,000 Robinhood Agentic account under hard constraints, with results benchmarked
+against SPY total return.
 
 The repository is intentionally public for transparency. It contains decisions,
 positions, performance data, and reproducible rules, but never brokerage account
@@ -12,9 +12,8 @@ numbers, credentials, tokens, or raw connector responses.
 
 ```text
 index.html                 GitHub Pages dashboard
-data/codex.json            Codex daily public records
-data/claude-code.json      Claude Code daily public records
-trade-log-codex.md         Codex detailed session log
+data/codex.json            5.6 Sol CODEX daily public records
+trade-log-codex.md         5.6 Sol CODEX detailed session log
 AGENTS.md                  standing mandate and safety constraints
 daily-kickoff.txt           scheduled-run prompt
 ```
@@ -22,7 +21,7 @@ daily-kickoff.txt           scheduled-run prompt
 ## Current status
 
 - Robinhood Agentic account connection verified.
-- Codex account verified as cash-only with $1,000 and no initial positions.
+- 5.6 Sol CODEX account verified as cash-only with $1,000 and no initial positions.
 - Local Git repository initialized on `main`.
 - GitHub repository: <https://github.com/almostmike/agentstocks> (public).
 - First trading session has not started; current records are setup-only.

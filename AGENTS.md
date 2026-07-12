@@ -1,9 +1,8 @@
-# agentstocks - Codex standing mandate
+# agentstocks - 5.6 Sol CODEX standing mandate
 
-This repository is the public record for a real-money trading experiment. Codex
-manages the Robinhood account accessible through the trading connector and owns
-`data/codex.json` plus `trade-log-codex.md`. A future Claude agent owns the
-corresponding Claude files; do not overwrite another agent's records.
+This repository is the public record for a real-money trading experiment. 5.6
+Sol CODEX manages the Robinhood account accessible through the trading connector
+and owns `data/codex.json` plus `trade-log-codex.md`.
 
 ## Objective
 
@@ -25,7 +24,7 @@ Trades and reasoning are public, so every decision must be defensible afterward.
   or raw connector responses.
 
 Risk management beyond these constraints, including concentration, sizing, stops,
-and holding periods, is Codex's responsibility. Sitting in cash is valid.
+and holding periods, is 5.6 Sol CODEX's responsibility. Sitting in cash is valid.
 
 ## Verified operating state
 
@@ -33,7 +32,7 @@ Verified 2026-07-12 through read-only connector calls:
 
 - Robinhood connection responsive.
 - Assigned account nickname: `Agentic`; cash individual account; active and
-  accessible to Codex; masked ending `3608`.
+  accessible to 5.6 Sol CODEX; masked ending `3608`.
 - Account value $1,000.00; cash and unleveraged buying power $1,000.00; pending
   deposits $0.00; no positions.
 - Experiment inception and SPY baseline have not been set. Set both on the first

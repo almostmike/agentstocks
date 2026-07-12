@@ -52,7 +52,7 @@
     color:var(--paper);
     border-radius:2px;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(2,1fr);
     font-family:'IBM Plex Mono', monospace;
   }
   .ticker .cell{
@@ -80,7 +80,7 @@
   }
 
   /* Holdings */
-  .holdings-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .holdings-grid{display:grid;grid-template-columns:1fr;gap:20px;}
   @media (max-width:700px){.holdings-grid{grid-template-columns:1fr;}}
   .acct-card{background:var(--card);border:1px solid var(--paper-line);border-radius:3px;padding:18px 18px 6px;}
   .acct-card h3{
@@ -127,11 +127,10 @@
   <header>
     <p class="eyebrow">Live experiment - Real money - Public record</p>
     <h1>The Ledger</h1>
-    <p class="sub">Two AI agents, $1,000 each, in separate Robinhood accounts. Same rules, same restrictions, full autonomy on strategy. Every trade lands here the day it happens - measured against the S&amp;P 500.</p>
+    <p class="sub">One AI agent, one $1,000 Robinhood Agentic account, full autonomy on strategy within the standing rules. Every trade lands here the day it happens - measured against the S&amp;P 500.</p>
 
     <div class="ticker" id="ticker">
-      <div class="cell"><div class="label">Claude Code</div><div class="val" id="t-cc">-</div></div>
-      <div class="cell"><div class="label">Codex</div><div class="val" id="t-cx">-</div></div>
+      <div class="cell"><div class="label">5.6 Sol CODEX</div><div class="val" id="t-cx">-</div></div>
       <div class="cell"><div class="label">S&amp;P 500</div><div class="val" id="t-spy">-</div></div>
       <div class="asof" id="t-asof">as of -</div>
     </div>
@@ -139,7 +138,7 @@
 
   <section>
     <h2>Cumulative return</h2>
-    <p class="section-note">Both accounts vs. SPY total return, indexed to the day each account was funded.</p>
+    <p class="section-note">5.6 Sol CODEX vs. SPY total return, indexed to the day the account starts trading.</p>
     <div class="chart-card"><canvas id="perfChart" height="110"></canvas></div>
   </section>
 
@@ -148,14 +147,7 @@
     <p class="section-note">Snapshot as of the last daily run. Cash is what's left of the $1,000 not currently deployed.</p>
     <div class="holdings-grid">
       <div class="acct-card">
-        <h3>Claude Code - Cash $<span id="cc-cash">-</span></h3>
-        <table>
-          <thead><tr><th>Ticker</th><th>Shares</th><th>Avg cost</th><th>Value</th></tr></thead>
-          <tbody id="cc-holdings"></tbody>
-        </table>
-      </div>
-      <div class="acct-card">
-        <h3>Codex - Cash $<span id="cx-cash">-</span></h3>
+        <h3>5.6 Sol CODEX - Cash $<span id="cx-cash">-</span></h3>
         <table>
           <thead><tr><th>Ticker</th><th>Shares</th><th>Avg cost</th><th>Value</th></tr></thead>
           <tbody id="cx-holdings"></tbody>
@@ -173,9 +165,9 @@
   <footer>
     <div>THE LEDGER - updated daily by the agents themselves, unattended.</div>
     <div class="rules">
-      Rules both accounts operate under: $1,000 starting capital, no margin - max 10 open
+      Rules: $1,000 starting capital, no margin - max 10 open
       positions - equities only - excluded from trading: ISRG, JNJ, ZBH, SNN, SYK, MDT -
-      position sizing and risk fully at each agent's discretion - benchmarked against SPY total return.
+      position sizing and risk fully at the agent's discretion - benchmarked against SPY total return.
     </div>
   </footer>
 
@@ -193,47 +185,41 @@ function cumReturn(series, key){
 }
 
 async function loadData(){
-  const [cc, cx] = await Promise.all([
-    fetch('data/claude-code.json').then(r => r.ok ? r.json() : []).catch(() => []),
-    fetch('data/codex.json').then(r => r.ok ? r.json() : []).catch(() => [])
-  ]);
-  return {cc, cx};
+  const cx = await fetch('data/codex.json')
+    .then(r => r.ok ? r.json() : [])
+    .catch(() => []);
+  return {cx};
 }
 
 (async function render(){
-  let {cc, cx} = await loadData();
-  const usingSample = (cc.length === 0 && cx.length === 0);
-  if (usingSample) {
+  let {cx} = await loadData();
+  const awaitingFirstSession = (cx.length === 0);
+  if (awaitingFirstSession) {
     const empty = {
       date:'Not started', account_value:1000, cash:1000, positions:[],
       spy_close:1, action:'AWAITING FIRST SESSION',
       rationale:'No live trading session has been recorded yet.'
     };
-    cc = [{...empty}]; cx = [{...empty}];
+    cx = [{...empty}];
     const banner = document.createElement('div');
     banner.textContent = 'No live trading sessions recorded yet.';
     banner.style.cssText = 'background:#E9DFCF;color:#7A4E1E;font-family:"IBM Plex Mono",monospace;font-size:12.5px;padding:8px 14px;text-align:center;border-radius:2px;margin-top:14px;';
     document.querySelector('header').appendChild(banner);
   }
-  const anySeries = cc.length ? cc : cx;
-  if (cc.length === 0) cc = [{...anySeries[0], account_value:1000, cash:1000, positions:[]}];
-  if (cx.length === 0) cx = [{...anySeries[0], account_value:1000, cash:1000, positions:[]}];
 
   // Ticker strip
-  const ccRet = cumReturn(cc, 'account_value');
   const cxRet = cumReturn(cx, 'account_value');
-  const spyRet = cumReturn(anySeries, 'spy_close');
+  const spyRet = cumReturn(cx, 'spy_close');
   const setTicker = (id, val) => {
     const el = document.getElementById(id);
     el.textContent = fmtPct(val);
     el.classList.add(val >= 0 ? 'up' : 'down');
   };
-  setTicker('t-cc', ccRet);
   setTicker('t-cx', cxRet);
   setTicker('t-spy', spyRet);
-  document.getElementById('t-asof').textContent = usingSample
+  document.getElementById('t-asof').textContent = awaitingFirstSession
     ? 'experiment awaiting first live session'
-    : 'as of ' + cc[cc.length-1].date;
+    : 'as of ' + cx[cx.length-1].date;
 
   // Holdings
   const fillHoldings = (tbodyId, cashId, day) => {
@@ -251,13 +237,11 @@ async function loadData(){
         <td>$${(p.shares*p.avg_cost).toFixed(2)}</td>
       </tr>`).join('');
   };
-  fillHoldings('cc-holdings','cc-cash', cc[cc.length-1]);
   fillHoldings('cx-holdings','cx-cash', cx[cx.length-1]);
 
   // Ledger feed (merged, reverse chronological)
   const feed = [
-    ...cc.map(d => ({...d, acct:'cc', acctLabel:'Claude Code'})),
-    ...cx.map(d => ({...d, acct:'cx', acctLabel:'Codex'}))
+    ...cx.map(d => ({...d, acct:'cx', acctLabel:'5.6 Sol CODEX'}))
   ].sort((a,b) => b.date.localeCompare(a.date));
   document.getElementById('feed').innerHTML = feed.map(e => `
     <div class="entry">
@@ -282,11 +266,10 @@ async function loadData(){
   new Chart(ctx, {
     type:'line',
     data:{
-      labels: cc.map(d=>d.date),
+      labels: cx.map(d=>d.date),
       datasets:[
-        {label:'Claude Code', data:toReturns(cc,'account_value'), borderColor:'#2E5339', backgroundColor:'transparent', tension:.25, borderWidth:2.5},
-        {label:'Codex', data:toReturns(cx,'account_value'), borderColor:'#B4772F', backgroundColor:'transparent', tension:.25, borderWidth:2.5},
-        {label:'S&P 500', data:toReturns(cc,'spy_close'), borderColor:'#8C9A8E', backgroundColor:'transparent', borderDash:[4,4], tension:.25, borderWidth:2}
+        {label:'5.6 Sol CODEX', data:toReturns(cx,'account_value'), borderColor:'#B4772F', backgroundColor:'transparent', tension:.25, borderWidth:2.5},
+        {label:'S&P 500', data:toReturns(cx,'spy_close'), borderColor:'#8C9A8E', backgroundColor:'transparent', borderDash:[4,4], tension:.25, borderWidth:2}
       ]
     },
     options:{

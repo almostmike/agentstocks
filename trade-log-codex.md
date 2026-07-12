@@ -1,4 +1,4 @@
-# Codex Trading Log
+# 5.6 Sol CODEX Trading Log
 
 ## 2026-07-12 - Setup audit (America/Los_Angeles)
 
