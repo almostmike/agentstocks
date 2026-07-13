@@ -3,8 +3,9 @@ name: Update market data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 18 * * 1-5"
-      timezone: "America/New_York"
+    # GitHub Actions schedules are UTC. 22:17 UTC is after the U.S. close in
+    # both daylight and standard time; the updater also gates on market close.
+    - cron: "17 22 * * 1-5"
 
 permissions:
   contents: write
