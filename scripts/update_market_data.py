@@ -16,6 +16,13 @@ LEDGER_PATH = ROOT / "data" / "codex.json"
 SNAPSHOT_PATH = ROOT / "data" / "market.json"
 HISTORY_PATH = ROOT / "data" / "market-history.json"
 STARTING_CAPITAL = 1000.0
+PROVISIONAL_SPY_RATIONALE_TEXT = (
+    "The SPY field is temporarily the July 10 adjusted close and will be replaced "
+    "with the official July 13 adjusted close when available."
+)
+FINAL_SPY_RATIONALE_TEXT = (
+    "The SPY baseline has been finalized to the official July 13 adjusted close."
+)
 
 
 def read_json(path: Path, default: Any) -> Any:
@@ -100,6 +107,11 @@ def finalize_provisional_spy(
             entry["spy_close"] = round(adjusted_close, 4)
             entry["spy_close_date"] = market_date
             entry["spy_close_status"] = "FINAL: automated adjusted close"
+            if isinstance(entry.get("rationale"), str):
+                entry["rationale"] = entry["rationale"].replace(
+                    PROVISIONAL_SPY_RATIONALE_TEXT,
+                    FINAL_SPY_RATIONALE_TEXT,
+                )
             entry.pop("spy_live_at_check", None)
             changed = True
     return changed

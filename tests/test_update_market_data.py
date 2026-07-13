@@ -49,12 +49,14 @@ class MarketSnapshotTests(unittest.TestCase):
                 "spy_close": 1,
                 "spy_close_status": "PROVISIONAL: pending",
                 "spy_live_at_check": 2,
+                "rationale": MODULE.PROVISIONAL_SPY_RATIONALE_TEXT,
             }
         ]
         changed = MODULE.finalize_provisional_spy(ledger, "2026-07-13", 752.12345)
         self.assertTrue(changed)
         self.assertEqual(ledger[0]["spy_close"], 752.1235)
         self.assertEqual(ledger[0]["spy_close_status"], "FINAL: automated adjusted close")
+        self.assertEqual(ledger[0]["rationale"], MODULE.FINAL_SPY_RATIONALE_TEXT)
         self.assertNotIn("spy_live_at_check", ledger[0])
 
 
