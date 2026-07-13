@@ -21,7 +21,8 @@ PROVISIONAL_SPY_RATIONALE_TEXT = (
     "with the official July 13 adjusted close when available."
 )
 FINAL_SPY_RATIONALE_TEXT = (
-    "The SPY baseline has been finalized to the official July 13 adjusted close."
+    "The SPY baseline is the last completed adjusted close before trading began: "
+    "July 10, 2026."
 )
 
 
@@ -51,6 +52,11 @@ def latest_ledger_state(ledger: list[dict[str, Any]]) -> dict[str, Any]:
     if "cash" not in state or "positions" not in state:
         raise ValueError("latest ledger entry is missing cash or positions")
     return state
+
+
+def baseline_spy_date(ledger: list[dict[str, Any]]) -> str:
+    first = ledger[0]
+    return str(first.get("spy_close_date") or first["date"])
 
 
 def download_adjusted_closes(
@@ -182,9 +188,11 @@ def main() -> None:
     ledger = read_json(LEDGER_PATH, [])
     state = latest_ledger_state(ledger)
     inception_date = str(ledger[0]["date"])
+    spy_baseline_date = baseline_spy_date(ledger)
     symbols = sorted({str(item["ticker"]).upper() for item in state["positions"]})
     tickers = symbols + ["SPY"]
-    closes = download_adjusted_closes(tickers, inception_date)
+    download_start_date = min(inception_date, spy_baseline_date)
+    closes = download_adjusted_closes(tickers, download_start_date)
     market_date = latest_common_market_date(closes)
     now_et = datetime.now(ZoneInfo("America/New_York"))
     if market_date == now_et.date().isoformat() and now_et.time() < time(16, 15):
@@ -193,10 +201,12 @@ def main() -> None:
         raise RuntimeError(
             f"latest completed market date {market_date} predates inception {inception_date}"
         )
-    if inception_date not in closes["SPY"]:
-        raise RuntimeError(f"SPY has no adjusted close for inception date {inception_date}")
+    if spy_baseline_date not in closes["SPY"]:
+        raise RuntimeError(
+            f"SPY has no adjusted close for baseline date {spy_baseline_date}"
+        )
 
-    inception_spy = closes["SPY"][inception_date]
+    inception_spy = closes["SPY"][spy_baseline_date]
     snapshot, history_row = build_snapshot(
         state, closes, market_date, inception_spy
     )

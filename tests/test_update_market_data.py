@@ -42,6 +42,10 @@ class MarketSnapshotTests(unittest.TestCase):
         }
         self.assertEqual(MODULE.latest_common_market_date(closes), "2026-07-10")
 
+    def test_baseline_spy_date_uses_recorded_prior_close(self):
+        ledger = [{"date": "2026-07-13", "spy_close_date": "2026-07-10"}]
+        self.assertEqual(MODULE.baseline_spy_date(ledger), "2026-07-10")
+
     def test_finalize_provisional_spy_only_changes_matching_session(self):
         ledger = [
             {

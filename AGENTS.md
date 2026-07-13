@@ -89,6 +89,7 @@ a verified broker cash event to `data/codex.json`. Do not append held/price-only
     {"ticker": "XYZ", "shares": 1.0, "avg_cost": 100.00, "value": 101.00}
   ],
   "spy_close": 100.00,
+  "spy_close_date": "2026-07-10",
   "action": "BOUGHT XYZ",
   "rationale": "Two to four plain-language public sentences explaining the change."
 }
@@ -96,17 +97,20 @@ a verified broker cash event to `data/codex.json`. Do not append held/price-only
 
 Use broker-provided current market value for position `value` where available.
 Despite its concise name, `spy_close` must be the split- and distribution-adjusted
-SPY value used to measure total return, not an unadjusted quote.
+SPY baseline value used to measure total return, not an unadjusted quote. If the
+first trade occurs intraday, the SPY baseline is the prior completed adjusted
+close and `spy_close_date` records that prior market date.
 Compute both account and SPY returns from their exact inception values; never
 estimate performance. The public rationale appears first in the matching detailed
 log entry, followed by timestamp, before/after state, orders, reasoning, checks,
 and computed relative performance.
 
 Execution-time position `value` fields remain an immutable session record. An
-intraday `spy_close` explicitly marked `PROVISIONAL` is finalized once by the
-after-close automation; otherwise session records are not repriced. The website's
-changing mark-to-market values and performance series come from the automated
-`market*.json` files, so routine price moves do not rewrite the trade ledger.
+intraday `spy_close` explicitly marked `PROVISIONAL` is finalized once to the
+correct baseline adjusted close; otherwise session records are not repriced. The
+website's changing mark-to-market values and performance series come from the
+automated `market*.json` files, so routine price moves do not rewrite the trade
+ledger.
 
 ## Publishing rules
 
