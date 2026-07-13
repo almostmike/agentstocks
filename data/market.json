@@ -1,0 +1,24 @@
+{
+  "market_date": "2026-07-13",
+  "generated_at": "2026-07-13T13:51:08+00:00",
+  "price_type": "live intraday prices; first official close pending",
+  "source": "Robinhood broker reconciliation",
+  "source_status": "temporary inception snapshot; daily automation replaces this after the close",
+  "portfolio": {
+    "cash": 400.00,
+    "equity_value": 600.01,
+    "account_value": 1000.01,
+    "return_pct": 0.000711
+  },
+  "benchmark": {
+    "symbol": "SPY",
+    "adjusted_close": 752.55,
+    "inception_adjusted_close": 752.55,
+    "return_pct": 0.0
+  },
+  "positions": [
+    {"ticker": "NVDA", "shares": 0.961785, "avg_cost": 207.95, "price": 208.365, "value": 200.40},
+    {"ticker": "NTAP", "shares": 1.226692, "avg_cost": 163.04, "price": 162.73, "value": 199.62},
+    {"ticker": "ADM", "shares": 2.441108, "avg_cost": 81.93, "price": 81.92, "value": 199.98}
+  ]
+}

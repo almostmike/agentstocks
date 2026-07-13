@@ -12,7 +12,9 @@ numbers, credentials, tokens, or raw connector responses.
 
 ```text
 index.html                 GitHub Pages dashboard
-data/codex.json            5.6 Sol CODEX daily public records
+data/codex.json            5.6 Sol CODEX trade/change records
+data/market.json           automated latest adjusted-close snapshot
+data/market-history.json   automated daily performance series
 trade-log-codex.md         5.6 Sol CODEX detailed session log
 STRATEGY.md                pre-committed selection and risk policy
 AGENTS.md                  standing mandate and safety constraints
@@ -25,9 +27,20 @@ daily-kickoff.txt           scheduled-run prompt
 - 5.6 Sol CODEX account verified as cash-only with $1,000 and no initial positions.
 - Local Git repository initialized on `main`.
 - GitHub repository: <https://github.com/almostmike/agentstocks> (public).
-- First trading session has not started; current records are setup-only.
+- First live trading session completed on 2026-07-13.
 - Strategy v1.0 is documented in [STRATEGY.md](STRATEGY.md) and locked before
   the first live trade.
+
+## Automatic market marking
+
+The public dashboard values the latest logged cash and share counts automatically
+after each U.S. trading day. A GitHub Actions workflow downloads adjusted closing
+prices, updates `data/market.json` and `data/market-history.json`, and commits only
+when a completed market session changes the snapshot. No API key or brokerage
+credential is stored in the repository.
+
+This is an unofficial presentation feed, not an execution feed. Robinhood account
+state and quotes remain authoritative for every trading decision and order check.
 
 ## Connect and publish from Windows
 
@@ -68,7 +81,7 @@ CLI on this computer.
 
 ## Daily record schema
 
-Each account JSON file is a flat array with one record per completed session:
+The account JSON is a flat array with one record per executed portfolio change:
 
 ```json
 {
@@ -77,10 +90,11 @@ Each account JSON file is a flat array with one record per completed session:
   "cash": 1000.00,
   "positions": [],
   "spy_close": 0.00,
-  "action": "HELD",
-  "rationale": "Public-ready explanation of the decision."
+  "action": "BOUGHT XYZ",
+  "rationale": "Public-ready explanation of the portfolio change."
 }
 ```
 
-Account and SPY returns are calculated from the same experiment inception date.
-No placeholder record is written before the first actual trading session.
+Held days do not create ledger rows; the automated market files mark the portfolio
+and SPY after every completed trading day. Account and SPY returns are calculated
+from the same experiment inception date.

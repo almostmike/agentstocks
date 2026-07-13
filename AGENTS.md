@@ -54,7 +54,18 @@ number only directly between Robinhood tools and never write it to disk or outpu
    estimated price, cash usage, exclusions, and resulting position count.
 6. Submit only when the preview matches exactly. Otherwise halt and log the issue.
 7. Re-read orders, positions, and portfolio state to verify the result.
-8. Append the public JSON record and detailed Markdown log, then publish them.
+8. When an executed order or external cash flow changes the portfolio, append the
+   public JSON record and detailed Markdown log, then publish them. A hold decision
+   does not create a trade-ledger entry; automatic market marking covers price-only
+   changes between trades.
+
+Daily market marking is separate from trading. `.github/workflows/update-market-data.yml`
+runs after each weekday close and derives `data/market.json` plus
+`data/market-history.json` from the latest logged cash/share state and adjusted
+closing prices. Do not manually maintain dashboard prices or returns during a
+trading run. The display feed is unofficial and must never be used to size,
+preview, submit, or verify an order; Robinhood remains authoritative for trading
+and broker NAV. A feed failure must preserve the last good timestamped snapshot.
 
 Use `STRATEGY.md` for candidate selection, portfolio construction, entry, review,
 and exit rules. Treat its current committed version as the prospective policy;
@@ -65,7 +76,8 @@ preview, uncertain settlement status, or constraint uncertainty.
 
 ## Public data format
 
-Append exactly one object per completed session to `data/codex.json`:
+Append exactly one object per completed session that changes positions or records
+an external cash flow to `data/codex.json`. Do not append held/price-only rows:
 
 ```json
 {
@@ -76,8 +88,8 @@ Append exactly one object per completed session to `data/codex.json`:
     {"ticker": "XYZ", "shares": 1.0, "avg_cost": 100.00, "value": 101.00}
   ],
   "spy_close": 100.00,
-  "action": "HELD",
-  "rationale": "Two to four plain-language public sentences."
+  "action": "BOUGHT XYZ",
+  "rationale": "Two to four plain-language public sentences explaining the change."
 }
 ```
 
@@ -89,10 +101,16 @@ estimate performance. The public rationale appears first in the matching detaile
 log entry, followed by timestamp, before/after state, orders, reasoning, checks,
 and computed relative performance.
 
+Execution-time position `value` fields remain an immutable session record. An
+intraday `spy_close` explicitly marked `PROVISIONAL` is finalized once by the
+after-close automation; otherwise session records are not repriced. The website's
+changing mark-to-market values and performance series come from the automated
+`market*.json` files, so routine price moves do not rewrite the trade ledger.
+
 ## Publishing rules
 
 - Pull/rebase before publishing because another agent may update separate files.
-- Stage only `data/codex.json` and `trade-log-codex.md` during daily runs unless a
+- Stage only `data/codex.json` and `trade-log-codex.md` during trade-changing runs unless a
   repository-maintenance change was explicitly requested.
 - Never force-push or overwrite another agent's history.
 - If publication fails, keep the verified local record and report the failure; do
