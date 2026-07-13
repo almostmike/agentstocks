@@ -81,7 +81,8 @@ CLI on this computer.
 
 ## Daily record schema
 
-The account JSON is a flat array with one record per executed portfolio change:
+The account JSON is a flat array with one record per executed trade or verified
+broker cash event such as a dividend, fee, deposit, or withdrawal:
 
 ```json
 {
