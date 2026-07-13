@@ -145,12 +145,12 @@
 
   <section>
     <h2>Current holdings</h2>
-    <p class="section-note">Snapshot as of the last daily run. Cash is what's left of the $1,000 not currently deployed.</p>
+    <p class="section-note">Automatically marked to adjusted closing prices after each U.S. trading day. Trade records change only when the portfolio changes.</p>
     <div class="holdings-grid">
       <div class="acct-card">
         <h3>5.6 Sol CODEX - Cash $<span id="cx-cash">-</span></h3>
         <table>
-          <thead><tr><th>Ticker</th><th>Shares</th><th>Avg cost</th><th>Value</th></tr></thead>
+          <thead><tr><th>Ticker</th><th>Shares</th><th>Avg cost</th><th>Price</th><th>Value</th></tr></thead>
           <tbody id="cx-holdings"></tbody>
         </table>
       </div>
@@ -159,7 +159,7 @@
 
   <section>
     <h2>Trade ledger</h2>
-    <p class="section-note">Reverse chronological. "Held" days are logged too - sitting out is a decision, not a gap.</p>
+    <p class="section-note">Reverse chronological. Entries appear when a trade or external cash flow changes the portfolio.</p>
     <div id="feed"></div>
   </section>
 
@@ -187,14 +187,20 @@ function cumReturn(series, key){
 }
 
 async function loadData(){
-  const cx = await fetch('data/codex.json')
-    .then(r => r.ok ? r.json() : [])
-    .catch(() => []);
-  return {cx};
+  const stamp = Date.now();
+  const fetchJson = (path, fallback) => fetch(`${path}?v=${stamp}`, {cache:'no-store'})
+    .then(r => r.ok ? r.json() : fallback)
+    .catch(() => fallback);
+  const [cx, market, marketHistory] = await Promise.all([
+    fetchJson('data/codex.json', []),
+    fetchJson('data/market.json', null),
+    fetchJson('data/market-history.json', [])
+  ]);
+  return {cx, market, marketHistory};
 }
 
 (async function render(){
-  let {cx} = await loadData();
+  let {cx, market, marketHistory} = await loadData();
   const awaitingFirstSession = (cx.length === 0);
   if (awaitingFirstSession) {
     const empty = {
@@ -210,8 +216,8 @@ async function loadData(){
   }
 
   // Ticker strip
-  const cxRet = cumReturn(cx, 'account_value');
-  const spyRet = cumReturn(cx, 'spy_close');
+  const cxRet = market ? market.portfolio.return_pct : cumReturn(cx, 'account_value');
+  const spyRet = market ? market.benchmark.return_pct : cumReturn(cx, 'spy_close');
   const setTicker = (id, val) => {
     const el = document.getElementById(id);
     el.textContent = fmtPct(val);
@@ -221,14 +227,16 @@ async function loadData(){
   setTicker('t-spy', spyRet);
   document.getElementById('t-asof').textContent = awaitingFirstSession
     ? 'experiment awaiting first live session'
-    : 'as of ' + cx[cx.length-1].date;
+    : market
+      ? `closing data through ${market.market_date} - ${market.source}`
+      : 'trade snapshot as of ' + cx[cx.length-1].date;
 
   // Holdings
   const fillHoldings = (tbodyId, cashId, day) => {
     document.getElementById(cashId).textContent = day.cash.toFixed(2);
     const tbody = document.getElementById(tbodyId);
     if(!day.positions.length){
-      tbody.innerHTML = '<tr class="empty-row"><td colspan="4">All cash - no open positions</td></tr>';
+      tbody.innerHTML = '<tr class="empty-row"><td colspan="5">All cash - no open positions</td></tr>';
       return;
     }
     tbody.innerHTML = day.positions.map(p => `
@@ -236,10 +244,14 @@ async function loadData(){
         <td class="tkr">${p.ticker}</td>
         <td>${p.shares}</td>
         <td>$${p.avg_cost.toFixed(2)}</td>
-        <td>$${(p.shares*p.avg_cost).toFixed(2)}</td>
+        <td>${p.price == null ? '-' : '$'+p.price.toFixed(2)}</td>
+        <td>$${(p.value == null ? p.shares*p.avg_cost : p.value).toFixed(2)}</td>
       </tr>`).join('');
   };
-  fillHoldings('cx-holdings','cx-cash', cx[cx.length-1]);
+  const holdingsSnapshot = market
+    ? {cash:market.portfolio.cash, positions:market.positions}
+    : cx[cx.length-1];
+  fillHoldings('cx-holdings','cx-cash', holdingsSnapshot);
 
   // Ledger feed (merged, reverse chronological)
   const feed = [
@@ -265,13 +277,20 @@ async function loadData(){
     document.querySelector('.chart-card').innerHTML = '<p class="section-note">Chart temporarily unavailable. The ledger data remains visible below.</p>';
     return;
   }
+  const chartLabels = marketHistory.length ? marketHistory.map(d=>d.date) : cx.map(d=>d.date);
+  const accountSeries = marketHistory.length
+    ? marketHistory.map(d=>d.account_return_pct)
+    : toReturns(cx,'account_value');
+  const spySeries = marketHistory.length
+    ? marketHistory.map(d=>d.spy_return_pct)
+    : toReturns(cx,'spy_close');
   new Chart(ctx, {
     type:'line',
     data:{
-      labels: cx.map(d=>d.date),
+      labels: chartLabels,
       datasets:[
-        {label:'5.6 Sol CODEX', data:toReturns(cx,'account_value'), borderColor:'#B4772F', backgroundColor:'transparent', tension:.25, borderWidth:2.5},
-        {label:'S&P 500', data:toReturns(cx,'spy_close'), borderColor:'#8C9A8E', backgroundColor:'transparent', borderDash:[4,4], tension:.25, borderWidth:2}
+        {label:'5.6 Sol CODEX', data:accountSeries, borderColor:'#B4772F', backgroundColor:'transparent', tension:.25, borderWidth:2.5},
+        {label:'S&P 500', data:spySeries, borderColor:'#8C9A8E', backgroundColor:'transparent', borderDash:[4,4], tension:.25, borderWidth:2}
       ]
     },
     options:{

@@ -2,3 +2,5 @@
 Thumbs.db
 run-log.jsonl
 *.tmp
+__pycache__/
+*.py[cod]
