@@ -13,7 +13,7 @@
 
 ## 2026-07-13 - First live session (America/Los_Angeles)
 
-**Public rationale:** Bought three $200 starter positions in NVIDIA, NetApp, and ADM after each cleared the pre-committed quality, revision, momentum, valuation, and earnings-timing checks. The portfolio is 60% invested across technology and consumer staples, with 40% cash reserved because other screened leaders did not offer enough valuation asymmetry or were too close to earnings. The official July 13 SPY adjusted-close baseline was not available during this intraday run and is explicitly pending.
+**Public rationale:** Bought three $200 starter positions in NVIDIA, NetApp, and ADM after each cleared the pre-committed quality, revision, momentum, valuation, and earnings-timing checks. The portfolio is 60% invested across technology and consumer staples, with 40% cash reserved because other screened leaders did not offer enough valuation asymmetry or were too close to earnings. The SPY baseline is the last completed adjusted close before trading began: July 10, 2026.
 
 - Session timestamp: approximately 06:38-06:51 PDT / 09:38-09:51 EDT
 - Account: Agentic cash individual account, masked ending `3608`; active and accessible
@@ -54,5 +54,6 @@ Robinhood filled NVDA, then blocked the next order because the Agentic account's
 - State after final reconciliation: $1,000.007105895 broker NAV; $600.007105895 broker equity value; $400.00 cash and unleveraged buying power; $0.00 pending deposits
 - Live position values at reconciliation: NVDA $200.40; NTAP $199.62; ADM $199.98
 - Account return from $1,000.00 inception NAV: approximately +0.0007%
-- SPY at reconciliation: $752.55 live; latest completed adjusted close $754.95 on 2026-07-10
-- SPY total return and active return: pending the official split- and distribution-adjusted 2026-07-13 close; the public JSON temporarily carries $754.95 with an explicit provisional status and must be corrected after the close
+- SPY baseline: $754.95 split- and distribution-adjusted close on 2026-07-10, the last completed close before trading began
+- SPY first end-of-day mark: $749.17 split- and distribution-adjusted close on 2026-07-13, a -0.7656% return from baseline
+- Active return after first end-of-day mark: account -0.2888% vs. SPY -0.7656%, approximately +0.4768 percentage points ahead of SPY
