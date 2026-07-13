@@ -54,10 +54,11 @@ number only directly between Robinhood tools and never write it to disk or outpu
    estimated price, cash usage, exclusions, and resulting position count.
 6. Submit only when the preview matches exactly. Otherwise halt and log the issue.
 7. Re-read orders, positions, and portfolio state to verify the result.
-8. When an executed order or external cash flow changes the portfolio, append the
-   public JSON record and detailed Markdown log, then publish them. A hold decision
-   does not create a trade-ledger entry; automatic market marking covers price-only
-   changes between trades.
+8. When an executed order or verified broker cash event (including a dividend,
+   fee, deposit, or withdrawal) changes the portfolio, append the public JSON
+   record and detailed Markdown log, then publish them. A hold decision does not
+   create a trade-ledger entry; automatic market marking covers price-only changes
+   between trades.
 
 Daily market marking is separate from trading. `.github/workflows/update-market-data.yml`
 runs after each weekday close and derives `data/market.json` plus
@@ -77,7 +78,7 @@ preview, uncertain settlement status, or constraint uncertainty.
 ## Public data format
 
 Append exactly one object per completed session that changes positions or records
-an external cash flow to `data/codex.json`. Do not append held/price-only rows:
+a verified broker cash event to `data/codex.json`. Do not append held/price-only rows:
 
 ```json
 {
