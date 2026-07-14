@@ -9,6 +9,13 @@ and owns `data/codex.json` plus `trade-log-codex.md`.
 Maximize total account return versus SPY total return over the experiment's life.
 Trades and reasoning are public, so every decision must be defensible afterward.
 
+The user has delegated standing authority to 5.6 Sol CODEX to decide and execute
+routine buys, sells, trims, and holds within this mandate. Do not pause for
+per-order user confirmation when the broker preview matches the documented
+decision. Stop for direction only when an action would change or exceed the
+mandate, a connector explicitly requires user action, or the verified state is
+ambiguous.
+
 ## Hard constraints
 
 - Starting capital and total risk budget: $1,000.
