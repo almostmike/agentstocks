@@ -44,6 +44,8 @@
     margin:0 0 6px;letter-spacing:-.01em;
   }
   .sub{color:var(--ink-soft);font-size:16px;margin:0;max-width:56ch;}
+  .article-link{color:var(--ink-soft);font-size:14px;margin:12px 0 0;}
+  .article-link a{color:var(--gain);font-weight:600;}
 
   /* Ticker strip */
   .ticker{
@@ -129,6 +131,7 @@
     <p class="eyebrow">Live experiment - Real money - Public record</p>
     <h1>The Ledger</h1>
     <p class="sub">One AI agent, one $1,000 Robinhood Agentic account, full autonomy on strategy within the standing rules. Every trade lands here the day it happens - measured against the S&amp;P 500.</p>
+    <p class="article-link">New to the experiment? Read the <a href="https://www.linkedin.com/pulse/can-ai-predict-future-better-call-sol-michael-todasco-zyaic/">Day 1 article</a>.</p>
 
     <div class="ticker" id="ticker">
       <div class="cell"><div class="label">5.6 Sol CODEX</div><div class="val" id="t-cx">-</div></div>
@@ -185,6 +188,16 @@ function cumReturn(series, key){
   const end = series[series.length-1][key];
   return ((end/start)-1)*100;
 }
+function marketCoversLedger(market, ledgerDay){
+  return Boolean(
+    market &&
+    ledgerDay &&
+    market.market_date &&
+    ledgerDay.date &&
+    ledgerDay.date !== 'Not started' &&
+    market.market_date >= ledgerDay.date
+  );
+}
 
 async function loadData(){
   const stamp = Date.now();
@@ -214,9 +227,11 @@ async function loadData(){
     banner.style.cssText = 'background:#E9DFCF;color:#7A4E1E;font-family:"IBM Plex Mono",monospace;font-size:12.5px;padding:8px 14px;text-align:center;border-radius:2px;margin-top:14px;';
     document.querySelector('header').appendChild(banner);
   }
+  const latestLedgerDay = cx[cx.length - 1];
+  const marketIsFresh = marketCoversLedger(market, latestLedgerDay);
 
   // Ticker strip
-  const cxRet = market ? market.portfolio.return_pct : cumReturn(cx, 'account_value');
+  const cxRet = marketIsFresh ? market.portfolio.return_pct : cumReturn(cx, 'account_value');
   const spyRet = market ? market.benchmark.return_pct : cumReturn(cx, 'spy_close');
   const setTicker = (id, val) => {
     const el = document.getElementById(id);
@@ -227,8 +242,10 @@ async function loadData(){
   setTicker('t-spy', spyRet);
   document.getElementById('t-asof').textContent = awaitingFirstSession
     ? 'experiment awaiting first live session'
-    : market
+    : marketIsFresh
       ? `closing data through ${market.market_date} - ${market.source}`
+      : market
+        ? `latest trade ledger as of ${latestLedgerDay.date}; market close data through ${market.market_date}`
       : 'trade snapshot as of ' + cx[cx.length-1].date;
 
   // Holdings
@@ -248,9 +265,9 @@ async function loadData(){
         <td>$${(p.value == null ? p.shares*p.avg_cost : p.value).toFixed(2)}</td>
       </tr>`).join('');
   };
-  const holdingsSnapshot = market
+  const holdingsSnapshot = marketIsFresh
     ? {cash:market.portfolio.cash, positions:market.positions}
-    : cx[cx.length-1];
+    : latestLedgerDay;
   fillHoldings('cx-holdings','cx-cash', holdingsSnapshot);
 
   // Ledger feed (merged, reverse chronological)

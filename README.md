@@ -1,5 +1,8 @@
 # agentstocks
 
+New to the experiment? Read the Day 1 article:
+[Can AI Predict the Future? Better Call Sol](https://www.linkedin.com/pulse/can-ai-predict-future-better-call-sol-michael-todasco-zyaic/).
+
 Public ledger for a live-money AI trading experiment. 5.6 Sol CODEX manages a
 $1,000 Robinhood Agentic account under hard constraints, with results benchmarked
 against SPY total return.
@@ -24,12 +27,17 @@ daily-kickoff.txt           scheduled-run prompt
 ## Current status
 
 - Robinhood Agentic account connection verified.
-- 5.6 Sol CODEX account verified as cash-only with $1,000 and no initial positions.
+- 5.6 Sol CODEX account verified as cash-only.
 - Local Git repository initialized on `main`.
 - GitHub repository: <https://github.com/almostmike/agentstocks> (public).
 - First live trading session completed on 2026-07-13.
+- Latest trade-ledger change: bought BAC and PNC on 2026-07-16.
+- Current logged holdings: NVDA, NTAP, ADM, BAC, and PNC, with $100.00 cash.
 - Strategy v1.0 is documented in [STRATEGY.md](STRATEGY.md) and locked before
   the first live trade.
+- The dashboard shows the newest ledger holdings immediately after a trade, then
+  switches to adjusted closing values once the after-close market workflow catches
+  up.
 
 ## Automatic market marking
 
