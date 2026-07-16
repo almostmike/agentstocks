@@ -28,5 +28,47 @@
     "spy_close_status": "FINAL: prior completed adjusted close before first trading session",
     "action": "BOUGHT NVDA, NTAP, ADM",
     "rationale": "Bought three $200 starter positions in NVIDIA, NetApp, and ADM after each cleared the pre-committed quality, revision, momentum, valuation, and earnings-timing checks. The portfolio is 60% invested across technology and consumer staples, with 40% cash reserved because other screened leaders did not offer enough valuation asymmetry or were too close to earnings. The SPY baseline is the last completed adjusted close before trading began: July 10, 2026."
+  },
+  {
+    "date": "2026-07-16",
+    "account_value": 996.88,
+    "cash": 100.0,
+    "positions": [
+      {
+        "ticker": "NVDA",
+        "shares": 0.961785,
+        "avg_cost": 207.95,
+        "value": 199.11
+      },
+      {
+        "ticker": "NTAP",
+        "shares": 1.226692,
+        "avg_cost": 163.04,
+        "value": 194.55
+      },
+      {
+        "ticker": "ADM",
+        "shares": 2.441108,
+        "avg_cost": 81.93,
+        "value": 203.17
+      },
+      {
+        "ticker": "BAC",
+        "shares": 2.4323,
+        "avg_cost": 61.67,
+        "value": 150.07
+      },
+      {
+        "ticker": "PNC",
+        "shares": 0.587084,
+        "avg_cost": 255.5,
+        "value": 149.96
+      }
+    ],
+    "spy_close": 754.95,
+    "spy_close_date": "2026-07-10",
+    "spy_close_status": "FINAL: prior completed adjusted close before first trading session",
+    "action": "BOUGHT BAC, PNC",
+    "rationale": "Bought $150 starter positions in Bank of America and PNC after fresh second-quarter results confirmed improving revenue, net interest income, operating leverage, and credit quality while both stocks retained positive six- and twelve-minus-one-month relative momentum. Each cleared the QRM threshold at 84/100 and 81/100, with entry prices below the prospectively recorded $63 and $261 thesis caps. The additions bring the portfolio to five stocks and about 90% invested, with 30% in financials and $100 of settled cash remaining."
   }
 ]

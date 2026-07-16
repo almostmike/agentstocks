@@ -57,3 +57,46 @@ Robinhood filled NVDA, then blocked the next order because the Agentic account's
 - SPY baseline: $754.95 split- and distribution-adjusted close on 2026-07-10, the last completed close before trading began
 - SPY first end-of-day mark: $749.17 split- and distribution-adjusted close on 2026-07-13, a -0.7656% return from baseline
 - Active return after first end-of-day mark: account -0.2888% vs. SPY -0.7656%, approximately +0.4768 percentage points ahead of SPY
+
+## 2026-07-16 - Added Bank of America and PNC (America/Los_Angeles)
+
+**Public rationale:** Bought $150 starter positions in Bank of America and PNC after fresh second-quarter results confirmed improving revenue, net interest income, operating leverage, and credit quality while both stocks retained positive six- and twelve-minus-one-month relative momentum. Each cleared the QRM threshold at 84/100 and 81/100, with entry prices below the prospectively recorded $63 and $261 thesis caps. The additions bring the portfolio to five stocks and about 90% invested, with 30% in financials and $100 of settled cash remaining.
+
+- Session timestamp: approximately 10:18-10:25 PDT / 13:18-13:25 EDT
+- Account: Agentic cash individual account, masked ending `3608`; active and accessible
+- State before: $997.40154481 broker NAV; $597.40154481 equity value; $400.00 cash and settled/unleveraged buying power; $0.00 pending deposits; unchanged NVDA, NTAP, and ADM positions; no open equity orders
+- Market regime: SPY traded near $752.05 and remained above its rising 50-day average of $743.34 and rising 200-day average of $695.85; the constructive-regime target remained 85-100% invested when qualifying ideas existed
+- Constraint checks: cash only; $300.00 total order notional against $400.00 settled buying power; 5/10 positions after orders; no excluded security or close-proxy exposure; technology 39.49% and financials 30.10% after execution; both candidates were more than two trading days from scheduled earnings
+- Candidate review: BAC and PNC qualified. BNY had stronger long-term momentum but had only one post-report session and was down on the review day; MS fell roughly 4.9% after its report; WFC lacked positive six- and twelve-minus-one-month relative momentum; JPM lacked positive twelve-minus-one-month relative momentum; GE, UNH, STT, and TSM were still in their report-day reactions, with TSM also excluded as an ADR. JNJ and ISRG remained prohibited, and NFLX had not yet reported.
+
+### Filled orders
+
+| Symbol | Side | Type | Notional | Shares | Average fill | Fees | Filled (UTC) |
+|---|---|---|---:|---:|---:|---:|---|
+| BAC | Buy | Regular-hours market | $150.00 | 2.432300 | $61.6700 | $0.00 | 2026-07-16 17:24:30 |
+| PNC | Buy | Regular-hours market | $150.00 | 0.587084 | $255.4999 | $0.00 | 2026-07-16 17:24:31 |
+
+Fractional, dollar-based market orders held each new allocation to approximately 15% of account value. The broker previews showed no alerts. BAC's $61.64 ask was below its $63.00 maximum entry price, and PNC's $255.48 ask was below its $261.00 maximum; both orders matched the documented symbol, side, notional, type, cash use, exclusions, and resulting position count before submission.
+
+### QRM underwriting recorded before purchase
+
+| Symbol | Momentum /30 | Revisions /25 | Quality /20 | Valuation /15 | Catalyst /10 | Total |
+|---|---:|---:|---:|---:|---:|---:|
+| BAC | 24 | 23 | 18 | 11 | 8 | 84 |
+| PNC | 23 | 23 | 17 | 10 | 8 | 81 |
+
+**BAC thesis.** Second-quarter revenue rose 15% year over year to $31.6 billion, EPS rose 34% to $1.21, net interest income rose 9% to $16.0 billion, and the bank produced 6.6% positive operating leverage. Return on tangible common equity improved to 17.0%, the standardized CET1 ratio was 11.2%, the net charge-off ratio improved to 0.47%, and management described strong near-term pipelines and improving commercial borrowing. BAC was above rising 50- and 200-day averages with positive six- and twelve-minus-one-month relative returns; its July 15 close was 3.5% above the pre-report July 13 close. Six-to-twelve-month bear/base/bull values were approximately $55/$75/$90, giving roughly 2.0 times base-case upside to bear-case downside at the $61.67 fill. The thesis requires continued NII, loan, deposit, and fee growth with contained credit costs; invalidation includes material NII or guidance deterioration, a credit-loss spike, or the strategy's trend/loss rules.
+
+**PNC thesis.** Second-quarter revenue reached a record $6.875 billion, adjusted EPS rose to $4.85 from $3.85 a year earlier, net interest income increased to $4.107 billion, fee income rose 10% sequentially, and the bank generated 3% positive operating leverage. ROTCE reached 17.9%, nonperforming loans and delinquencies improved sequentially, the estimated CET1 ratio was 9.9%, and PNC raised its quarterly dividend 18% while planning third-quarter repurchases near the second-quarter pace. PNC was above rising 50- and 200-day averages with positive six- and twelve-minus-one-month relative returns, and it held a positive reaction after the report. Six-to-twelve-month bear/base/bull values were approximately $225/$310/$375, giving roughly 1.8 times base-case upside to bear-case downside at the $255.4999 fill. The thesis requires successful FirstBank integration, continued loan/NII and fee growth, and stable credit; invalidation includes integration slippage, a material credit or capital deterioration, or the strategy's trend/loss rules.
+
+Primary evidence: [Bank of America second-quarter 2026 SEC earnings release](https://www.sec.gov/Archives/edgar/data/70858/000007085826000353/bac06302026ex991.htm), [Bank of America July 14 Form 8-K](https://www.sec.gov/Archives/edgar/data/70858/000007085826000353/bac-20260714.htm), and [PNC second-quarter 2026 results](https://investor.pnc.com/news-events/financial-press-releases/detail/694/pnc-reports-second-quarter-2026-net-income-of-2-1-billion-4-81-diluted-eps-or-4-85-as-adjusted).
+
+### Final verification and performance
+
+- Both orders were re-read as filled exactly once with no fees; no equity order remained open
+- State after final reconciliation: $996.87795663 broker NAV; $896.87795663 equity value; $100.00 cash and settled/unleveraged buying power; $0.00 pending deposits; five positions, all shares sellable
+- Execution-time position values from authoritative broker quotes: NVDA $199.11; NTAP $194.55; ADM $203.17; BAC $150.07; PNC $149.96
+- Portfolio weights at the final broker mark: technology 39.49%; financials 30.10%; consumer staples 20.38%; cash 10.03%
+- Account return from $1,000.00 inception NAV: -0.312204%
+- SPY return through its latest completed adjusted close of $754.81 on July 15 versus the $754.95 inception baseline: -0.018544%
+- Active return using those exact marks: -0.293660 percentage points behind SPY; the automated market-data workflow will supply the next synchronized end-of-day mark
