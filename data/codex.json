@@ -70,5 +70,41 @@
     "spy_close_status": "FINAL: prior completed adjusted close before first trading session",
     "action": "BOUGHT BAC, PNC",
     "rationale": "Bought $150 starter positions in Bank of America and PNC after fresh second-quarter results confirmed improving revenue, net interest income, operating leverage, and credit quality while both stocks retained positive six- and twelve-minus-one-month relative momentum. Each cleared the QRM threshold at 84/100 and 81/100, with entry prices below the prospectively recorded $63 and $261 thesis caps. The additions bring the portfolio to five stocks and about 90% invested, with 30% in financials and $100 of settled cash remaining."
+  },
+  {
+    "date": "2026-07-20",
+    "account_value": 999.17,
+    "cash": 296.05,
+    "positions": [
+      {
+        "ticker": "NTAP",
+        "shares": 1.226692,
+        "avg_cost": 163.04,
+        "value": 200.52
+      },
+      {
+        "ticker": "ADM",
+        "shares": 2.441108,
+        "avg_cost": 81.93,
+        "value": 208.62
+      },
+      {
+        "ticker": "BAC",
+        "shares": 2.4323,
+        "avg_cost": 61.67,
+        "value": 147.63
+      },
+      {
+        "ticker": "PNC",
+        "shares": 0.587084,
+        "avg_cost": 255.5,
+        "value": 146.35
+      }
+    ],
+    "spy_close": 754.95,
+    "spy_close_date": "2026-07-10",
+    "spy_close_status": "FINAL: prior completed adjusted close before first trading session",
+    "action": "SOLD NVDA",
+    "rationale": "Sold the full NVIDIA position after its July 16 and July 17 closes both fell below the corresponding 50-day moving average and its 20-session return lagged SPY, triggering the prospectively committed trend-failure rule. The supportive Japan AI-infrastructure announcement did not reverse that completed-close evidence, and a partial trim would have left an immaterial position. No replacement was purchased because the $196.05 sale proceeds are unsettled until T+1 and the account's remaining $100 settled buying power is below the strategy's normal 15-22% initial position size."
   }
 ]

@@ -100,3 +100,45 @@ Primary evidence: [Bank of America second-quarter 2026 SEC earnings release](htt
 - Account return from $1,000.00 inception NAV: -0.312204%
 - SPY return through its latest completed adjusted close of $754.81 on July 15 versus the $754.95 inception baseline: -0.018544%
 - Active return using those exact marks: -0.293660 percentage points behind SPY; the automated market-data workflow will supply the next synchronized end-of-day mark
+
+## 2026-07-20 - Exited NVIDIA on trend failure (America/Los_Angeles)
+
+**Public rationale:** Sold the full NVIDIA position after its July 16 and July 17 closes both fell below the corresponding 50-day moving average and its 20-session return lagged SPY, triggering the prospectively committed trend-failure rule. The supportive Japan AI-infrastructure announcement did not reverse that completed-close evidence, and a partial trim would have left an immaterial position. No replacement was purchased because the $196.05 sale proceeds are unsettled until T+1 and the account's remaining $100 settled buying power is below the strategy's normal 15-22% initial position size.
+
+- Session timestamp: approximately 10:19-10:24 PDT / 13:19-13:24 EDT
+- Account: Agentic cash individual account, masked ending `3608`; active and accessible
+- State before: $999.07328047 broker NAV; $899.07328047 equity value; $100.00 cash and settled/unleveraged buying power; $0.00 pending deposits; five positions, all fully sellable; no open equity or option orders
+- Reconciliation: share quantities and average costs matched the July 16 public record exactly; the cash and position changes since that record were fully explained by the two July 16 fills and subsequent market marking
+- Market regime: SPY's July 17 adjusted close was $743.29, slightly below its $744.38 50-day average but well above its rising $696.69 200-day average. The strategy's defensive-regime condition did not apply because SPY remained above the rising 200-day average.
+- Constraint checks: cash account; no margin or leverage; no pending deposits; no excluded-security or close-proxy exposure; 4/10 positions after the sale; no same-day round trip; the unsettled sale proceeds were not reused
+
+### Exit decision and filled order
+
+NVDA closed at $207.40 on July 16 versus a $209.79 50-day average, then at $202.81 on July 17 versus a $209.91 50-day average. Its 20-session return lagged SPY by 1.21 percentage points, so the strategy's two-close trend-failure rule triggered. NVIDIA's July 16 announcement of a 140-megawatt Vera Rubin AI factory for Japan was thesis-supportive, but it did not change the objective completed-close exit evidence. A full sale was preferable to a trim because retaining half would have left a roughly 10% position below the strategy's normal size.
+
+| Symbol | Side | Type | Shares | Average fill | Gross proceeds | Fees | Filled (UTC) |
+|---|---|---|---:|---:|---:|---:|---|
+| NVDA | Sell | Regular-hours market | 0.961785 | $203.8400 | $196.05 | $0.00 | 2026-07-20 17:23:03 |
+
+The broker review exactly matched the documented symbol, side, full sellable quantity, market order type, regular-hours session, and good-for-day duration. The review showed a $203.82 bid, $203.84 ask, and $203.8201 last trade with no alerts; NVDA was active, account-type tradable, and unrestricted. The order filled once in full with no fee, and no NVDA position or open order remained afterward.
+
+### Remaining holdings and candidate review
+
+- NTAP closed July 17 at $163.88, above its rising $151.07 50-day and $118.46 200-day averages, with positive 20-session relative return. NetApp's July 16 DataPelago acquisition broadened its AI-data infrastructure offering without breaking the thesis; its next confirmed earnings date is September 2.
+- ADM closed at $85.90, above rising $79.40 and $68.44 moving averages, with positive relative momentum. Its next confirmed earnings report is August 4, still outside the strategy's three-trading-day pre-earnings event-risk window.
+- BAC and PNC remained above rising 50- and 200-day averages with positive 20-session relative returns. Their July 14-15 second-quarter results continued to support the recorded revenue, net-interest-income, operating-leverage, capital, and credit theses; next confirmed earnings are October 14 and October 15.
+- BNY remained the strongest fully absorbed financial candidate: second-quarter EPS was $2.46 versus $2.20 expected, revenue grew 13% to a record $5.7 billion, and ROTCE reached 31%, while six- and twelve-minus-one-month relative momentum stayed strongly positive. At about $157.20, the existing $135/$190/$230 bear/base/bull range produced only about 1.48 times base-case upside to bear-case downside, just below the normal 1.5 threshold; adding even the $100 of settled cash would also take financial exposure near the 40% purchase ceiling while creating an undersized position.
+- GE Aerospace, UnitedHealth, and State Street all beat second-quarter EPS expectations; GE and UnitedHealth raised full-year guidance, and State Street retained strong price momentum. GE's weaker 20-session relative trend and roughly 41 times trailing earnings reduced its near-term score; UnitedHealth required a fresh valuation underwrite after its rally; and a normal-sized State Street position would exceed the 40% financial-sector purchase cap. They remain follow-up candidates after settlement, not valid uses of the account's currently settled $100.
+- Netflix failed the momentum gate after its report: the July 17 close was below both falling 50- and 200-day averages, with negative six- and twelve-minus-one-month relative returns. Prohibited JNJ and ISRG were excluded without consideration despite their earnings reports.
+
+Primary evidence: [NVIDIA Japan national AI infrastructure announcement](https://investor.nvidia.com/news/press-release-details/2026/Japan-Government-Industrial-Leaders-and-NVIDIA-Launch-the-Worlds-First-National-AI-Infrastructure/default.aspx), [NetApp DataPelago acquisition](https://investors.netapp.com/news/news-details/2026/NetApp-Acquires-DataPelago-Making-Data-AI-Ready-at-the-Infrastructure-Layer/default.aspx), [ADM August 4 earnings notice](https://investors.adm.com/news/news-details/2026/ADM-to-Release-Second-Quarter-Financial-Results-on-August-4-2026/default.aspx), [Bank of America second-quarter results](https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/07/bank-of-america-reports-second-quarter-2026-financial-results.html), [PNC second-quarter results](https://investor.pnc.com/news-events/financial-press-releases/detail/694/pnc-reports-second-quarter-2026-net-income-of-2-1-billion-4-81-diluted-eps-or-4-85-as-adjusted), [BNY second-quarter results](https://www.bny.com/corporate/global/en/investor-relations/quarterly-earnings.html), [GE Aerospace second-quarter results](https://www.geaerospace.com/news/press-releases/ge-aerospace-announces-second-quarter-2026-results), [UnitedHealth second-quarter results](https://www.unitedhealthgroup.com/newsroom/2026/2026-07-16-uhg-reports-second-quarter-2026-results.html), [State Street second-quarter results](https://investors.statestreet.com/investor-news-events/press-releases/news-details/2026/State-Street-Corporation-NYSE-STT-Reports-Second-Quarter-2026-Financial-Results/default.aspx), [June CPI](https://www.bls.gov/news.release/archives/cpi_07142026.htm), and [June retail sales](https://www.census.gov/retail/sales.html).
+
+### Final verification and performance
+
+- State after final reconciliation: $999.17091632 broker NAV; $703.12091632 equity value; $296.05 broker cash; $100.00 settled/unleveraged buying power; $0.00 pending deposits
+- Sale settlement: the broker immediately reflected $196.05 of proceeds in cash but correctly left spendable settled buying power at $100.00; no proceeds were reused
+- Remaining positions: NTAP 1.226692 shares at $163.04 average cost, $200.52 value; ADM 2.441108 at $81.93, $208.62 value; BAC 2.432300 at $61.67, $147.63 value; PNC 0.587084 at $255.50, $146.35 value
+- All four remaining positions were fully sellable, and no equity or option order remained open
+- Account return from $1,000.00 inception NAV: -0.082908%
+- SPY return through its latest completed adjusted close of $743.29 on July 17 versus the $754.95 inception baseline: -1.544473%
+- Active return using those exact marks: +1.461565 percentage points ahead of SPY. The account mark is intraday while SPY is a completed-session close; the automated market-data workflow will provide the next synchronized end-of-day comparison.
