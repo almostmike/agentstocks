@@ -6,7 +6,6 @@
 <title>The Ledger - AI Agents vs. the Market</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
 <style>
   :root{
     --paper: #EDF2E9;
@@ -78,8 +77,17 @@
 
   .chart-card{
     background:var(--card);border:1px solid var(--paper-line);
-    border-radius:3px;padding:20px 20px 8px;
+    border-radius:3px;padding:18px 18px 12px;
   }
+  .perf-chart{display:block;width:100%;height:auto;min-height:260px;}
+  .chart-legend{
+    display:flex;justify-content:center;gap:24px;flex-wrap:wrap;
+    margin-top:8px;color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+  }
+  .legend-key{display:inline-flex;align-items:center;gap:7px;}
+  .legend-line{display:inline-block;width:24px;border-top:3px solid var(--brass);}
+  .legend-line.spy{border-top:2px dashed #8C9A8E;}
 
   /* Holdings */
   .holdings-grid{display:grid;grid-template-columns:1fr;gap:20px;}
@@ -143,7 +151,16 @@
   <section>
     <h2>Cumulative return</h2>
     <p class="section-note">5.6 Sol CODEX vs. SPY total return, indexed to the day the account starts trading.</p>
-    <div class="chart-card"><canvas id="perfChart" height="110"></canvas></div>
+    <div class="chart-card">
+      <svg id="perfChart" class="perf-chart" viewBox="0 0 900 320" role="img" aria-labelledby="perfChartTitle perfChartDesc">
+        <title id="perfChartTitle">Cumulative return comparison</title>
+        <desc id="perfChartDesc">Line chart comparing 5.6 Sol CODEX with SPY total return.</desc>
+      </svg>
+      <div class="chart-legend" aria-hidden="true">
+        <span class="legend-key"><span class="legend-line"></span>5.6 Sol CODEX</span>
+        <span class="legend-key"><span class="legend-line spy"></span>SPY total return</span>
+      </div>
+    </div>
   </section>
 
   <section>
@@ -284,16 +301,11 @@ async function loadData(){
       </div>
     </div>`).join('');
 
-  // Chart
-  const ctx = document.getElementById('perfChart').getContext('2d');
+  // Self-contained SVG chart: no third-party script is required to render it.
   const toReturns = (series, key) => {
     const start = series[0][key];
     return series.map(d => ((d[key]/start)-1)*100);
   };
-  if (typeof Chart === 'undefined') {
-    document.querySelector('.chart-card').innerHTML = '<p class="section-note">Chart temporarily unavailable. The ledger data remains visible below.</p>';
-    return;
-  }
   const chartLabels = marketHistory.length ? marketHistory.map(d=>d.date) : cx.map(d=>d.date);
   const accountSeries = marketHistory.length
     ? marketHistory.map(d=>d.account_return_pct)
@@ -301,24 +313,49 @@ async function loadData(){
   const spySeries = marketHistory.length
     ? marketHistory.map(d=>d.spy_return_pct)
     : toReturns(cx,'spy_close');
-  new Chart(ctx, {
-    type:'line',
-    data:{
-      labels: chartLabels,
-      datasets:[
-        {label:'5.6 Sol CODEX', data:accountSeries, borderColor:'#B4772F', backgroundColor:'transparent', tension:.25, borderWidth:2.5},
-        {label:'S&P 500', data:spySeries, borderColor:'#8C9A8E', backgroundColor:'transparent', borderDash:[4,4], tension:.25, borderWidth:2}
-      ]
-    },
-    options:{
-      responsive:true,
-      plugins:{legend:{position:'bottom', labels:{font:{family:'IBM Plex Mono', size:11}}}},
-      scales:{
-        y:{ticks:{callback:v=>v+'%', font:{family:'IBM Plex Mono', size:11}}, grid:{color:'#C7D2BE'}},
-        x:{ticks:{font:{family:'IBM Plex Mono', size:10}}, grid:{display:false}}
-      }
-    }
+  const svg = document.getElementById('perfChart');
+  const NS = 'http://www.w3.org/2000/svg';
+  const width = 900, height = 320;
+  const margin = {top:24,right:22,bottom:46,left:58};
+  const plotW = width-margin.left-margin.right;
+  const plotH = height-margin.top-margin.bottom;
+  const allValues = [...accountSeries, ...spySeries, 0].filter(Number.isFinite);
+  let minY = Math.min(...allValues), maxY = Math.max(...allValues);
+  const rawRange = Math.max(maxY-minY, 1);
+  const step = rawRange <= 2 ? .5 : rawRange <= 5 ? 1 : rawRange <= 10 ? 2 : 5;
+  minY = Math.floor((minY-step*.4)/step)*step;
+  maxY = Math.ceil((maxY+step*.4)/step)*step;
+  if(minY === maxY) maxY = minY+step;
+  const x = i => margin.left + (chartLabels.length <= 1 ? plotW/2 : i*plotW/(chartLabels.length-1));
+  const y = v => margin.top + (maxY-v)*plotH/(maxY-minY);
+  const add = (name, attrs={}, text='') => {
+    const el = document.createElementNS(NS,name);
+    Object.entries(attrs).forEach(([key,val])=>el.setAttribute(key,val));
+    if(text) el.textContent=text;
+    svg.appendChild(el);
+    return el;
+  };
+  for(let tick=minY; tick<=maxY+.0001; tick+=step){
+    const yy=y(tick);
+    add('line',{x1:margin.left,y1:yy,x2:width-margin.right,y2:yy,stroke:'#C7D2BE','stroke-width':1});
+    add('text',{x:margin.left-10,y:yy+4,'text-anchor':'end',fill:'#4C5A4E','font-family':'IBM Plex Mono','font-size':11},`${tick.toFixed(step<1?1:0)}%`);
+  }
+  const shownLabelIndexes = new Set([0, chartLabels.length-1]);
+  if(chartLabels.length > 4) shownLabelIndexes.add(Math.floor((chartLabels.length-1)/2));
+  [...shownLabelIndexes].sort((a,b)=>a-b).forEach(i=>{
+    add('text',{x:x(i),y:height-18,'text-anchor':i===0?'start':i===chartLabels.length-1?'end':'middle',fill:'#4C5A4E','font-family':'IBM Plex Mono','font-size':11},chartLabels[i]);
   });
+  const drawSeries = (values,color,dash='') => {
+    const points=values.map((value,i)=>`${x(i)},${y(value)}`).join(' ');
+    add('polyline',{points,fill:'none',stroke:color,'stroke-width':3,'stroke-linecap':'round','stroke-linejoin':'round','stroke-dasharray':dash});
+    values.forEach((value,i)=>add('circle',{cx:x(i),cy:y(value),r:3.5,fill:color,stroke:'#F5F8F2','stroke-width':1.5}));
+  };
+  drawSeries(accountSeries,'#B4772F');
+  drawSeries(spySeries,'#8C9A8E','6 5');
+  const latestAccount=accountSeries[accountSeries.length-1];
+  const latestSpy=spySeries[spySeries.length-1];
+  document.getElementById('perfChartDesc').textContent =
+    `From ${chartLabels[0]} through ${chartLabels[chartLabels.length-1]}, 5.6 Sol CODEX returned ${fmtPct(latestAccount)} and SPY returned ${fmtPct(latestSpy)}.`;
 })();
 </script>
 
