@@ -68,5 +68,12 @@
     "spy_adjusted_close": 738.93,
     "account_return_pct": 0.983175,
     "spy_return_pct": -2.121997
+  },
+  {
+    "date": "2026-07-27",
+    "account_value": 1005.1,
+    "spy_adjusted_close": 739.09,
+    "account_return_pct": 0.509654,
+    "spy_return_pct": -2.100799
   }
 ]
