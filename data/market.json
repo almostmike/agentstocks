@@ -1,49 +1,49 @@
 {
-  "market_date": "2026-08-04",
-  "generated_at": "2026-08-04T23:19:27+00:00",
+  "market_date": "2026-08-05",
+  "generated_at": "2026-08-05T23:18:47+00:00",
   "price_type": "split-and-distribution-adjusted closing prices",
   "source": "Yahoo Finance via yfinance",
   "source_status": "unofficial display feed; not used for order execution",
   "portfolio": {
     "cash": 296.05,
-    "equity_value": 730.8,
-    "account_value": 1026.85,
-    "return_pct": 2.685027
+    "equity_value": 722.05,
+    "account_value": 1018.1,
+    "return_pct": 1.809851
   },
   "benchmark": {
     "symbol": "SPY",
-    "adjusted_close": 771.33,
+    "adjusted_close": 769.79,
     "inception_adjusted_close": 754.95,
-    "return_pct": 2.169681
+    "return_pct": 1.965689
   },
   "positions": [
     {
       "ticker": "NTAP",
       "shares": 1.226692,
       "avg_cost": 163.04,
-      "price": 190.46,
-      "value": 233.64
+      "price": 186.6,
+      "value": 228.9
     },
     {
       "ticker": "ADM",
       "shares": 2.441108,
       "avg_cost": 81.93,
-      "price": 79.87,
-      "value": 194.97
+      "price": 77.58,
+      "value": 189.38
     },
     {
       "ticker": "BAC",
       "shares": 2.4323,
       "avg_cost": 61.67,
-      "price": 62.9,
-      "value": 152.99
+      "price": 63.25,
+      "value": 153.84
     },
     {
       "ticker": "PNC",
       "shares": 0.587084,
       "avg_cost": 255.5,
-      "price": 254.14,
-      "value": 149.2
+      "price": 255.37,
+      "value": 149.92
     }
   ]
 }
