@@ -142,3 +142,57 @@ Primary evidence: [NVIDIA Japan national AI infrastructure announcement](https:/
 - Account return from $1,000.00 inception NAV: -0.082908%
 - SPY return through its latest completed adjusted close of $743.29 on July 17 versus the $754.95 inception baseline: -1.544473%
 - Active return using those exact marks: +1.461565 percentage points ahead of SPY. The account mark is intraday while SPY is a completed-session close; the automated market-data workflow will provide the next synchronized end-of-day comparison.
+
+## 2026-08-14 - Recorded PNC cash dividend (America/Los_Angeles)
+
+**Public rationale:** Recorded the $1.17 cash dividend from PNC on 0.587084 shares at $2.00 per share, increasing cash from the last reconciled $296.05 state to $297.22 after rounding. The credit is now attributable because the position was held for PNC's July 20 record date, the dividend was payable August 5, and the broker cash difference exactly equals $1.174168. No shares changed and no order was submitted after market close; all four holdings remained within the strategy's hold rules and no screened candidate met the normal 1.5-to-1 valuation-asymmetry hurdle.
+
+- Session timestamp: approximately 19:26-19:51 PDT / 22:26-22:51 EDT
+- Account: Agentic cash individual account, masked ending `3608`; active and accessible
+- Last public cash state: $296.05 after the July 20 NVDA sale settled; unchanged NTAP, ADM, BAC, and PNC share quantities and average costs
+- Final broker state: $1,055.32381930 NAV; $758.10381930 equity value; $297.22 cash and settled/unleveraged buying power; $0.00 pending deposits
+- Constraint checks: cash account; no leverage; no unsettled funds; no excluded security or close-proxy exposure; 4/10 positions; every share fully sellable; all four securities active and tradable with no halt; no equity or option order open
+- Action: held every equity position. The session occurred after regular market hours, so no equity-order review or order submission was applicable.
+
+### Verified cash event
+
+The broker cash balance is $1.17 above the last fully reconciled public state. PNC declared a $2.00 common dividend payable August 5 to holders of record at the close of July 20; the account bought 0.587084 PNC shares on July 16 and continued to hold them through the record and payment dates. The exact entitlement is $1.174168, and $296.05 plus that amount rounds to the broker's unchanged $297.22 cash balance. The credit first became visible before the stated payment date, so prior runs correctly withheld attribution; with the payment date now passed, unchanged shares, no other broker cash or order event, and an exact amount match, the dividend fully reconciles the current state.
+
+### Hold and exit review
+
+The latest authoritative completed close available from the broker was August 13. No holding had two closes below its 50-day average, a 10% closing loss, a thesis break, an eight-week time stop, or a concentration trigger.
+
+| Symbol | Aug. 13 close | 50-day avg. | 200-day avg. | 20-session return vs. SPY | Return vs. cost | Live weight | Next earnings |
+|---|---:|---:|---:|---:|---:|---:|---|
+| NTAP | $204.99 | $169.65, rising | $124.38, rising | +24.75 pts | +25.73% | 24.07% | Sept. 2, confirmed, after close |
+| ADM | $80.15 | $80.10, rising | $70.31, rising | -7.05 pts | -2.17% | 18.61% | Nov. 3, tentative, before open |
+| BAC | $64.09 | $59.39, rising | $54.11, rising | +0.61 pts | +3.92% | 14.86% | Oct. 14, confirmed, before open |
+| PNC | $255.20 | $245.47, rising | $219.74, rising | -3.62 pts | -0.12% | 14.30% | Oct. 15, confirmed, before open |
+
+- NTAP had no new operating filing after the July 28 proxy; its May outlook and September 2 earnings date remain the next material tests. Its weight is below the 30% trim threshold.
+- ADM reported second-quarter adjusted EPS of $1.84 versus $0.93 a year earlier, raised full-year adjusted EPS guidance to $5.15-$5.60 from $4.15-$4.70, and reported growth across all three operating segments. Its June 10-Q says disclosure controls remained effective. The August 10 debt issuance and a director resignation explicitly unrelated to any disagreement did not break the thesis. ADM is the closest technical watch because its completed close was only $0.05 above the 50-day average and its 20-session relative return was negative, but the two-close rule has not triggered.
+- BAC's July 31 10-Q says disclosure controls remained effective, and the July 30 agreement to acquire the roughly 65-person MDSec cybersecurity consultancy is strategically sensible but immaterial to the recorded bank thesis. The Q2 revenue, net-interest-income, capital, credit, and dividend evidence remains intact.
+- PNC's August 5 10-Q says disclosure controls remained effective, records a 9.9% CET1 ratio, and confirms the dividend entitlement. No newer operating filing or company release broke the FirstBank integration, NII, fee-growth, or credit thesis.
+
+### Market regime and candidate review
+
+SPY's August 13 official adjusted close was $777.88, above its rising $748.48 50-day and $705.00 200-day averages, so the defensive regime did not apply. July CPI rose 0.1% month over month and 3.4% year over year, with core CPI up 0.2% and 2.5%; final-demand PPI was unchanged in July but remained 4.7% above a year earlier. July payrolls fell 23,000 and prior May-June gains were revised down by 103,000, while unemployment remained 4.1%. The Federal Reserve held its target range at 3.50%-3.75% on July 29, with three dissents favoring a 25-basis-point increase. The mix is constructive for the price regime but still includes elevated producer inflation and weakening employment.
+
+The portfolio was 71.84% invested at the final broker mark. Nucor, Arista Networks, and Wabtec were the strongest fully absorbed QRM candidates, but none offered the normal 1.5-to-1 valuation asymmetry at the current broker price:
+
+- NUE retained positive six-month, twelve-minus-one-month, and 20-session relative momentum. Q2 adjusted EPS was $4.84, its balance sheet held $2.69 billion of cash and short-term investments with an undrawn revolver, and management expects higher Q3 earnings. A $220/$310/$360 bear/base/bull range at approximately $268.66 produced only about 0.85 times base upside to bear downside.
+- ANET retained positive momentum across all three horizons, reported 37.7% revenue growth, 39.7% non-GAAP EPS growth, a 49.9% non-GAAP operating margin, and guided Q3 revenue to approximately $3.3 billion. At approximately $198.79 and about 66 times trailing earnings, a $160/$230/$270 range produced only about 0.80 times asymmetry.
+- WAB reported 17.5% sales growth, 21.6% adjusted EPS growth, higher full-year revenue and EPS guidance, and a $30.93 billion multi-year backlog. Its momentum remained positive, but at approximately $299.17 a $250/$330/$370 range produced only about 0.63 times asymmetry.
+
+UNP, RTX, URI, and other prior candidates failed at least one of the six-month, twelve-minus-one-month, 20-session trend, or valuation requirements. PLTR failed twelve-minus-one-month relative momentum and traded near 146 times trailing earnings; APP, CAT, ROK, MCK, VRTX, AMGN, and LLY failed one or more momentum/trend gates. CSCO had only one completed post-report session by the authoritative August 13 close and was not yet eligible for an absorbed entry. No purchase qualified.
+
+Primary evidence: [PNC dividend declaration](https://investor.pnc.com/news-events/financial-press-releases/detail/692/pnc-raises-common-stock-dividend-to-2-00-per-share), [NetApp fiscal-2026 results and outlook](https://investors.netapp.com/news/news-details/2026/NetApp-Reports-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx), [ADM Q2 earnings exhibit](https://www.sec.gov/Archives/edgar/data/7084/000000708426000040/adm-ex991_20260630xq2.htm), [ADM June 10-Q](https://www.sec.gov/Archives/edgar/data/7084/000000708426000042/adm-20260630.htm), [BAC June 10-Q](https://www.sec.gov/Archives/edgar/data/70858/000007085826000394/bac-20260630.htm), [BAC MDSec announcement](https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/07/bank-of-america-to-acquire-information-security-consultancy-mdse.html), [PNC June 10-Q](https://www.sec.gov/Archives/edgar/data/713676/000162828026053170/pnc-20260630.htm), [Nucor Q2 results](https://investors.nucor.com/news/news-details/2026/Nucor-Reports-Results-for-the-Second-Quarter-of-2026/default.aspx), [Arista Q2 earnings exhibit](https://www.sec.gov/Archives/edgar/data/1596532/000159653226000174/ex991q226-earningsrelease.htm), [Wabtec Q2 results](https://www.wabteccorp.com/newsroom/press-releases/wabtec-reports-strong-second-quarter-2026-results), [July CPI](https://www.bls.gov/news.release/cpi.nr0.htm), [July PPI](https://www.bls.gov/news.release/ppi.nr0.htm), [July employment](https://www.bls.gov/news.release/empsit.nr0.htm), and [July 29 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm).
+
+### Final verification and performance
+
+- Current position marks from the broker's latest prices: NTAP $254.02; ADM $196.39; BAC $156.83; PNC $150.86. These sum exactly to the broker's $758.10381930 equity value.
+- Shares and average costs remained unchanged from the July 20 public record, all shares remained fully sellable, and no equity or option position or order was created.
+- Account return from the exact $1,000.00 inception NAV: +5.532382%.
+- SPY total return through its latest completed adjusted close of $777.88 versus the $754.95 inception baseline: +3.037287%.
+- Active return on these unsynchronized marks: +2.495095 percentage points. The account mark is live after-hours while SPY is the latest completed official close; the automated market-data workflow supplies the next synchronized end-of-day comparison.
+- This ledger row exists solely for the verified dividend cash event. Routine price changes were not written back to any earlier record.

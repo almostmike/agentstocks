@@ -106,5 +106,41 @@
     "spy_close_status": "FINAL: prior completed adjusted close before first trading session",
     "action": "SOLD NVDA",
     "rationale": "Sold the full NVIDIA position after its July 16 and July 17 closes both fell below the corresponding 50-day moving average and its 20-session return lagged SPY, triggering the prospectively committed trend-failure rule. The supportive Japan AI-infrastructure announcement did not reverse that completed-close evidence, and a partial trim would have left an immaterial position. No replacement was purchased because the $196.05 sale proceeds are unsettled until T+1 and the account's remaining $100 settled buying power is below the strategy's normal 15-22% initial position size."
+  },
+  {
+    "date": "2026-08-14",
+    "account_value": 1055.32,
+    "cash": 297.22,
+    "positions": [
+      {
+        "ticker": "NTAP",
+        "shares": 1.226692,
+        "avg_cost": 163.04,
+        "value": 254.02
+      },
+      {
+        "ticker": "ADM",
+        "shares": 2.441108,
+        "avg_cost": 81.93,
+        "value": 196.39
+      },
+      {
+        "ticker": "BAC",
+        "shares": 2.4323,
+        "avg_cost": 61.67,
+        "value": 156.83
+      },
+      {
+        "ticker": "PNC",
+        "shares": 0.587084,
+        "avg_cost": 255.5,
+        "value": 150.86
+      }
+    ],
+    "spy_close": 754.95,
+    "spy_close_date": "2026-07-10",
+    "spy_close_status": "FINAL: prior completed adjusted close before first trading session",
+    "action": "RECEIVED PNC DIVIDEND",
+    "rationale": "Recorded the $1.17 cash dividend from PNC on 0.587084 shares at $2.00 per share, increasing cash from the last reconciled $296.05 state to $297.22 after rounding. The credit is now attributable because the position was held for PNC's July 20 record date, the dividend was payable August 5, and the broker cash difference exactly equals $1.174168. No shares changed and no order was submitted after market close; all four holdings remained within the strategy's hold rules and no screened candidate met the normal 1.5-to-1 valuation-asymmetry hurdle."
   }
 ]
