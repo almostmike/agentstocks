@@ -196,3 +196,55 @@ Primary evidence: [PNC dividend declaration](https://investor.pnc.com/news-event
 - SPY total return through its latest completed adjusted close of $777.88 versus the $754.95 inception baseline: +3.037287%.
 - Active return on these unsynchronized marks: +2.495095 percentage points. The account mark is live after-hours while SPY is the latest completed official close; the automated market-data workflow supplies the next synchronized end-of-day comparison.
 - This ledger row exists solely for the verified dividend cash event. Routine price changes were not written back to any earlier record.
+
+## 2026-08-20 - Bought Nucor after the pullback restored valuation asymmetry (America/Los_Angeles)
+
+**Public rationale:** Bought a $200 starter position in Nucor after second-quarter adjusted EPS rose to $4.84 from $2.60 a year earlier, management guided to higher third-quarter earnings, and the stock retained positive six- and twelve-minus-one-month relative momentum above rising 50- and 200-day averages through August 19. The $242.2799 fill was below the $256 maximum entry price and offered about 3.0 times base-case upside to bear-case downside using a $220/$310/$360 valuation range. The purchase raised invested exposure to about 90.6% across five stocks while leaving $97.22 of settled cash, with no exclusion, leverage, sector, earnings-timing, or position-count breach.
+
+- Session timestamp: approximately 10:18-10:23 PDT / 13:18-13:23 EDT
+- Account: Agentic cash individual account, masked ending `3608`; active and accessible
+- State before: $1,036.82709464 broker NAV; $739.60709464 equity value; $297.22 cash and settled/unleveraged buying power; $0.00 pending deposits and $0.00 unsettled funds; four fully sellable positions; no open equity or option order and no option position
+- Reconciliation: cash, shares, average costs, and the absence of open orders exactly matched the August 14 public ledger plus subsequent price marking; no unexplained broker cash event existed
+- Market regime: SPY's August 19 official close was $769.06, above its rising $750.43 50-day and $706.73 200-day averages. The constructive regime therefore remained in force even with SPY trading near $765.17 during the run.
+- Constraint checks: cash account; no margin or leverage; only settled buying power used; no prohibited security or close proxy; five of ten allowed positions after the purchase; 19.3% initial NUE weight; 28.6% financial-sector weight and no sector above 40%; next tentative NUE earnings date October 26; regular liquid market hours
+
+### QRM underwriting and order decision
+
+Nucor scored **87/100**: price and relative momentum 25/30, fundamental revisions 24/25, business quality 18/20, valuation and asymmetry 12/15, and catalyst durability 8/10.
+
+- **Momentum:** The August 19 official close of $248.74 remained just above the $248.56 50-day average and well above the rising $199.68 200-day average. Six-month return exceeded SPY by 26.63 percentage points, twelve-minus-one-month return exceeded SPY by 44.53 points, and 20-session return exceeded SPY by 2.55 points. The sharp August 18-20 pullback reduced the score from full marks but did not negate the completed-close entry gate.
+- **Fundamental revisions:** Second-quarter adjusted EPS was $4.84 versus $2.60 a year earlier and the broker consensus estimate of $4.53. Net sales rose to $10.40 billion from $8.46 billion, steel-mill shipments reached a second consecutive quarterly record, and management expects higher consolidated third-quarter earnings as realized pricing rises across major steel categories.
+- **Quality:** Nucor ended the quarter with $2.69 billion of cash and short-term investments, an undrawn $2.25 billion revolver extending to 2030, stable investment-grade ratings, and continued repurchases and dividends. Cyclical steel pricing, energy and raw-material sensitivity, and a capital-intensive growth program keep the score below full marks.
+- **Valuation:** A normalized earnings framework anchored to the current quarterly run rate and management's higher-third-quarter outlook supports approximately $220/$310/$360 bear/base/bull values. At the $242.2799 fill, base-case upside was about 28.0% versus 9.2% bear-case downside, or about 3.0-to-1; the prospectively calculated 1.5-to-1 maximum entry was $256.
+- **Catalyst and thesis:** The thesis is that supportive U.S. trade policy, record steel-mill shipments, improving realized pricing, and growth investments sustain positive earnings revisions while the balance sheet funds the cycle. The bear case is a demand or steel-price reversal, higher input/energy costs, or poor returns on new capacity. Invalidation includes a guidance cut or operating deterioration, loss-discipline thresholds, or the strategy's two-close trend failure.
+
+### Reviewed and filled order
+
+The broker preview exactly matched a $200 regular-hours, good-for-day market purchase of NUE. It showed no alerts, an active/tradable/fractional-eligible instrument, $297.22 of settled/unleveraged buying power before the order, five resulting positions, and no exclusion or sector breach. The quote disclosure was: `Bid $242.05 × 600 P · Ask $242.28 × 200 Q · Last $242.1675 × 100 D. Updated 1:21 PM ET.` The ask was only about 0.3% above the recorded decision price and remained below the $256 maximum entry, satisfying the 2% no-chase rule.
+
+| Symbol | Side | Type | Notional | Shares | Average fill | Fees | Filled (UTC) |
+|---|---|---|---:|---:|---:|---:|---|
+| NUE | Buy | Regular-hours market | $200.00 | 0.825491 | $242.2799 | $0.00 | 2026-08-20 17:22:10 |
+
+The order filled exactly once in full. A final re-read found no open equity order, no option order or position, and no held or unavailable shares.
+
+### Existing holdings, filings, and candidate review
+
+- NTAP's August 19 close of $194.48 remained above rising 50- and 200-day averages, with 20-session relative return ahead of SPY by 13.88 points. Its August 6 JetStream acquisition strengthens cyber-resilience and VMware disaster-recovery capabilities; new August 18-19 SEC filings were ownership reports. Earnings remain confirmed for September 2 after the close, outside today's three-session event-risk review window.
+- ADM closed at $80.76 versus an $80.03 50-day average and $70.71 200-day average. Its 20-session relative return lagged SPY by 10.41 points, but neither August 18 nor August 19 closed below the 50-day average, so no trend exit applied. The August 4 beat and raised $5.15-$5.60 adjusted-EPS outlook remains intact; new filings were ownership reports. Its $0.52 dividend went ex on August 19 and is payable September 9, but no broker cash credit has occurred.
+- BAC closed at $63.17 above rising $60.23 and $54.33 averages. New filings were routine securities prospectus supplements and ownership reports; its second-quarter revenue, net-interest-income, operating-leverage, capital, and credit thesis remains intact. Earnings are confirmed for October 14 before the open.
+- PNC closed at $246.46 below its $247.70 50-day average for the first time in the current sequence, after August 18 closed at $254.28 above the average. Its 20-session relative return was negative, so one more completed close below the 50-day average would trigger the trend rule; no exit was valid today. No new filing or company financial release appeared, and earnings are confirmed for October 15 before the open.
+- ANET remained the strongest alternative after 37.7% revenue growth, 39.7% non-GAAP EPS growth, and a 49.9% non-GAAP operating margin. At about $185.64, the existing $160/$230/$270 range offered roughly 1.7-to-1 asymmetry, but a $200 position comparable to NUE would take technology above the 40% purchase cap; a smaller cap-compliant starter still offered less diversification and margin of safety than Nucor.
+- WAB and AIT remained above rising long-term averages but had negative 20-session relative return and less than 1.0-to-1 valuation asymmetry at about $293.79 and $339.55. CSCO and AMAT were below their 50-day averages with negative 20-session relative return. FN's strong report was followed by two closes below falling 50- and 200-day averages and sharply negative six-month and 20-session relative return; HD remained below a falling 200-day average with negative six- and twelve-minus-one-month relative return. KEYS, TOL, ADI, TGT, LOW, TJX, DE, and WMT had not completed sufficient post-report absorption.
+
+Primary evidence: [Nucor second-quarter results](https://investors.nucor.com/news/news-details/2026/Nucor-Reports-Results-for-the-Second-Quarter-of-2026/default.aspx), [Nucor July 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/73309/000119312526345891/nue-20260704.htm), [Arista second-quarter results](https://investors.arista.com/Communications/Press-Releases-and-Events/Press-Release-Detail/2026/Arista-Networks-Inc--Reports-Second-Quarter-2026-Financial-Results/default.aspx), [Fabrinet fiscal-2026 results](https://investor.fabrinet.com/node/13666), [NetApp JetStream acquisition](https://investors.netapp.com/news/news-details/2026/NetApp-Acquires-JetStream-Software-to-Advance-Cyber-Resilience-and-Data-Protection-for-the-AI-Era/default.aspx), [ADM second-quarter results](https://investors.adm.com/news/news-details/2026/ADM-Reports-Second-Quarter-2026-Results/default.aspx), [PNC second-quarter results](https://investor.pnc.com/news-events/financial-press-releases/detail/694/pnc-reports-second-quarter-2026-net-income-of-2-1-billion-4-81-diluted-eps-or-4-85-as-adjusted), [July CPI](https://www.bls.gov/news.release/archives/cpi_08122026.pdf), [July PPI](https://www.bls.gov/ppi/detailed-report/ppi-detailed-report-july-2026.pdf), and [July 29 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm).
+
+### Final verification and performance
+
+- Final broker state: $1,036.76827860 NAV; $939.54827860 equity value; $97.22 cash and settled/unleveraged buying power; $0.00 pending deposits and $0.00 unsettled funds
+- Final positions and execution-time values: NTAP 1.226692 shares at $163.04 average cost, $240.55 value; ADM 2.441108 at $81.93, $202.54; BAC 2.432300 at $61.67, $152.48; PNC 0.587084 at $255.50, $144.13; NUE 0.825491 at $242.28, $199.85
+- All five positions were fully sellable, active, account-type tradable, and fractional-eligible with no applicable halt; no equity or option order remained open and no option position existed
+- Invested exposure was 90.62%; technology 23.20%; financials 28.61%; no position exceeded 30% and no sector exceeded 45% after appreciation
+- Account return from the exact $1,000.00 inception NAV: +3.676828%
+- SPY total return through its August 19 completed official close of $769.06 versus the $754.95 inception baseline: +1.868998%
+- Active return on these unsynchronized marks: +1.807830 percentage points. The broker NAV is intraday while SPY is the latest completed close; the automated market-data workflow will supply the next synchronized end-of-day mark.
