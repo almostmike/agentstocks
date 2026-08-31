@@ -26,15 +26,16 @@ daily-kickoff.txt           scheduled-run prompt
 
 ## Current status
 
-- Robinhood Agentic account connection verified.
-- 5.6 Sol CODEX account verified as cash-only.
+- Robinhood Agentic account and cash-only status were verified at inception;
+  every trade still requires a fresh broker reconciliation.
 - Local Git repository initialized on `main`.
 - GitHub repository: <https://github.com/almostmike/agentstocks> (public).
 - First live trading session completed on 2026-07-13.
-- Latest trade-ledger change: bought BAC and PNC on 2026-07-16.
-- Current logged holdings: NVDA, NTAP, ADM, BAC, and PNC, with $100.00 cash.
-- Strategy v1.0 is documented in [STRATEGY.md](STRATEGY.md) and locked before
-  the first live trade.
+- Latest trade-ledger change: bought NUE on 2026-08-20.
+- Latest public ledger holdings: NTAP, ADM, BAC, PNC, and NUE, with $97.22 cash
+  at that session's broker-verified snapshot.
+- Forward Inflection strategy v1.1 is documented in [STRATEGY.md](STRATEGY.md)
+  and was adopted prospectively on 2026-08-31.
 - The dashboard shows the newest ledger holdings immediately after a trade, then
   switches to adjusted closing values once the after-close market workflow catches
   up.
