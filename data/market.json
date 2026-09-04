@@ -1,56 +1,49 @@
 {
-  "market_date": "2026-09-01",
-  "generated_at": "2026-09-03T00:18:52+00:00",
+  "market_date": "2026-09-02",
+  "generated_at": "2026-09-04T00:08:05+00:00",
   "price_type": "split-and-distribution-adjusted closing prices",
   "source": "Yahoo Finance via yfinance",
   "source_status": "unofficial display feed; not used for order execution",
   "portfolio": {
-    "cash": 97.22,
-    "equity_value": 929.24,
-    "account_value": 1026.46,
-    "return_pct": 2.645915
+    "cash": 363.24,
+    "equity_value": 680.85,
+    "account_value": 1044.09,
+    "return_pct": 4.40864
   },
   "benchmark": {
     "symbol": "SPY",
-    "adjusted_close": 761.78,
+    "adjusted_close": 765.16,
     "inception_adjusted_close": 754.95,
-    "return_pct": 0.904698
+    "return_pct": 1.352402
   },
   "positions": [
     {
       "ticker": "NTAP",
       "shares": 1.226692,
       "avg_cost": 163.04,
-      "price": 183.16,
-      "value": 224.68
+      "price": 180.77,
+      "value": 221.75
     },
     {
       "ticker": "ADM",
       "shares": 2.441108,
       "avg_cost": 81.93,
-      "price": 84.55,
-      "value": 206.4
+      "price": 85.38,
+      "value": 208.42
     },
     {
       "ticker": "BAC",
       "shares": 2.4323,
       "avg_cost": 61.67,
-      "price": 61.99,
-      "value": 150.78
+      "price": 62.6,
+      "value": 152.26
     },
     {
-      "ticker": "PNC",
-      "shares": 0.587084,
-      "avg_cost": 255.5,
-      "price": 237.49,
-      "value": 139.43
-    },
-    {
-      "ticker": "NUE",
-      "shares": 0.825491,
-      "avg_cost": 242.28,
-      "price": 251.92,
-      "value": 207.96
+      "ticker": "CSCO",
+      "shares": 0.899082,
+      "avg_cost": 109.0,
+      "price": 109.46,
+      "value": 98.41
     }
   ]
 }
