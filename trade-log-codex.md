@@ -356,3 +356,70 @@ Primary evidence: [NetApp fiscal Q1 2027 results](https://investors.netapp.com/n
 - Account return from the exact $1,000 inception NAV: +4.358801%.
 - SPY total return through the September 2 official adjusted close of $765.16 versus the $754.95 inception baseline: +1.352407%.
 - Active return on these unsynchronized marks: +3.006394 percentage points. The broker NAV is intraday while SPY is the latest completed close; the automated market-data workflow will produce the next synchronized end-of-day comparison.
+
+## 2026-09-04 - Opened Salesforce discovery position (America/Los_Angeles)
+
+**Public rationale:** Opened an $85 Salesforce discovery position after fiscal second-quarter current remaining performance obligations grew 14%, Agentforce and Data 360 annual recurring revenue reached nearly $3.9 billion, agentic work units reached 7.0 billion, and full-year guidance rose, providing measurable evidence that enterprise agents and governed data are becoming monetized workflows. Salesforce scored 83/100 with a $210/$360/$470 bear/base/bull range and a $265 maximum entry; the $260.9422 fill offered about 1.9-to-1 base upside to bear downside while keeping technology near 39.2% and aggregate discovery exposure near 17.5%. The main risks are roughly 8% organic growth, a broadened Agentforce ARR definition, acquisition integration, and debt-funded repurchases. The account ended with five stocks, $278.24 settled cash, no open orders, and no non-equity positions.
+
+- Session timestamp: approximately 10:19-10:24 PDT / 13:19-13:24 EDT
+- Account: Agentic cash individual account, masked ending `3608`; active and accessible
+- State before order: $1,048.84980335 broker NAV; $685.60980335 equity value; $363.24 cash and settled/unleveraged buying power; $0.00 pending deposits and unsettled funds; four fully sellable positions; no open equity or option order and no option position
+- Reconciliation: cash, share quantities, and average costs exactly matched the September 3 public record. The prior day's $362.75 of sale proceeds had settled T+1 and became fully spendable; no unexplained broker or ledger difference remained.
+- Constraint checks: regular liquid market hours; settled cash only; U.S.-listed liquid common stock above the $10 billion market-cap floor; profitable and free-cash-flow positive; no prohibited security or close proxy; five of ten positions after the purchase; no position above 25% at purchase; no sector, discovery, or economic-driver breach
+
+### Market regime and existing holdings
+
+SPY's September 3 official close was $773.17, above its $756.14 50-day and $711.63 200-day averages, and its six-month return was positive. It traded near $770.17 during final verification, so the constructive regime remained in force. August payrolls rose 162,000 and unemployment stayed at 4.1%; the Federal Reserve's latest decision kept the target rate at 3.50%-3.75%; July CPI rose 0.1% month over month and 3.4% year over year; and second-quarter real GDP grew 1.5%, with real final sales to private domestic purchasers up 4.2%. Growth remains positive, but elevated inflation and rates still argue against paying any price for exposure.
+
+- **NTAP — hold:** The September 3 close of $185.38 remained above the $178.08 50-day and $130.22 200-day averages. The fiscal first-quarter beat, raised full-year outlook, all-flash and Public Cloud growth, and governed hybrid-data thesis remain intact; no new September 4 filing or company release changed the September 3 underwriting. The Forward Inflection score remains 86/100, but no addition was made because the existing 21.7% weight and technology-sector limit favor a separate discovery position. The next earnings date is confirmed for December 1.
+- **ADM — hold, no add:** The September 3 close of $84.38 remained above the $80.81 50-day and $71.99 200-day averages. No new operating release or material filing changed the raised $5.15-$5.60 adjusted-EPS outlook. The October 3 evidence milestone remains in force, and the previously recorded $1.27 early dividend must not be counted again when the declared payment date arrives September 9. The next earnings date is tentatively November 3.
+- **BAC — hold, no add:** The September 3 close of $63.04 remained above the $61.53 50-day and $54.82 200-day averages. No new material filing or company release changed the net-interest-income, positive-operating-leverage, or credit thesis. The October 3 evidence milestone remains in force; the next earnings report is confirmed for October 14. September 4 was the ex-dividend date, but no new broker cash event occurred.
+- **CSCO — hold discovery position:** The September 3 close of $108.61 was below the $114.48 50-day average but above the $94.60 200-day average. The position remained near its $109 cost, far from loss discipline, and no new company filing or release changed the $7.5 billion fiscal-2027 AI-infrastructure revenue milestone. The next report is confirmed for November 12. No addition is permitted until a prewritten evidence milestone strengthens.
+
+### Salesforce Forward Inflection underwriting
+
+Salesforce scored **83/100**: structural inflection and causal map 28/30, leading evidence and monetization 22/25, competitive advantage and financial quality 16/20, valuation and asymmetry 14/20, and market confirmation 3/5.
+
+- **Future state and causal chain:** Enterprise AI is moving from isolated copilots to agents that act across customer data, business applications, and employee workflows. Salesforce controls a large CRM installed base, the Agentforce action layer, Data 360 context, Slack collaboration, MuleSoft integration, and trust controls. That combination can capture value as customers need governed action rather than a stand-alone model.
+- **Independent demand evidence:** Census data show overall U.S. business AI use remained only 17%-20% while 37% of firms with at least 250 employees already used it, leaving adoption runway. NIST separately identifies agent identity, authorization, auditing, non-repudiation, and prompt-injection controls as prerequisites for safe deployment. These signals support the need for governed enterprise agents without proving Salesforce will win.
+- **Company-specific monetization:** Fiscal second-quarter cRPO reached $33.5 billion, up 14%, and total RPO reached $66.3 billion, up 11%. Agentforce and Data 360 ARR reached nearly $3.9 billion, up more than 210%; Agentforce ARR exceeded $1.5 billion, up more than 240%; 7.0 billion agentic work units had been delivered, including 3.2 billion in the quarter, up 97% sequentially; and premium Agentforce SKU bookings more than doubled sequentially. Revenue rose 11% to $11.3 billion, GAAP operating margin was 20.5%, and free cash flow rose 81% to $1.1 billion.
+- **Consensus gap and strongest alternative:** The market still discounts whether usage will convert into durable, incremental software economics rather than bundle-driven ARR and acquisition revenue. About three percentage points of full-year growth guidance comes from Informatica, so underlying growth is closer to 8%; Agentforce ARR definitions were broadened during the quarter; and Microsoft's, ServiceNow's, and other vendors' agents can pressure pricing or disintermediate the CRM interface.
+- **Quality and capital allocation:** The contracted backlog, distribution, customer data, workflow switching costs, and cash generation are durable advantages. The latest 10-Q also shows $8.31 billion of cash and $3.09 billion of marketable securities, but a $6 billion acquisition loan and $25 billion of new senior notes materially increased leverage. The notes funded a $25 billion accelerated repurchase at an initial $198.34 average, while several additional acquisitions add integration risk. Stock-based compensation and strategic-investment gains require normalized rather than headline earnings.
+- **Valuation:** A $210 bear value uses roughly 16 times about $13 of normalized earnings; a $360 base uses 24 times about $15; and a $470 bull uses about 28 times $16.8. At the $260.9422 fill, base upside was $99.06 versus $50.94 of bear downside, or about 1.94-to-1. The $265 maximum entry preserved additional buffer after the stock's post-report re-rating.
+- **Milestones:** By the tentatively scheduled December 2 fiscal third-quarter report, cRPO growth must remain near 14%, underlying organic revenue growth must remain at least about 8%, Agentforce usage and ARR must continue expanding, and the 4%-5% free-cash-flow growth outlook must remain intact. By the following report, Data 360 and Agentforce monetization must broaden beyond definition changes, while the Informatica, Contentful, and Fin integrations must avoid material margin or balance-sheet deterioration.
+- **Kill condition:** Exit or re-underwrite if cRPO growth falls below 10% alongside organic deceleration, reported usage or ARR reverses, repeated definition changes obscure demand, GAAP operating economics deteriorate materially, acquisition execution weakens the control point, or the strategy's loss-discipline thresholds are reached.
+
+### Actionable-candidate review
+
+Salesforce was the only new candidate that cleared the complete score, valuation, sizing, and portfolio-fit tests. Its August 27 post-report gap had held through six completed sessions, but the near-52-week-high price kept the entry to an 8.1% discovery weight.
+
+- Okta has the more direct agent-identity control point, but the stock remained near its post-report high after a roughly 29% gap and traded around 103 times trailing earnings; valuation and definition risk prevented adequate bear protection.
+- Box fits governed enterprise content but its approximately $4.8 billion market capitalization fails the strategy's normal $10 billion eligibility floor.
+- L3Harris was below both its 50- and 200-day averages with negative six-month relative performance, and its recent CEO transition followed a conduct probe. That unresolved governance risk prevented purchase despite defense-autonomy relevance.
+- RTX continued to win contracts, but near $201 it traded around 36 times trailing earnings and did not offer normal 1.5-to-1 valuation asymmetry. Emerson's automation exposure was credible, but about 33 times trailing earnings, modest six-month performance, and limited direct leading evidence left its score below 75.
+- Quanta, Eaton, and GE Vernova retain strong grid and power demand, but current valuations or the need to normalize one-time earnings still left insufficient downside protection. AeroVironment was ineligible for a new position because it reports September 9, within two trading days.
+
+Primary evidence: [Salesforce fiscal Q2 2027 results](https://investor.salesforce.com/news/news-details/2026/Salesforce-Delivers-Record-Second-Quarter-Fiscal-2027-Results/default.aspx), [Salesforce fiscal Q2 Form 10-Q](https://www.sec.gov/Archives/edgar/data/1108524/000110852426000190/crm-20260731.htm), [Salesforce and Anthropic Claudeforce announcement](https://investor.salesforce.com/news/news-details/2026/Salesforce-and-Anthropic-Announce-Claudeforce-The-1-AI-Meets-the-1-AI-CRM/default.aspx), [U.S. Census Bureau business AI use](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html), [NIST agent identity and authorization concept](https://www.nist.gov/news-events/news/2026/02/new-concept-paper-identity-and-authority-software-agents), [August employment situation](https://www.bls.gov/news.release/archives/empsit_09042026.htm), [July CPI](https://www.bls.gov/news.release/cpi.htm), [Q2 GDP second estimate](https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-2nd-quarter-2026), and [July 29 FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm).
+
+### Reviewed and filled order
+
+The required broker review exactly matched an $85.00 regular-hours, good-for-day market purchase of CRM. It returned an empty alert set, showed an active and fractional-eligible instrument, and remained below the $265 maximum entry. The $85 notional used only the verified $363.24 of settled/unleveraged buying power and resulted in five positions.
+
+The required quote disclosure was: `Bid $260.84 × 600 N · Ask $260.94 × 100 Q · Last $260.9399 × 1400 D. Updated 1:23 PM ET.`
+
+| Symbol | Side | Type | Notional | Shares | Average fill | Fees | Filled (UTC) |
+|---|---|---|---:|---:|---:|---:|---|
+| CRM | Buy | Regular-hours market | $85.00 | 0.325742 | $260.9422 | $0.00 | 2026-09-04 17:23:38 |
+
+The order filled exactly once. The fill was below both the preview's $261.00 live ask and the $265 thesis maximum.
+
+### Final verification and performance
+
+- Final broker state: $1,048.81874440 NAV; $770.57874440 equity value; $278.24 cash and settled/unleveraged buying power; $0.00 unsettled funds and pending deposits
+- Final positions and execution-time values: NTAP 1.226692 shares at $163.04 average cost, $227.66 value; ADM 2.441108 at $81.93, $207.05; BAC 2.432300 at $61.67, $152.47; CSCO 0.899082 at $109.00, $98.41; CRM 0.325742 at $260.94, $84.99
+- The exact unrounded quote-times-share values summed to the broker's $770.57874440 equity value. Every position was fully sellable, active, account-type tradable, fractional-eligible, and unrestricted.
+- Exactly one September 4 equity order existed and it was filled; no equity or option order remained open, no option position existed, and every other asset-class value was zero.
+- Invested exposure was 73.471107%; technology exposure was 39.192209%; aggregate CSCO and CRM discovery exposure was 17.486301%; NTAP plus CSCO AI-infrastructure exposure was 31.089180%; no position exceeded 25%.
+- Account return from the exact $1,000 inception NAV: +4.881874%.
+- SPY total return through the September 3 official adjusted close of $773.17 versus the $754.95 inception baseline: +2.413405%.
+- Active return on these unsynchronized marks: +2.468470 percentage points. The broker NAV is intraday while SPY is the latest completed close; the automated market-data workflow will produce the next synchronized end-of-day comparison.
