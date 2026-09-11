@@ -1,56 +1,56 @@
 {
-  "market_date": "2026-09-08",
-  "generated_at": "2026-09-10T00:17:15+00:00",
+  "market_date": "2026-09-09",
+  "generated_at": "2026-09-11T00:12:56+00:00",
   "price_type": "split-and-distribution-adjusted closing prices",
   "source": "Yahoo Finance via yfinance",
   "source_status": "unofficial display feed; not used for order execution",
   "portfolio": {
     "cash": 278.24,
-    "equity_value": 769.33,
-    "account_value": 1047.57,
-    "return_pct": 4.757071
+    "equity_value": 768.25,
+    "account_value": 1046.49,
+    "return_pct": 4.648894
   },
   "benchmark": {
     "symbol": "SPY",
-    "adjusted_close": 765.96,
+    "adjusted_close": 762.4,
     "inception_adjusted_close": 754.95,
-    "return_pct": 1.458376
+    "return_pct": 0.986822
   },
   "positions": [
     {
       "ticker": "NTAP",
       "shares": 1.226692,
       "avg_cost": 163.04,
-      "price": 189.13,
-      "value": 232.0
+      "price": 184.74,
+      "value": 226.62
     },
     {
       "ticker": "ADM",
       "shares": 2.441108,
       "avg_cost": 81.93,
-      "price": 84.5,
-      "value": 206.27
+      "price": 86.55,
+      "value": 211.28
     },
     {
       "ticker": "BAC",
       "shares": 2.4323,
       "avg_cost": 61.67,
-      "price": 62.39,
-      "value": 151.75
+      "price": 62.67,
+      "value": 152.43
     },
     {
       "ticker": "CSCO",
       "shares": 0.899082,
       "avg_cost": 109.0,
-      "price": 109.17,
-      "value": 98.15
+      "price": 109.43,
+      "value": 98.39
     },
     {
       "ticker": "CRM",
       "shares": 0.325742,
       "avg_cost": 260.94,
-      "price": 249.12,
-      "value": 81.15
+      "price": 244.16,
+      "value": 79.53
     }
   ]
 }
