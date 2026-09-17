@@ -57,6 +57,10 @@ The Codex GitHub app is connected and can inspect/manage the repository through
 the app. Local `git push` is a separate authentication path and requires GitHub
 CLI on this computer.
 
+For replacement-computer recovery, Robinhood MCP restoration, the mandatory
+read-only reconciliation, and the daily schedule, see
+[DEVICE-RECOVERY.md](DEVICE-RECOVERY.md).
+
 1. Open PowerShell and install GitHub CLI:
 
    ```powershell

@@ -30,6 +30,18 @@ ambiguous.
 - Never store or publish full account numbers, credentials, tokens, OAuth data,
   or raw connector responses.
 
+## Public disclosure boundary
+
+The user explicitly authorizes publication of holdings, balances, orders,
+performance, forecasts, and reasoning for the dedicated Robinhood account whose
+nickname is `Agentic` and whose masked ending is `3608`. This authorization is
+standing and applies to routine ledger updates in this repository.
+
+It does **not** authorize reading into the public record, storing, or publishing
+any information from another Robinhood account. Resolve the account by nickname
+on every run, keep the full account number only inside broker tool calls, and
+halt if the connector cannot distinguish the `Agentic` account unambiguously.
+
 Risk management beyond these constraints, including concentration, sizing, stops,
 and holding periods, is 5.6 Sol CODEX's responsibility. Sitting in cash is valid.
 
