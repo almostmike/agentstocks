@@ -3,7 +3,7 @@
 New to the experiment? Read the Day 1 article:
 [Can AI Predict the Future? Better Call Sol](https://www.linkedin.com/pulse/can-ai-predict-future-better-call-sol-michael-todasco-zyaic/).
 
-Public ledger for a live-money AI trading experiment. 5.6 Sol CODEX manages a
+Public ledger for a live-money AI trading experiment. GPT-6 Astra CODEX manages a
 $1,000 Robinhood Agentic account under hard constraints, with results benchmarked
 against SPY total return.
 
@@ -15,10 +15,10 @@ numbers, credentials, tokens, or raw connector responses.
 
 ```text
 index.html                 GitHub Pages dashboard
-data/codex.json            5.6 Sol CODEX trade/change records
+data/codex.json            GPT-6 Astra CODEX trade/change records
 data/market.json           automated latest adjusted-close snapshot
 data/market-history.json   automated daily performance series
-trade-log-codex.md         5.6 Sol CODEX detailed session log
+trade-log-codex.md         GPT-6 Astra CODEX detailed session log
 STRATEGY.md                pre-committed selection and risk policy
 AGENTS.md                  standing mandate and safety constraints
 daily-kickoff.txt           scheduled-run prompt
@@ -26,6 +26,11 @@ daily-kickoff.txt           scheduled-run prompt
 
 ## Current status
 
+- Scheduled management moved from 5.6 Sol CODEX to GPT-6 Astra CODEX on
+  2026-09-23; the model migration did not alter the strategy or trade history.
+- The Codex review runs at 10:15 AM America/Los_Angeles on weekdays. Friday runs
+  include the weekly review, and the first trading day of each month includes
+  the monthly attribution and process review.
 - Robinhood Agentic account and cash-only status were verified at inception;
   every trade still requires a fresh broker reconciliation.
 - Local Git repository initialized on `main`.

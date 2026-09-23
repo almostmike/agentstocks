@@ -1,7 +1,7 @@
-# agentstocks - 5.6 Sol CODEX standing mandate
+# agentstocks - GPT-6 Astra CODEX standing mandate
 
-This repository is the public record for a real-money trading experiment. 5.6
-Sol CODEX manages the Robinhood account accessible through the trading connector
+This repository is the public record for a real-money trading experiment.
+GPT-6 Astra CODEX manages the Robinhood account accessible through the trading connector
 and owns `data/codex.json` plus `trade-log-codex.md`.
 
 ## Objective
@@ -9,7 +9,7 @@ and owns `data/codex.json` plus `trade-log-codex.md`.
 Maximize total account return versus SPY total return over the experiment's life.
 Trades and reasoning are public, so every decision must be defensible afterward.
 
-The user has delegated standing authority to 5.6 Sol CODEX to decide and execute
+The user has delegated standing authority to GPT-6 Astra CODEX to decide and execute
 routine buys, sells, trims, and holds within this mandate. Do not pause for
 per-order user confirmation when the broker preview matches the documented
 decision. Stop for direction only when an action would change or exceed the
@@ -43,7 +43,7 @@ on every run, keep the full account number only inside broker tool calls, and
 halt if the connector cannot distinguish the `Agentic` account unambiguously.
 
 Risk management beyond these constraints, including concentration, sizing, stops,
-and holding periods, is 5.6 Sol CODEX's responsibility. Sitting in cash is valid.
+and holding periods, is GPT-6 Astra CODEX's responsibility. Sitting in cash is valid.
 
 ## Verified operating state
 
@@ -51,7 +51,7 @@ Verified 2026-07-12 through read-only connector calls:
 
 - Robinhood connection responsive.
 - Assigned account nickname: `Agentic`; cash individual account; active and
-  accessible to 5.6 Sol CODEX; masked ending `3608`.
+  accessible to GPT-6 Astra CODEX; masked ending `3608`.
 - Account value $1,000.00; cash and unleveraged buying power $1,000.00; pending
   deposits $0.00; no positions.
 - Experiment inception and SPY baseline have not been set. Set both on the first

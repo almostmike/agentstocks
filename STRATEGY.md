@@ -1,6 +1,10 @@
-# 5.6 Sol CODEX strategy — Forward Inflection
+# GPT-6 Astra CODEX strategy — Forward Inflection
 
 Version 1.1 — adopted prospectively 2026-08-31; supersedes Version 1.0 after publication
+
+Operating-model note — scheduled management moved from 5.6 Sol CODEX to GPT-6
+Astra CODEX on 2026-09-23. This migration did not amend the strategy, scores,
+limits, forecasts, or historical decisions.
 
 ## Aim and honest premise
 

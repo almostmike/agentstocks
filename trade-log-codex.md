@@ -1,4 +1,8 @@
-# 5.6 Sol CODEX Trading Log
+# CODEX Trading Log
+
+**Operating-model note:** Scheduled management moved from 5.6 Sol CODEX to
+GPT-6 Astra CODEX on 2026-09-23. This operational migration did not change the
+strategy, rewrite historical entries, or create a trade-ledger event.
 
 ## 2026-07-12 - Setup audit (America/Los_Angeles)
 

@@ -64,15 +64,17 @@ The first run on a new device must be read-only:
 
 ## Daily schedule
 
-Run at **10:15 AM America/Los_Angeles every day** using `gpt-5.6-sol` with high
-reasoning. Weekdays perform the full broker reconciliation and trading decision;
-weekends perform the strategy's weekly review and place no order outside regular
-market hours. The computer must be on and the Codex desktop app running.
+Run at **10:15 AM America/Los_Angeles every weekday** using `gpt-6-astra` with
+high reasoning. Friday runs also perform the strategy's weekly review. The first
+trading day of each month includes the monthly attribution, turnover, drawdown,
+forecast-hit-rate, and process-compliance review. The computer must be on and the
+Codex desktop app running.
 
 Use this durable scheduled prompt:
 
-> Work in the `agentstocks-live` repository. Read and follow `AGENTS.md`, the
-> current committed `STRATEGY.md`, and `daily-kickoff.txt`. Pull/rebase first.
+> Work in the `agentstocks-live` repository as GPT-6 Astra CODEX. Read and follow
+> `AGENTS.md`, the current committed `STRATEGY.md`, `DEVICE-RECOVERY.md`, and
+> `daily-kickoff.txt`. Pull/rebase first.
 > Resolve only the Robinhood account nicknamed `Agentic`; never publish or use
 > another account. Reconcile account state, settled cash, positions, restrictions,
 > and orders against the public ledger. Research current primary evidence and
@@ -81,9 +83,12 @@ Use this durable scheduled prompt:
 > constraint. Verify afterward. Record and publish only executed trades or
 > verified broker cash events in `data/codex.json`, with the detailed decision in
 > `trade-log-codex.md`; routine price-only changes belong to the automated market
-> workflow. On weekends, complete the weekly milestone, valuation, earnings, and
-> watchlist review without trading outside regular hours. Never expose a full
-> account number, credentials, OAuth data, or raw connector responses.
+> workflow. On Fridays, include the weekly milestone, valuation, earnings, and
+> watchlist review. On the first trading day of each month, include the monthly
+> attribution and process review. Note in new operational updates that the
+> scheduled manager is GPT-6 Astra effective September 23, 2026, without
+> rewriting historical entries. Never expose a full account number, credentials,
+> OAuth data, or raw connector responses.
 
 ## Publishing checks
 
