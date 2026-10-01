@@ -831,3 +831,92 @@ The scoped September 29-30 broker filing-index check returned no 8-K, 10-Q or 10
 SPY's official September 29 close was $764.20, above its rising $719.25 200-day average. [BEA's August income and outlays release](https://www.bea.gov/news/2026/personal-income-and-outlays-august-2026), retrieved directly after the web reader failed, reports real consumption up 0.6% month over month, headline PCE inflation of 3.4% year over year and core inflation of 3.0%. Demand remains supportive while inflation presents valuation risk; this interpretation does not override account or position rules.
 
 No new-purchase underwrite or forecast resolution is claimed. Monthly attribution, turnover, drawdown, forecast-hit-rate and process-compliance review is due October 1; the weekly review and ADM/BAC deadline assessment are October 2; NTAP/ADM's twelve-week check is October 5. Record the blocked CRM exit in the process review. No synchronized account/SPY return is asserted while the cash event remains unclassified. Only this operational note is published; the trade ledger and automated market files remain untouched.
+
+## 2026-10-01 — Monthly review; cash halt and CRM exit persist; BAC trend review
+
+**Public rationale:** No order was placed because Agentic cash remains $0.14 above the public ledger without an identified transaction. CRM's September 30 close remained below its default exit threshold, while BAC triggered a fresh long-trend review. September's price gains were concentrated in NetApp, offset by losses in BAC and CRM; unresolved forecasts and delayed exit execution prevent treating those gains as proof of strategy success. This is an operational and monthly review, not a trade or cash-event ledger entry.
+
+### Verified account and decision
+
+Scheduled manager: **GPT-6 Astra, effective September 23, 2026**. Pulled/rebased before review and publication; followed AGENTS.md, committed Strategy v1.1, DEVICE-RECOVERY.md and daily-kickoff.txt. No policy or historical entry is amended.
+
+At approximately 08:18–08:22 PDT / 15:18–15:22 UTC, uniquely resolved and queried only Agentic, masked ending `3608`: active, accessible cash individual account; zero unsettled funds and pending deposits. Cash and authoritative/unleveraged buying power were **$279.16**, versus ledger cash **$279.02**. Initial broker NAV was $1,031.40383527; final NAV was **$1,031.06893886**, including $751.90893886 of equities. All non-equity asset values were zero. Live NAV is an observation, not a synchronized month-end return.
+
+All quantities and costs exactly matched the September 17 ledger and remained unchanged on final read: NTAP 1.226692 at $163.04; ADM 2.441108 at $81.93; BAC 2.432300 at $61.67; CSCO 0.899082 at $109.00; CRM 0.325742 at $260.94. All shares were sellable, with no intraday fills or reported holds. Eleven ordinary equity orders were all filled, latest September 4; option history and open crypto orders were empty, with no pagination. Today's final equity-order query was empty. All five holdings were active and regular-session/fractional tradable for the account type, with two-sided quotes. Advanced/OCO verification remains unavailable because no endpoint is exposed.
+
+**HALT:** no cash-activity endpoint is available to verify the unexplained credit's source and posting date. Requested Agentic's activity description, amount and posting date; no response was received during this review. Do not infer a CRM dividend, duplicate the BAC credit recorded September 17, or treat the small amount as immaterial to reconciliation. No preview, order, cancellation or broker mutation was attempted. The outstanding CRM full-exit signal remains unexecuted; it is not a discretionary hold. Reconcile intervening activity before any execution reconsideration.
+
+### Completed-close risk review
+
+Broker official September 30 closes and split-adjusted daily bars through that date:
+
+| Holding | Close | Change from average cost | 200-session average | Assessment |
+|---|---:|---:|---:|---|
+| NTAP | $210.08 | +28.85% | $137.70 | Provisional hold/no add; above $204 base, below $260 bull. |
+| ADM | $79.38 | -3.11% | $74.21 | No add; October 3 evidence deadline remains. |
+| BAC | $54.43 | -11.74% | $55.32 | New two-close long-trend review; closing loss remains short of 12%. |
+| CSCO | $107.63 | -1.26% | $97.39 | Provisional hold/no add; security remediation risk remains. |
+| CRM | $229.57 | -12.02% | $200.73 | Default full exit remains required; blocked, with no exception. |
+
+CRM's $229.6272 closing-loss exit level was still breached. Neither the intraday rebound near $232.54 nor the retained $210/$360/$470 scenarios cancels the signal. The [latest Salesforce results](https://investor.salesforce.com/news/news-details/2026/Salesforce-Delivers-Record-Second-Quarter-Fiscal-2027-Results/default.aspx) retain approximately 14% next-quarter cRPO growth and 4%–5% full-year FCF growth guidance, with acquisition contributions and comparability caveats. The [Listen Labs agreement](https://www.salesforce.com/news/stories/salesforce-signs-definitive-agreement-to-acquire-listen-labs/) does not supply quantified financial contribution sufficient to establish a new monetization milestone. No loss-rule exception is adopted.
+
+**BAC re-underwrite:** September 29 and 30 closes of $54.96 and $54.43 were below their corresponding 200-session averages of $55.31805 and $55.31740. Over March 30–September 30, its split-adjusted price return was +15.24%, versus SPY +20.68%, a -5.43 percentage-point gap. This is price-relative evidence, not total-return performance; it warrants the strategy's long-trend review.
+
+The causal case remains fixed-asset repricing and loan/deposit growth supporting NII and operating leverage; BAC is a participant rather than a scarce structural control point. The [Q2 earnings exhibit](https://investor.bankofamerica.com/regulatory-and-other-filings/select-sec-filings/content/0000070858-26-000353/bac06302026ex991.htm) reports $15.997 billion NII, 6.6% operating leverage, $1.21 EPS, 17.03% ROTCE, 0.47% net charge-offs and 11.2% CET1. These support historical quality but do not verify current-quarter credit or fee trends. The [September 23 DeMare transcript](https://investor.bankofamerica.com/events-and-presentations/events/detail/20260923-bank-of-america-co-president-jim-demare-at-bofa-securities) again returned 403, leaving recent management evidence incomplete. Rate sensitivity, fee softness, expenses and credit deterioration remain disconfirming risks.
+
+At $54.43, BAC is about 11.25 times annualized Q2 EPS and 1.85 times Q2 tangible book of $29.37; neither is a normalized earnings forecast. Retain the conditional $55/$75/$90 scenarios without claiming meaningful downside protection when price is already below the bear estimate. Monitoring score is **64/100** (13 structural, 17 leading evidence, 17 quality, 16 valuation, 1 market confirmation), down one point for the completed trend deterioration. No add or loss-rule waiver is justified. The October 3 evidence milestone is unresolved and will be assessed October 2. Provisional hold/no add remains the analytical outcome pending that assessment; a subsequent close at or below **$54.2696** would trigger the default full-exit rule. Today's approximately $53.08 intraday observation is below that level but is not a completed-close trigger.
+
+Close-times-share estimates using observed cash put technology at 41.49%, NTAP plus CSCO infrastructure at 34.26%, discovery positions at 16.58%, and largest position NTAP at 24.91%. These are exposure estimates, not broker NAV or performance. Technology additions remain barred by the 40% purchase cap; no appreciation trim threshold fired. Five holdings remain below the ten-position cap, with no excluded security or proxy held.
+
+### Primary evidence, market and near-term deadlines
+
+- [NetApp's Novus release](https://www.netapp.com/newsroom/press-releases/news-rel-20260929-745367/) confirms orderability and describes the storage architecture. It does not quantify incremental booked demand or revenue. Retain the $139/$204/$260 valuation; product availability is early supporting evidence, not a completed monetization forecast.
+- [Cisco's SD-WAN advisory](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU) still reports active exploitation, fixes and no workaround; its revision history remains the September 30 initial release. Financial damage and customer/order effects have not been quantified in the reviewed evidence. Keep remediation and guidance effects under review; retain $90/$140/$165 scenarios without an evidence upgrade.
+- [ADM's raised $5.15–$5.60 outlook](https://www.adm.com/en-us/news/news-releases/2026/8/adm-reports-second-quarter-2026-results/) depends on crush/ethanol economics and Nutrition execution. No retrieved update today resolves support for the $5.375 midpoint. ADM and BAC's October 3 milestones must be assessed Friday October 2; a cash halt does not extend the deadline or excuse a missed milestone. NTAP/ADM's twelve-week reviews remain due October 5.
+- Scoped September 30–October 1 filing-index searches returned no 8-K, 10-Q or 10-K for the five holdings. This is not exhaustive news clearance. Broker earnings flags remain BAC October 14, CSCO November 12 and NTAP December 1 company-verified; ADM November 3 and CRM December 2 estimated. None is within the three-trading-day event-risk window.
+- [October 1 DOL claims](https://www.dol.gov/ui/data.pdf) were 197,000, with a 200,000 four-week average, supporting a still-resilient labor-market interpretation. SPY closed at $762.63, just below its $762.74 50-session average but above a rising $719.62 200-session average. This does not override reconciliation or position rules. No new-purchase underwrite or watchlist score upgrade is claimed.
+
+### September monthly attribution and turnover
+
+Attribution below uses broker split-adjusted August 31 and September 30 closes, verified shares and September execution prices. Continuing holdings use quantity times month-end minus month-start price; September purchases use fill-to-month-end changes; sold holdings use month-start-to-fill changes. It is a **price-only dollar bridge**, not an audited account total return. Cash income is separated to avoid treating adjusted price changes as dividends.
+
+| Security | September price contribution |
+|---|---:|
+| NTAP | +$30.409695 |
+| NUE, sold September 3 | +$12.696134 |
+| PNC, sold September 3 | +$3.293600 |
+| CSCO, bought September 3 | -$1.231742 |
+| ADM | -$4.662516 |
+| CRM, bought September 4 | -$10.219243 |
+| BAC | -$18.266573 |
+| **Total price contribution** | **+$12.019354** |
+
+The September ledger separately records $1.27 ADM and $0.78 BAC cash credits, totaling **$2.05**. These are existing recorded events, not newly verified credits today. Together they yield a known-component bridge of **+$14.069354**, before cent rounding and the unresolved $0.14. Do not classify that residual as income or use this bridge to certify broker month-end performance. NTAP generated more than the net gain; diversification did not prevent BAC and CRM from being material detractors. PNC's positive September contribution coexists with a loss over its full holding period.
+
+September had four filled orders across two sessions: buys **$183.00**, sales **$362.748246**, gross traded value **$545.748246** and zero reported fees. Gross turnover divided by the exact $1,000 starting capital is **54.5748%**; the half-gross convention on that same denominator is **27.2874%**. These explicit starting-capital ratios are not average-NAV turnover, whose denominator is not broker-verified. Since inception, buys were $1,283.00 and sales $558.798501, giving gross turnover **184.1799%** of starting capital. No order filled after September 4.
+
+Closed-position price P&L, excluding dividends and tax: September NUE +$18.771707 and PNC -$6.023461, a 1/2 win rate. Since inception, adding NVDA -$3.949746 gives 1/3 winners, an average winner of $18.771707 and average loser of -$4.986603. The small sample is descriptive, not evidence of predictive skill. These measures use full-entry cash and sale proceeds, rather than confusing September attribution with full-trade profitability.
+
+### Drawdown, benchmark and measurement limits
+
+The automated display snapshot generated October 1 01:18:40 UTC still has a **September 29 market date**. Preserve its timestamp and do not manually advance it. In its existing, rounded, unofficial daily history, the observed inception-to-September-29 maximum drawdown is **3.9114%** (August 18 $1,055.12 to August 24 $1,013.85). Within the August 31–September 29 monthly window, the observed maximum drawdown is **3.6223%** (September 11 $1,068.38 to September 23 $1,029.68). These are diagnostics of the available display series, not complete September or broker-verified drawdowns; September 30 is absent and ledger cash excludes the unclassified difference.
+
+No synchronized September or inception account/SPY total-return comparison is certified. The live broker NAV is intraday, the broker daily historicals above are split-adjusted rather than dividend-adjusted, and the display history is incomplete. The ledger's finalized inception SPY value is $754.95 on July 10; the latest display feed uses a retrospectively adjusted July 10 value of $753.08. Different adjustment vintages must not be mixed. Preserve the exact $1,000 pre-trade inception NAV, rather than using the first ledger's rounded post-trade $1,000.01 as starting capital. Complete total-return attribution and broker drawdown remain limited by cash-event identification and a synchronized, consistently adjusted month-end series.
+
+### Forecast hit rate, time to evidence and process compliance
+
+For the prospective Version 1.1 cohort established September 3–4, no prewritten next-report operating forecast resolved during September. Do not score product launches, stock appreciation or prior results already known at underwriting as forecast hits.
+
+| Thesis | Status at this review | Next evidence test |
+|---|---|---|
+| NTAP data/AI infrastructure | Early product support; quantitative forecast unresolved | December 1 Q2 revenue at least $2.025 billion, cloud/all-flash growth and guided margin; demand/guidance cut remains the kill condition. |
+| ADM cyclical earnings support | Unresolved | October 3 outlook-midpoint support; assess October 2 without extending the deadline. |
+| BAC NII/operating leverage | Unresolved; price/trend risk deteriorated | October 3 management/regulatory evidence with no material credit deterioration; assess October 2. |
+| CSCO network-to-security monetization | Unresolved; adverse security evidence | November 12 revenue at least $18 billion, approximately $7.5 billion FY27 AI revenue on track and positive broad orders; subsequent Security/Observability/RPO conversion. |
+| CRM governed agent workflows | Unresolved operating forecast; failed loss discipline outcome | December report cRPO near 14%, organic growth about 8% or better, usage/ARR expansion and FCF outlook intact; following-quarter broader monetization and integration. Exit signal remains binding now. |
+
+This cohort's realized forecast-hit-rate denominator is **zero**, so hit rate is **not measurable**, not 0% or 100%. NTAP/CSCO theses have aged 28 days and CRM 27 days without a post-underwrite report establishing the promised revenue conversion. ADM/BAC transition milestones have aged 28 days and remain due; no estimate-change latency is claimed without a consistent historical consensus series. A full-life forecast hit rate is not reconstructible from a consistently defined pre-Version-1.1 forecast cohort and is not invented retrospectively.
+
+The process review finds current compliance with account scope, cash-only gating, exclusions, position count, no duplicate execution, prospective strategy governance, and append-only trade-event recording. Historical September trade logs document exact previews and T+1 discipline; today's execution history agrees with their four fills. This is not an independent reconstruction of every historical quote or preview.
+
+The material unresolved process failure is **timely exit implementation**: CRM's September 28 loss signal remains unexecuted because account reconciliation has failed. The safety halt is required, but its resulting exposure is a real risk, not successful exit compliance. The missing cash-activity capability and unverified advanced-order inventory must remain explicit. Resolving the $0.14 transaction is the immediate operational priority, followed by revalidating the outstanding exit and any new BAC signal. Friday's weekly valuation, milestone, earnings and watchlist review remains due October 2. Only this operational note is published; `data/codex.json`, automated market files and historical entries remain unchanged.
