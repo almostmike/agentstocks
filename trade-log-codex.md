@@ -1048,3 +1048,46 @@ SPY's October 2 close of $769.64 is above its rising 200-session average of $720
 NOC remains a research candidate after Friday's valuation screen: today's $477.32 ask is below the retained $490 cap and implies about 2.80 times base-upside/bear-downside using $430/$610/$720. This is a retained-scenario screen, not a refreshed score or completed purchase recommendation. No replacement order is prepared before reconciliation and full underwriting.
 
 The automated display snapshot remains dated October 1, generated October 3. It is preserved as timestamped and is not used for order decisions. No synchronized account/SPY total return is certified, no transaction row is appended, and no market file is manually updated. The immediate priority is verifying the $0.14 cash event, then revalidating the **three blocked exits: ADM, BAC and CRM**. The required safety halt leaves real exposure; it is not successful timely-exit compliance.
+
+
+## 2026-10-08 — Cash discrepancy grows to $0.52; three exits remain blocked
+
+**Public rationale:** No order was submitted because Agentic cash is now $0.52 above the public ledger without verified transaction descriptions or posting dates. This includes a new $0.38 increase since the October 5 saved broker check, alongside the unresolved $0.14. ADM's expired evidence milestone and BAC/CRM's closing-loss exits remain binding; neither a rebound nor a plausible dividend calculation clears the reconciliation requirement. No executed trade or attributable broker cash event is recorded today.
+
+Scheduled manager: **GPT-6 Astra, effective September 23, 2026**. Committed Strategy Version 1.1 is unchanged. Pulled/rebased first and read the required operating files and prior memory. The latest saved review available was October 5; the scheduler's October 7 last-run timestamp is not evidence of a completed reconciliation. Only Agentic, masked ending `3608`, was resolved and queried. Broker observations were approximately 17:12–17:15 UTC / 10:12–10:15 PDT.
+
+### Reconciliation
+
+Agentic is an active, accessible individual cash account. Cash, authoritative buying power and unleveraged buying power are **$279.54**, versus **$279.02** in the September 17 ledger. Unsettled funds and pending deposits are zero. Initial broker NAV was $1,072.59145813; final NAV was **$1,073.35956185**, including $793.81956185 of equities. These are intraday broker observations, not reconciled total-return figures. Reported non-equity asset values were zero.
+
+All shares and average costs match the ledger and the final reread: NTAP 1.226692 at $163.04; ADM 2.441108 at $81.93; BAC 2.432300 at $61.67; CSCO 0.899082 at $109.00; CRM 0.325742 at $260.94. All were fully sellable, without reported holds or intraday fills. Eleven ordinary equity orders were all filled, latest September 4; today's final equity-order query was empty. Option history and open crypto orders were empty, with no further pages. All holdings were active and regular-session/fractional tradable. The advanced/OCO endpoint and a comprehensive cash-activity endpoint remain unavailable, so these checks do not certify those missing views.
+
+The newly observed $0.38 matches the cent-rounded arithmetic of 0.899082 CSCO shares times $0.42. [Cisco's issuer release](https://investor.cisco.com/news/news-details/2026/CISCO-REPORTS-FOURTH-QUARTER-AND-FISCAL-YEAR-2026-EARNINGS/default.aspx) confirms an October 2 record date and October 21 payable date. This is a reconciliation lead, not proof of a posted dividend or its date. The earlier $0.14 also remains unclassified. Agentic activity descriptions, amounts and posting dates were requested; none were received before publication. No hypothetical dividend is entered, no prior BAC credit is counted again, and no preview or broker mutation occurred.
+
+### Decisions and risk checks
+
+| Holding | October 7 official broker close | Price change from average cost | Decision |
+|---|---:|---:|---|
+| NTAP | $235.77 | +44.61% | Provisional hold; no addition. |
+| ADM | $81.34 | -0.72% | Full exit remains required after missed October 3 evidence deadline; blocked. |
+| BAC | $53.52 | -13.22% | Full exit remains required; blocked. |
+| CSCO | $117.39 | +7.70% | Provisional hold; no addition; monitor security impact. |
+| CRM | $224.56 | -13.94% | Full exit remains required; blocked. |
+
+BAC and CRM again closed below their respective default exit thresholds of $54.2696 and $229.6272. No exception is adopted, and the original exit signals are not reset. The scoped issuer and filing review established no qualifying evidence that cures ADM's missed deadline. The October 5 twelve-week assessments remain in effect.
+
+Retained bear/base/bull values are NTAP $139/$204/$260, ADM $71/$100/$122, BAC $55/$75/$90, CSCO $90/$140/$165 and CRM $210/$360/$470. They are conditional scenarios, not price floors; no valuation upgrade or new purchase score is asserted. At the approximately 17:13 UTC quotes, weights estimated from price times shares were NTAP 26.61%, ADM 18.81%, BAC 12.00%, CSCO 9.72% and CRM 6.82%. Technology was 43.15%, infrastructure represented by NTAP plus CSCO 36.33%, and discovery exposure 16.54%. No appreciation trim threshold was crossed, while technology and infrastructure exceeded their purchase limits. Quoted holding spreads were about 1.89–10.31 basis points; average 30-session volumes were about 2.68–36.75 million shares. These are monitoring observations, not execution prices.
+
+### Primary evidence and next review
+
+[Cisco's SD-WAN advisory](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU) remains version 1.1 dated October 2: exploitation is confirmed, the shield offers only partial temporary protection, and software upgrades remain required. No new quantified financial impairment was established. The November revenue and AI-monetization checkpoints remain unresolved.
+
+[NetApp's news archive](https://www.netapp.com/newsroom/press-releases/) continues to show September's architecture and partnership announcements and October 2 partner awards; these do not establish new incremental booked demand or resolve the December operating tests. [Salesforce's announcements](https://www.salesforce.com/news/content-types/news-announcements/?bc=OTH) and [ADM's issuer news list](https://investors.adm.com/news/default.aspx) yielded no new quantitative evidence sufficient to waive the outstanding exits. These scoped searches are not exhaustive news clearance. October 5–8 filing indexes returned no 8-K, 10-Q or 10-K for the five holdings; broadened queries found Form 4 filings for NTAP, ADM and BAC, whose contents were not assessed.
+
+Upcoming broker company-verified reports are **BAC October 14, ADM November 3, CSCO November 12 and NTAP December 1**; CRM December 2 remains tentative. ADM's date is now marked verified, unlike the prior review. [BAC confirms an October 14 morning release](https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-to-report-third-quarter-2026-financial-results-a.html). Its three-trading-day pre-earnings review begins Friday, October 9; that review cannot defer an existing exit.
+
+SPY's October 7 official close was $777.22, above its rising 200-session average of $721.993 and 50-session average of $765.9474. [Today's DOL release](https://www.dol.gov/ui/data.pdf) reports initial claims of 197,000 and a four-week average of 198,000; continuing claims rose to 1.716 million. Low layoffs do not resolve company-specific risks. No ordinary SPY quote is substituted for an adjusted total-return benchmark.
+
+NOC's observed $482.50 ask remains below the retained $490 cap and implies approximately 2.43 times base-upside/bear-downside using $430/$610/$720. It remains a research candidate, not a completed replacement recommendation. Full milestone, valuation, earnings and watchlist review is due Friday; the October 1 monthly review is not repeated. Quarterly forecast outcomes remain unresolved. No synchronized performance is certified while cash is unclassified.
+
+Only this operational note is appended. The transaction ledger and automated market files remain unchanged. Priority remains obtaining the broker cash activity and reconciling the $0.52; the three unimplemented exits remain a material process problem and real exposure, not a discretionary all-hold decision or timely exit compliance.
