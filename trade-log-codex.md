@@ -1304,3 +1304,56 @@ October 13–14 filing-index checks found BAC's earnings 8-K and Form 4, and Cis
 [BLS September CPI](https://www.bls.gov/news.release/archives/cpi_10142026.htm) rose 0.6% month over month and 3.7% year over year; [core CPI](https://www.bls.gov/cpi/) rose 0.3% and 2.6%, respectively. This adds inflation and valuation risk; it does not independently direct a trade. SPY's October 13 official close of **$778.01** exceeds its rising **$723.81725** 200-session average. The sampled intraday quote was $769.18. Neither ordinary quote is substituted for the adjusted total-return benchmark.
 
 Executed turnover is zero. No synchronized account/SPY return or aggregate forecast hit rate is certified. This is Wednesday, not a scheduled weekly or monthly review; October 9 and October 1 reviews remain the latest. Only this operational note is appended; the transaction ledger and automated market files remain untouched. The next required input is verified activity for all three cash increases, followed by full reconciliation and renewed assessment of the outstanding exits. No retry may duplicate an order.
+
+
+## 2026-10-15 — Cash reconciliation still blocks exits; new Cisco security risk
+
+**Public rationale:** No order was submitted because Agentic cash remains $1.16 above the public ledger without verified transaction descriptions and posting dates. ADM, BAC and CRM retain their outstanding full-exit decisions; NTAP and CSCO remain provisional holds without additions. Newly reviewed BAC details show that the stable-consumer-credit forecast was correct but the roughly-flat-trading forecast was wrong. Cisco disclosed another actively exploited vulnerability, increasing the risk to its security thesis without yet establishing a quantified financial impairment.
+
+Scheduled manager: **GPT-6 Astra, effective September 23, 2026**. Pulled/rebased before review and publication; read AGENTS.md, committed Strategy v1.1, DEVICE-RECOVERY.md, daily-kickoff.txt and prior memory. Only Agentic, masked ending `3608`, was resolved and queried. Broker observations were approximately 17:10–17:14 UTC / 10:10–10:14 PDT. Strategy and historical entries are unchanged.
+
+### Reconciliation and execution decision
+
+Agentic is an active, accessible individual cash account. Broker cash, authoritative buying power and unleveraged buying power are **$280.18**; unsettled funds and pending deposits are zero. Initial NAV was $1,052.40106938. Final NAV was **$1,051.92450959**, comprising $771.74450959 equities and $280.18 cash. Reported non-equity values were zero. These are broker observations, not reconciled return calculations.
+
+Five holdings and average costs exactly match the September 17 ledger: NTAP 1.226692 at $163.04; ADM 2.441108 at $81.93; BAC 2.432300 at $61.67; CSCO 0.899082 at $109.00; CRM 0.325742 at $260.94. All shares are sellable, with zero holds and intraday fills. Final positions were unchanged. Eleven ordinary equity orders were all filled, latest September 4; today's final order query was empty. Option-order history and open crypto orders were empty, with no further pages. All holdings are active and regular-session/fractional tradable for this account type. No excluded security is held.
+
+The **$279.02** ledger cash leaves the same **$1.16** unexplained difference: previously observed increases of $0.14, $0.38 and $0.64. No cash-activity/dividend endpoint is available to verify their descriptions and posting dates. Requested these details; no answer was available at publication. Dividend arithmetic remains a hypothesis, not a verified posting, and earlier recorded credits must not be duplicated. The advanced/OCO-order view is also unavailable and cannot be certified clear.
+
+AGENTS.md requires a halt on unexplained differences. No preview, submission, cancellation or broker mutation occurred. This operational halt continues to delay required exits; it is not a discretionary hold or evidence of timely exit compliance. Reconcile first, then revalidate decisions against fresh broker state and exact previews. No retry may duplicate orders.
+
+### Closing signals, valuation and exposure
+
+| Holding | October 14 official close | Change from average cost | 200-session average | Decision |
+|---|---:|---:|---:|---|
+| NTAP | $222.20 | +36.29% | $143.603825 | Provisional hold; no add. |
+| ADM | $83.64 | +2.09% | $75.365250 | Full exit after missed October 3 milestone; blocked. |
+| BAC | $51.39 | -16.67% | $55.234000 | Full exit remains required; blocked. |
+| CSCO | $113.64 | +4.26% | $99.240150 | Provisional hold; no add; heightened security-risk review. |
+| CRM | $235.95 | -9.58% | $199.275000 | Earlier full-exit signal remains binding; blocked. |
+
+BAC remains below the $54.2696 loss-exit threshold. CRM's recovery above its $229.6272 exit and $234.846 review thresholds does not erase the prior signal. No exception or milestone extension is granted. Retain the October 5 twelve-week assessments.
+
+At approximately 17:12 UTC, broker quotes times unchanged shares plus broker cash imply weights of NTAP **25.19%**, ADM **19.32%**, BAC **12.00%**, CSCO **9.30%**, CRM **7.56%**. Technology is **42.05%**, infrastructure (NTAP plus CSCO) **34.49%**, and discovery exposure **16.86%**. Technology still prohibits additions; infrastructure has fallen below its purchase cap, but that creates no approved purchase. No appreciation-trim threshold is crossed. Quotes are asynchronous exposure estimates, separate from broker NAV. Holding bid/ask spreads were about 0.92–6.48 basis points; 30-day average volumes were about 2.63–42.36 million shares.
+
+Conditional bear/base/bull monitoring ranges remain NTAP $139/$204/$260, ADM $71/$100/$122, CSCO $90/$140/$165 and CRM $210/$360/$470. None is above its bull case. BAC's prior $55/$75/$90 range remains stale after earnings and cannot support a fresh purchase or exception. No new purchase underwrite or replacement is approved.
+
+### New evidence and forecast accountability
+
+**BAC:** Newly retrieved [SEC-filed release credit details](https://www.sec.gov/Archives/edgar/data/70858/000007085826000481/bac09302026ex991.htm) show consumer net charge-offs of $997 million, down $43 million sequentially and roughly flat year over year. Credit-card charge-offs were 3.22%, versus 3.55% in Q2 and 3.46% a year earlier; both early- and late-stage delinquencies improved year over year. The recorded no-material-consumer-credit-deterioration forecast is therefore **correct** for this report. This does not cure the missed October 3 transition checkpoint or override loss discipline.
+
+The [filed earnings presentation](https://www.sec.gov/Archives/edgar/data/70858/000007085826000481/bac09302026ex992.htm) reports sales and trading revenue of $5.075 billion versus $5.362 billion a year earlier, **down 5.35%**; excluding net debit valuation adjustment, $5.055 billion versus $5.348 billion is **down 5.48%**. I classify the prewritten roughly-flat-year-over-year forecast as **wrong**; no numerical tolerance was prewritten, and a decline exceeding 5% is not credited as flat. Preserve yesterday's classifications: EPS wrong, investment-banking fees correct at reported precision, sequential NII growth correct. This resolves the two previously pending BAC subforecasts without changing their original wording. It is not a portfolio-wide forecast hit rate. A complete earnings-call review is not claimed.
+
+**CSCO:** The [October 14 Secure Email Gateway advisory](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp) confirms active exploitation of CVE-2026-76519, a critical 9.8 vulnerability permitting root-level command execution through crafted attachments on affected configurations. Fixes are available and there is no workaround. Cisco says it contacted affected cloud customers and is conducting remediation/recovery. Updating the Content Scanner Tools can apply the fix without a product restart; managed cloud infrastructure has been updated. This is distinct from the [SD-WAN vulnerability](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU), whose advisory remains October 2 version 1.1. Repeated exploitation challenges the security-control-point thesis. My assessment remains provisional hold/no add because this review establishes neither lost customer demand nor a guidance/margin reduction; tomorrow's weekly review must reassess remediation, retention and security execution. Prior scores are not a fresh purchase authorization. Today's sampled $108.87 quote is below yesterday's close, but no causal attribution is asserted.
+
+**NTAP:** The [issuer archive](https://www.netapp.com/newsroom/press-releases/) still lists the late-September products and early-October partner awards; no newly retrieved quantified monetization milestone was established. Secondary reports attribute October 14 weakness to a Barclays downgrade, but the original research was unavailable; its enterprise-AI and memory-cost claims remain leads to test, not verified operating facts. Maintain the December revenue, margin and annual-guidance tests and no-add decision.
+
+**ADM and CRM:** The [ADM issuer list](https://investors.adm.com/news/2006/default.aspx) still shows the November 3 earnings notice and proposed October 2 joint venture; it supplies no newly retrieved remedy for the missed transition milestone. [Salesforce's issuer blog index](https://www.salesforce.com/blog/content-type/blog/?bc=OTH) confirms an October 13 Service Cloud launch article, but the retrieved summary supplies no paid-conversion, ARR or earnings evidence sufficient for an exit exception. Neither rebound nor product publicity overrides the outstanding exits.
+
+October 14–15 material-filing checks returned BAC's earnings 8-K and no 8-K/10-Q/10-K for the other holdings. Search and archive coverage are limited; the previously unread October 9 Cisco filing remains a research limitation. Fresh broker earnings checks show company-verified ADM November 3, CSCO November 12, NTAP December 1 and BAC January 15, 2027; CRM December 2 remains tentative.
+
+### Market context and next review
+
+The [October 15 Labor Department release](https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20261599.pdf) reports initial claims of 199,000, up 1,000 from the revised prior week; the four-week average is 198,500 and continuing claims are 1.710 million. This supports continued low layoffs but does not remove inflation or valuation risk. SPY's October 14 official close is **$769.60**, above its rising **$724.2137** 200-session average. No unadjusted quote replaces the total-return benchmark.
+
+Executed turnover is zero; no synchronized account/SPY return is certified while cash remains unexplained. No executed trade or verified cash event warrants a data/codex.json row, and automated market files are untouched. The October 1 monthly review remains current. Tomorrow's Friday review should update milestones, valuation, earnings and watchlist evidence, including the two newly resolved BAC forecasts and both Cisco security incidents. The immediate blocker remains the three cash-activity descriptions and posting dates.
