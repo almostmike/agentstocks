@@ -1357,3 +1357,74 @@ October 14–15 material-filing checks returned BAC's earnings 8-K and no 8-K/10
 The [October 15 Labor Department release](https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20261599.pdf) reports initial claims of 199,000, up 1,000 from the revised prior week; the four-week average is 198,500 and continuing claims are 1.710 million. This supports continued low layoffs but does not remove inflation or valuation risk. SPY's October 14 official close is **$769.60**, above its rising **$724.2137** 200-session average. No unadjusted quote replaces the total-return benchmark.
 
 Executed turnover is zero; no synchronized account/SPY return is certified while cash remains unexplained. No executed trade or verified cash event warrants a data/codex.json row, and automated market files are untouched. The October 1 monthly review remains current. Tomorrow's Friday review should update milestones, valuation, earnings and watchlist evidence, including the two newly resolved BAC forecasts and both Cisco security incidents. The immediate blocker remains the three cash-activity descriptions and posting dates.
+
+
+## 2026-10-16 — Friday review; account identity cannot be resolved
+
+**Public rationale:** No order was submitted because the connector did not return an account with the exact nickname Agentic, preventing the identity verification required by the mandate. Previously documented ADM, BAC and CRM exits remain outstanding and must be revalidated after account identity and cash reconciliation are restored. NTAP and CSCO retain provisional hold/no-add research decisions, with Cisco security execution under heightened review. VRT now passes its old price screen, but no replacement is approved without refreshed underwriting and verified portfolio capacity.
+
+Scheduled manager: **GPT-6 Astra, effective September 23, 2026**. Pulled/rebased before review and publication; read AGENTS.md, committed Strategy v1.1, DEVICE-RECOVERY.md, daily-kickoff.txt and prior automation memory. Public market observations below were sampled around 17:15 UTC / 10:15 PDT. No policy amendment or historical rewrite was made.
+
+### Identity halt and reconciliation limits
+
+Repeated get_accounts calls returned no exact Agentic nickname match. Parsing was checked against the connector's structured accounts array; this is an identity-resolution failure, not a conclusion that the account is closed or empty. No account was selected by default, accessibility flag alone, or remembered identifier. No account-specific portfolio, cash, position, restriction or order query was made, and no other account information is published. No preview, order, cancellation or broker mutation occurred.
+
+Consequently, today's account type/state, settled buying power, pending deposits, unsettled funds, positions, restrictions and open orders are **unverified**. Yesterday's observations cannot substitute for a fresh reconciliation. The last documented cash was $280.18 against ledger cash of $279.02, leaving $1.16 in unclassified credits ($0.14, $0.38 and $0.64); these are historical observations, not today's balances. No available cash-activity tool was found to establish their source and posting dates. Dividend arithmetic remains insufficient. Requested restoration/confirmation of the Agentic nickname for masked ending 3608 and the three broker activity descriptions and posting dates; no response was available for this record.
+
+No executed trade or verified cash event warrants a data/codex.json row. Current portfolio weights, sellable shares, position count, concentration compliance, NAV, account returns and weekly broker turnover cannot be certified. This run submitted zero orders; that does not prove there were no external trades. Restoring identity does not by itself resolve the earlier cash discrepancy. Existing blocked exits are a material execution-process problem, not discretionary holds.
+
+### Weekly closing signals and valuation
+
+The following are fresh, account-independent broker market data, compared with the last public average costs. They do not verify continued ownership. Daily split-adjusted history through October 15 was used for 200-session averages.
+
+| Ledger security | October 15 official close | Change from recorded cost | 200-session average | Research decision |
+|---|---:|---:|---:|---|
+| NTAP | $214.70 | +31.69% | $144.130325 | Provisional hold; no add. |
+| ADM | $82.93 | +1.22% | $75.488800 | Prior missed-milestone full exit remains outstanding. |
+| BAC | $51.70 | -16.17% | $55.215750 | Prior full exit remains outstanding. |
+| CSCO | $109.85 | +0.78% | $99.400450 | Provisional hold; no add; security execution risk. |
+| CRM | $246.74 | -5.44% | $199.177550 | Prior closing-loss full exit remains outstanding. |
+
+BAC remains below its $54.2696 default loss-exit threshold and 200-session average. CRM's rebound does not erase its earlier $229.6272 loss-exit signal. No exception or deadline extension is granted. The October 3 ADM/BAC transition failures and October 5 twelve-week assessments remain intact.
+
+Retain conditional monitoring cases of NTAP $139/$204/$260, ADM $71/$100/$122, CSCO $90/$140/$165 and CRM $210/$360/$470. BAC's old $55/$75/$90 cases remain stale after earnings and cannot support a new purchase or exception. None of the four other official closes exceeds its bull case. NTAP's sampled $205.32 is near its unchanged $204 base value; a falling price alone does not supply stronger demand evidence. Cisco's $107.72 ask implies approximately 1.82 times base upside to bear downside under its retained cases, but those cases still require assessment of remediation costs and customer effects. Conditional bear cases are not floors.
+
+Prior monitoring scores remain reference-only: NTAP 74, ADM 62, CSCO 81 and CRM 82. They are not refreshed purchase scores; no score upgrade is awarded from the price decline. BAC's prior 64 is withdrawn from current underwriting pending a full post-earnings valuation and governance assessment. Its existing exit already governs. Portfolio sector, economic-driver and discovery limits cannot be tested against unverified holdings and cash, so no purchase capacity is inferred from yesterday's estimates.
+
+### Weekly milestones, earnings and primary evidence
+
+**NTAP:** The [issuer quarterly results](https://investors.netapp.com/news/news-details/2026/NetApp-Reports-First-Quarter-of-Fiscal-Year-2027-Results/default.aspx) remain the operating baseline. December's revenue conversion, flash/cloud growth, margin and annual-guidance tests remain unresolved. The scoped issuer archive/search refresh did not establish a new quantified monetization milestone or explain the recent price decline. Preserve the original forecasts separately from company guidance; no milestone is marked achieved from a product release or partner award.
+
+**ADM:** The [issuer archive](https://investors.adm.com/news/2006/default.aspx) confirms the November 3 results notice. The missed October 3 evidence requirement supporting the $5.375 annual EPS midpoint is not renewed. Future $1.45–$1.65 quarterly EPS, segment profit above $1 billion and Nutrition profit of at least $160 million tests remain unresolved; they do not postpone the outstanding exit. Archive rendering and search coverage are incomplete, so no exhaustive news clearance is claimed.
+
+**BAC:** Carry forward this week's documented primary-filing outcomes without changing the original forecasts: EPS **wrong**, investment-banking fees **correct at reported precision**, sequential NII growth **correct**, stable consumer credit **correct**, and roughly-flat trading revenue **wrong**. Three of these five resolved BAC subforecasts were correct; this small, defined subset is not a portfolio-wide forecast hit rate. The regulatory charge and negative reported operating leverage warrant the stale-valuation designation. Later favorable NII and credit outcomes do not retroactively meet the October 3 transition deadline or waive the closing-loss exit. No new earnings-call review is claimed today.
+
+**CSCO:** The [October 12 OCP announcement](https://investor.cisco.com/news/news-details/2026/Cisco-Advances-Scalability-and-Openness-at-OCP-2026/default.aspx) reports first G300-based system shipments and P200 systems in production hyperscale environments. This is tangible deployment evidence, but supplies no incremental booked-revenue or margin figure sufficient to raise the valuation. November's revenue, EPS, gross-margin and AI-revenue-conversion tests, followed by Security/Observability or RPO conversion, remain unresolved.
+
+The [Secure Email Gateway advisory](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp) remains October 14 version 1.0: active exploitation, fixes available, cloud infrastructure updated and affected customers contacted for remediation. The separate [SD-WAN advisory](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU) remains October 2 version 1.1; temporary shielding is partial and fixed software is required. Repeated exploitation weakens confidence in the security-control-point thesis. This review establishes no quantified customer losses, retention deterioration or guidance reduction, but their absence from retrieved material is not proof of no damage. Maintain no-add and explicit remediation/retention scrutiny; the outstanding October 9 filing-content limitation remains.
+
+**CRM:** Organic monetization, comparable usage/ARR definitions, integration and balance-sheet discipline remain unresolved quarterly tests. Today's scoped issuer search establishes no new paid-demand or earnings evidence sufficient for an exit exception. Preserve the original December revenue, cRPO, EPS and FCF forecasts; product-launch publicity and price recovery do not satisfy them.
+
+Fresh account-independent broker earnings checks mark **ADM November 3, CSCO November 12, NTAP December 1 and BAC January 15, 2027** as company-verified; **CRM December 2** remains tentative. The October 1 monthly review remains the current monthly review; today is not the first trading day of a month. No fresh synchronized attribution, drawdown or portfolio-wide hit rate is asserted without reconciled account evidence.
+
+### Weekly watchlist and market context
+
+| Candidate | Sampled regular-session price | Retained cap | Review |
+|---|---:|---:|---|
+| PANW | $340.755 | $290 | Above cap; no entry. |
+| NVT | $143.07 | $120 | Above cap; no entry. |
+| ROK | $428.585 | $345 | Above cap; no entry. |
+| NOC | $512.2301; ask $512.79 | $490 | Above cap and inside earnings exclusion window. |
+| VRT | $209.49; ask $209.55 | $225 | Old valuation screen passes; priority research candidate only. |
+| ETN | $394.06; ask $394.27 | $390 | Above cap; no entry. |
+| AVAV | $121.01 | No approved exception | Approximately $6.15 billion capitalization; fails normal universe threshold. |
+
+NOC's [issuer-confirmed October 20 premarket earnings](https://investor.northropgrumman.com/news-releases/news-release-details/northrop-grumman-announces-date-third-quarter-2026-financial) put October 16 and 19 inside the two-trading-day no-initiation window. Do not initiate even if price later falls under its cap.
+
+VRT's retained $190/$320/$400 cases imply about **5.65 times** base upside to bear downside at the sampled ask. This is arithmetic on old cases, not proof of a fresh investment advantage. Its [Q2 release](https://investors.vertiv.com/news/news-details/2026/Vertiv-Reports-Strong-Second-Quarter-2026-with-Diluted-EPS-Growth-of-53-Adjusted-Diluted-EPS-Growth-of-60-Raises-Full-Year-2026-Guidance-Across-All-Key-Metrics/default.aspx) guides Q3 revenue to $3.65–$3.85 billion, adjusted operating margin to 24%–25% and adjusted EPS to $1.77–$1.83. These are issuer benchmarks, not newly adopted portfolio forecasts. Broker earnings date October 28 is company-verified. The [issuer archive](https://investors.vertiv.com/news/) lists an October 14 enterprise-AI announcement, but full text retrieval failed; no incremental monetization is inferred. Before any replacement, refresh normalized valuation, independent demand evidence, milestones, score superiority after friction and the shared infrastructure-driver budget. A lower share price alone cannot complete that work or resolve account identity.
+
+Other broker dates are tentative: NVT October 30, ETN November 3, ROK November 5 and PANW November 18. Prior candidate scores are not fresh approvals. No broker watchlist change was made.
+
+The [Federal Reserve's October 16 production release](https://www.federalreserve.gov/releases/g17/current/default.htm), retrieved directly, reports September industrial production up 0.7% month over month, manufacturing up 0.3%, utilities up 3.5% and utilization at 76.9%, below its long-run average. Output growth supports demand but is not evidence of supplier-specific pricing power. SPY's October 15 official close of **$771.79** exceeds its rising **$724.6334** 200-session average; the sampled regular-session price was $763.49. These prices are not substituted for the adjusted total-return benchmark.
+
+Only this operational/weekly review is appended. The transaction ledger and automated market files remain unchanged. Next action: restore unambiguous Agentic identity, obtain the three cash-credit records, reconcile positions/cash/orders/restrictions fully, then revalidate the outstanding exits against fresh broker evidence and exact previews. Never duplicate orders on a retry.
