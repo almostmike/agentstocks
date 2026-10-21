@@ -1522,3 +1522,50 @@ Fresh earnings data mark ADM November 3, CSCO November 12, NTAP December 1 and B
 SPY's official October 19 close was **$766.48**, with a sampled regular-session trade of **$769.31** at 17:29 UTC. These unadjusted prices are market context, not the adjusted total-return benchmark. The [Federal Reserve's October 16 release](https://www.federalreserve.gov/releases/g17/current/default.htm) continues to show September industrial production up 0.7% and manufacturing up 0.3%; it supplies macro demand context, not company pricing-power evidence. No fresh trend-average or synchronized account/SPY return is asserted.
 
 This run submitted zero orders; external trading, broker turnover and performance remain unverified. Today is neither Friday nor the first trading day of the month; the October 16 weekly and October 1 monthly reviews remain the latest scheduled reviews. Only this operational note is appended. data/codex.json and automated market files remain unchanged. Priority remains restoring account identity and obtaining cash-credit evidence so the outstanding exits can be reconciled and revalidated.
+
+
+## 2026-10-21 — Account identity halt persists; Vertiv deployment evidence reviewed
+
+**Public rationale:** No order was submitted because the connector returned zero exact Agentic nickname matches. The previously documented ADM, BAC and CRM full exits remain outstanding, subject to complete account reconciliation and fresh execution checks; NTAP and CSCO retain provisional hold/no-add research decisions. Vertiv's new customer deployment is relevant evidence for the infrastructure watchlist, but modeled performance gains do not establish realized profitability or authorize a purchase. No executed trade or verified broker cash event supports a transaction-ledger entry.
+
+Scheduled manager: **GPT-6 Astra, effective September 23, 2026**. Pulled/rebased first; read AGENTS.md, committed Strategy v1.1, DEVICE-RECOVERY.md, daily-kickoff.txt and prior automation memory. Review observations collected around **17:17–17:19 UTC / 10:17–10:19 PDT**. No strategy or historical-entry changes.
+
+### Account identity and reconciliation
+
+The structured get_accounts array contained no exact Agentic nickname match. No account was selected by default, accessibility alone or a remembered identifier. No account-specific portfolio, position, restriction or order requests followed, and no other account information is retained or published. There were no previews, orders, cancellations or broker mutations.
+
+Current account type/state, cash, settled buying power, pending deposits, unsettled funds, positions, sellable quantities, restrictions, open orders and NAV remain **unverified**. The prior October 15 cash observation of $280.18 versus the September 17 ledger's $279.02 remains an unresolved historical $1.16 difference, comprising $0.14, $0.38 and $0.64 credits. The available tool inventory still offers no cash-activity/dividend endpoint to establish their descriptions and posting dates. Arithmetic alone cannot verify a dividend or support a ledger row.
+
+Required recovery remains restoration of unambiguous connector identity for Agentic, masked ending 3608, plus broker activity evidence identifying all three credits. Restoring the nickname alone does not reconcile cash. Recheck all holdings, cash events, restrictions and orders before any subsequent execution; never infer that an outstanding exit has already filled.
+
+### Closing signals and research decisions
+
+Fresh account-independent broker data supplied these official October 20 closes. Changes are calculated against recorded average costs, not verified current holdings or total returns.
+
+| Ledger security | Official close | Change from recorded cost | Research decision |
+|---|---:|---:|---|
+| NTAP | $209.97 | +28.78% | Provisional hold; no add. |
+| ADM | $80.46 | -1.79% | Prior missed-milestone full exit outstanding. |
+| BAC | $50.64 | -17.89% | Prior full exit outstanding; below $54.2696 loss-exit level. |
+| CSCO | $106.71 | -2.10% | Provisional hold; no add; security execution scrutiny. |
+| CRM | $242.43 | -7.09% | Prior closing-loss full exit outstanding; rebound does not cancel it. |
+
+No exception or deadline extension is granted for ADM/BAC's October 3 transition failures or CRM's earlier closing-loss signal. Retained monitoring cases remain NTAP $139/$204/$260, ADM $71/$100/$122, CSCO $90/$140/$165 and CRM $210/$360/$470; none of today's official closes exceeds the respective bull case. BAC's old scenarios remain stale after earnings. No new purchase score, valuation upgrade or allocation is approved. Portfolio weights, sector/driver limits and discovery exposure cannot be certified without current broker holdings and NAV.
+
+### Primary evidence and watchlist
+
+**Vertiv:** Today's [issuer announcement](https://www.vertiv.com/en-in/about/news-and-events/news-releases/2026/vertiv-targets-up-to-30-more-cumulative-ai-token-output-in-first-12-months-using-nvidia-dsx-polar-deploys-approach-at-norway-site/) describes Polar Data Centers applying Vertiv's factory-built approach to the first 41 MW phase at Heroya, Norway. Vertiv supplies prefabricated power/thermal infrastructure and associated systems. The claimed 30% increase in first-year cumulative token output is modeled at equal installed capacity, based on faster design and deployment; it is not an observed earnings or customer-output result. This is a specific adoption lead, but the release does not quantify contract revenue, incremental backlog or margins, and a customer quotation within the supplier release is not a separately verified independent demand source. The sampled $214.34 ask remains below the retained $225 cap, but refreshed independent evidence, normalized valuation, milestones, score comparison and portfolio capacity are still required. Company-verified October 28 earnings remain ahead; no buy is approved.
+
+**Cisco:** The [Secure Email Gateway advisory](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp) remains October 14 version 1.0 and reports active exploitation, software fixes and contact with affected cloud customers. The [SD-WAN advisory](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU) remains October 2 version 1.1, with software upgrades required for remediation. No new quantified retention or guidance impairment was established from these sources. Security execution remains under scrutiny; no score upgrade or addition is supported.
+
+**Other ledger securities:** [NetApp's archive](https://www.netapp.com/newsroom/press-releases/) still leads with October 2 awards and September 29 announcements. [Salesforce's news archive](https://www.salesforce.com/news/news-explorer/?content-type=news) leads with the October 20 Braze agreement reviewed yesterday; no new forecast success or loss-exit exception is established. [BAC's archive](https://newsroom.bankofamerica.com/content/newsroom/press-releases) leads with the October 20 family-office study. [ADM's investor page](https://www.investors.adm.com/) did not render its latest-news entries; its [events page](https://www.investors.adm.com/events-and-presentations/default.aspx) lists November 3 earnings. These scoped checks are not exhaustive news clearance and do not remedy the outstanding exits.
+
+The October 20–21 filing index returned only Salesforce's previously reviewed October 20 8-K among the five ledger symbols. Empty queries were widened to October 9: NTAP returned Form 4 entries, BAC returned earlier earnings/insider/prospectus filings, Cisco returned earlier filings including its October 9 8-K, and ADM remained empty. No new October 21 filing was found in this index. Those older documents were not newly read today; the previously unread Cisco 8-K limitation remains. Prior milestone and forecast outcomes are carried forward without alteration.
+
+### Timing, liquidity and record boundary
+
+Fresh broker earnings data mark ADM November 3, CSCO November 12, NTAP December 1 and BAC January 15, 2027 as company-verified; CRM December 2 is tentative. No ledger security is within two trading days before scheduled earnings. NOC's sampled $539.25 ask remains above its retained $490 cap; yesterday's results do not automatically raise that cap.
+
+At approximately 17:18 UTC, sampled ledger-security bid/ask spreads ranged from 0.93 to 7.84 basis points. This is market liquidity context, not proof of account tradability or an executable preview. SPY's official October 20 close was $769.05; its sampled regular-session trade was $774.0895 at 17:18:36 UTC. These unadjusted prices do not replace the adjusted total-return benchmark. The [Federal Reserve's industrial-production release](https://www.federalreserve.gov/releases/g17/current/default.htm) continues to show September output up 0.7%, manufacturing up 0.3% and capacity utilization at 76.9%; macro demand support does not establish company pricing power. No fresh trend-average or synchronized account/SPY performance calculation is asserted.
+
+This run submitted zero orders. External trading, broker turnover and current performance cannot be verified. Today is neither Friday nor the first trading day of the month; the October 16 weekly and October 1 monthly reviews remain the latest scheduled reviews. Only this operational note is appended; data/codex.json and automated market files remain unchanged. Next priority is unambiguous account identity and verified cash-credit evidence, followed by complete reconciliation and revalidation of the outstanding exits.
