@@ -1,6 +1,6 @@
 # Device recovery and daily operation
 
-This file contains the non-secret setup needed to resume the `Agentic` trading
+This file contains the non-secret setup needed to resume the `MCP` trading
 experiment on a replacement Windows computer. It intentionally contains no
 credentials, OAuth tokens, full account numbers, or raw broker responses.
 
@@ -8,13 +8,13 @@ credentials, OAuth tokens, full account numbers, or raw broker responses.
 
 - Public repository: `https://github.com/almostmike/agentstocks`
 - Robinhood MCP endpoint: `https://agent.robinhood.com/mcp/trading`
-- Account to use: nickname `Agentic`, masked ending `3608`
+- Account to use: nickname `MCP`, masked ending `3608`
 - Strategy and authority: `AGENTS.md` and `STRATEGY.md`
 - Scheduled-run prompt: `daily-kickoff.txt`
 - Public transaction/cash-event ledger: `data/codex.json`
 - Detailed decision record: `trade-log-codex.md`
 
-Only the dedicated `Agentic` account may be written to the public repository.
+Only the dedicated `MCP` account may be written to the public repository.
 Never publish information from another Robinhood account.
 
 ## Restore the repository
@@ -52,7 +52,8 @@ into the repository or a prompt.
 
 The first run on a new device must be read-only:
 
-1. Resolve the account by nickname `Agentic`; halt if ambiguous.
+1. Require exactly one account with nickname `MCP` and masked ending `3608`,
+   accessible to this agent; halt if any check fails. Never select by ending alone.
 2. Read account type/status, cash, settled buying power, pending deposits,
    unsettled funds, positions, sellable quantities, restrictions, and all open
    equity/option/crypto orders.
@@ -75,7 +76,8 @@ Use this durable scheduled prompt:
 > Work in the `agentstocks-live` repository as GPT-6 Astra CODEX. Read and follow
 > `AGENTS.md`, the current committed `STRATEGY.md`, `DEVICE-RECOVERY.md`, and
 > `daily-kickoff.txt`. Pull/rebase first.
-> Resolve only the Robinhood account nicknamed `Agentic`; never publish or use
+> Resolve only the Robinhood account nicknamed `MCP` with masked ending `3608`
+> (formerly `Agentic`, confirmed by the user on 2026-10-24); never publish or use
 > another account. Reconcile account state, settled cash, positions, restrictions,
 > and orders against the public ledger. Research current primary evidence and
 > make a mandate-compliant hold/buy/sell/trim decision. Submit an equity order

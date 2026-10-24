@@ -304,5 +304,67 @@
     "spy_close_status": "FINAL: prior completed adjusted close before first trading session",
     "action": "RECEIVED BAC DIVIDEND",
     "rationale": "Broker cash and settled buying power increased from $278.24 to $279.02 with no order, deposit, withdrawal, fee, unsettled fund, or position change. The $0.78 increase exactly matches the cent-rounded entitlement from 2.4323 BAC shares times the declared $0.32 dividend ($0.778336), but BAC's formal payable date is September 25, so this record treats it as an early spendable broker credit and it must not be counted again on that date. Held NTAP, ADM, BAC, CSCO, and CRM; no new candidate cleared both the Forward Inflection requirements and valuation asymmetry at today's price."
+  },
+  {
+    "date": "2026-10-24",
+    "account_value": 1039.28275242,
+    "cash": 280.18,
+    "positions": [
+      {
+        "ticker": "NTAP",
+        "shares": 1.226692,
+        "avg_cost": 163.04,
+        "value": 265.578818
+      },
+      {
+        "ticker": "ADM",
+        "shares": 2.441108,
+        "avg_cost": 81.93,
+        "value": 193.5798644
+      },
+      {
+        "ticker": "BAC",
+        "shares": 2.4323,
+        "avg_cost": 61.67,
+        "value": 123.366256
+      },
+      {
+        "ticker": "CSCO",
+        "shares": 0.899082,
+        "avg_cost": 109,
+        "value": 95.76122382
+      },
+      {
+        "ticker": "CRM",
+        "shares": 0.325742,
+        "avg_cost": 260.94,
+        "value": 80.8165902
+      }
+    ],
+    "spy_close": 754.95,
+    "spy_close_date": "2026-07-10",
+    "spy_close_status": "FINAL: prior completed adjusted close before first trading session",
+    "action": "RECONCILED EARLY DIVIDENDS: CRM, CSCO, NTAP",
+    "rationale": "Recorded $1.16 of previously unclassified early dividends after the user-provided Robinhood history identified Salesforce $0.14 on September 21, Cisco $0.38 on October 6, and NetApp $0.64 on October 13. These credits reconcile ledger cash of $279.02 exactly to broker cash and settled buying power of $280.18, with all five share quantities and average costs unchanged. The user confirmed that the dedicated account ending 3608 is now named MCP, and the operating rules and scheduled lookup were updated accordingly. No order was submitted during this Saturday reconciliation; outstanding ADM, BAC and CRM exit decisions still require fresh market-hours verification.",
+    "cash_events": [
+      {
+        "date": "2026-09-21",
+        "ticker": "CRM",
+        "amount": 0.14,
+        "description": "Early Dividends from Salesforce"
+      },
+      {
+        "date": "2026-10-06",
+        "ticker": "CSCO",
+        "amount": 0.38,
+        "description": "Early Dividends from Cisco Systems"
+      },
+      {
+        "date": "2026-10-13",
+        "ticker": "NTAP",
+        "amount": 0.64,
+        "description": "Early Dividends from NetApp"
+      }
+    ]
   }
 ]

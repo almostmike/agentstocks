@@ -2,3 +2,7 @@ Daily trading check-in. Review current account state and the market,
 decide whether to trade today under the standing mandate in AGENTS.md,
 act if warranted, then update data/codex.json and trade-log-codex.md
 and publish the session record.
+
+Resolve exactly one Robinhood account named MCP with masked ending 3608,
+confirmed by the user on 2026-10-24 as the experiment account formerly called
+Agentic. Verify accessibility and halt on a mismatch; never select by ending alone.

@@ -1620,3 +1620,54 @@ Fresh earnings data mark ADM November 3, CSCO November 12, NTAP December 1 and B
 VRT's sampled $196.39 ask remains below the old $225 entry cap, but its price decline does not supply stronger evidence or refreshed underwriting. October 28 earnings remain company-verified; tomorrow's weekly review should reassess event risk and the recent deployment evidence. NOC's sampled $551.04 ask remains above its $490 cap. Neither candidate is approved for purchase, and portfolio capacity is unverified.
 
 This run submitted zero orders; external trading, broker turnover and current performance cannot be verified. Today is Thursday, neither Friday nor the month's first trading day. The next weekly milestone, valuation, earnings and watchlist review is October 23; the October 1 monthly review remains the latest. Only this operational note is appended. data/codex.json and automated market files remain unchanged.
+
+
+## 2026-10-24 — MCP account identity restored; $1.16 early dividends reconciled
+
+**Public rationale:** Recorded $1.16 of previously unclassified early dividends after the user-provided Robinhood history identified Salesforce $0.14 on September 21, Cisco $0.38 on October 6, and NetApp $0.64 on October 13. These credits reconcile ledger cash of $279.02 exactly to broker cash and settled buying power of $280.18, with all five share quantities and average costs unchanged. The user confirmed that the dedicated account ending 3608 is now named MCP, and the operating rules and scheduled lookup were updated accordingly. No order was submitted during this Saturday reconciliation; outstanding ADM, BAC and CRM exit decisions still require fresh market-hours verification.
+
+Scheduled manager: **GPT-6 Astra, effective September 23, 2026**. This user-requested account-recovery and cash-reconciliation session took place approximately **16:08–16:13 UTC / 09:08–09:13 PDT**, Saturday, October 24. Pulled/rebased first and read the operating instructions and committed Strategy v1.1. No investment-policy amendment or historical entry rewrite was made.
+
+### Account identity amendment
+
+The user confirmed that the dedicated experiment account is now nicknamed **MCP** and explicitly authorized updating the rules. A fresh broker account listing uniquely matched **MCP plus masked ending 3608**, reported this agent's access, and showed an active, non-deactivated cash individual account. The connection was responsive; the prior identity blocker was the nickname mismatch.
+
+AGENTS.md, DEVICE-RECOVERY.md and daily-kickoff.txt now require the new nickname together with ending 3608 and accessibility. The existing weekday automation's prompt was updated through the app and its saved configuration verified. Its schedule, model, reasoning setting, project, working directories and active status were preserved. The automation's display name remains unchanged. Historical Agentic references retain the name used at the time. No other account was queried beyond the minimal identity listing or included in the public record.
+
+### Verified cash events and reconciliation
+
+The user supplied a one-page Robinhood account-history PDF with the account filter set to MCP. Visual inspection established these descriptions, dates and amounts; the corresponding new credits are recorded once in this session's cash_events array:
+
+| Broker history date | Broker description | Amount | Treatment |
+|---|---|---:|---|
+| September 21, 2026 | Early Dividends from Salesforce | $0.14 | Newly classified and recorded today. |
+| October 6, 2026 | Early Dividends from Cisco Systems | $0.38 | Newly classified and recorded today. |
+| October 13, 2026 | Early Dividends from NetApp | $0.64 | Newly classified and recorded today. |
+
+The history shows month/day; the year follows the experiment chronology and matching 2026 broker orders. The PDF also confirms the already-recorded BAC $0.78 credit dated September 9, ADM $1.27 dated August 21 and PNC $1.17 dated July 22. These posting dates are supplementary evidence, distinct from the dates those credits were reconciled in the ledger. They are not recorded a second time. The original PDF, personal header and rendered image are not published.
+
+**Cash bridge:** $279.02 last recorded cash + $0.14 + $0.38 + $0.64 = **$280.18**, exactly equal to fresh broker cash and authoritative/unleveraged buying power. A full cash cross-check also closes: $1,000 inception capital - $1,283 purchase notionals + $558.80 sale proceeds + $4.38 total verified early dividends = $280.18. No residual cash discrepancy remains. No deposit, withdrawal or fee is invented to balance the books.
+
+This is one October 24 reconciliation row, with the actual event dates retained separately. Historical rows and their execution-time values are unchanged; no historical NAV is reconstructed or guessed.
+
+### Broker before/after verification
+
+Initial and final reads agreed: **$1,039.28275242 account value**, **$759.10275242 equity value**, **$280.18 cash and settled/unleveraged buying power**, zero unsettled funds and pending deposits, and zero option, crypto, futures, fixed-income, mutual-fund and event-contract values. No broker action changed the account during this session.
+
+| Holding | Shares | Average cost | Session position value |
+|---|---:|---:|---:|
+| NTAP | 1.226692 | $163.04 | $265.57881800 |
+| ADM | 2.441108 | $81.93 | $193.57986440 |
+| BAC | 2.432300 | $61.67 | $123.36625600 |
+| CSCO | 0.899082 | $109.00 | $95.76122382 |
+| CRM | 0.325742 | $260.94 | $80.81659020 |
+
+All quantities and costs match the September 17 ledger. All shares are sellable, with no sell, transfer, option-event or stock-grant holds and no intraday fills. The holdings are active and fractional/individual-account tradable; the session remains subject to the regular-hours-only policy. The connector does not expose per-position market values here, so values above use shares times the latest broker quote (October 23 after-hours timestamps, 20:13–23:59 UTC). Their exact sum equals the broker equity value; they are immutable reconciliation marks, not live dashboard prices.
+
+The complete ordinary equity history contains 11 filled orders, latest September 4, with no new or working equity orders and no further pages. Option order history and open crypto orders are empty with no further pages. Final position and equity-order reads are unchanged. An advanced/OCO endpoint remains unavailable; that limitation is not represented as a successful advanced-order query. No preview, placement, cancellation or other broker mutation occurred.
+
+### Performance and next trading session
+
+Account total return from the exact $1,000 inception NAV is **+3.928275242%**, including the now-identified dividends. The immutable ledger SPY baseline remains $754.95 on July 10. The latest automated display snapshot is dated October 22 and reports +1.444742% SPY total return using its consistently rebased adjusted-price series; it is an unofficial display feed, not a contemporaneous broker benchmark. No synchronized active-return figure is asserted from mismatched dates or differently rebased prices. Neither market.json nor market-history.json was manually changed; the next automated marking uses the reconciled cash balance. Historical display rows may retain the previously unclassified cash omission; they are not silently rewritten here.
+
+The identity and cash-reconciliation blockers are resolved. The previously documented **ADM, BAC and CRM full-exit decisions remain outstanding**, with no exception or deadline extension. NTAP and CSCO retain their last provisional hold/no-add research decisions. This recovery session does not claim a new full investment or weekly review. Saturday is outside the strategy's execution window; no queued order was submitted. The next regular-hours review must refresh primary evidence, holdings, cash, restrictions, all available order checks and exact previews before acting, and include any outstanding weekly milestone, valuation, earnings and watchlist work. Do not mistake successful reconciliation for proof that an exit has executed.

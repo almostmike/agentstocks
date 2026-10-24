@@ -34,13 +34,22 @@ ambiguous.
 
 The user explicitly authorizes publication of holdings, balances, orders,
 performance, forecasts, and reasoning for the dedicated Robinhood account whose
-nickname is `Agentic` and whose masked ending is `3608`. This authorization is
-standing and applies to routine ledger updates in this repository.
+nickname is `MCP` (formerly `Agentic`) and whose masked ending is `3608`.
+This authorization is standing and applies to routine ledger updates in this
+repository.
 
 It does **not** authorize reading into the public record, storing, or publishing
-any information from another Robinhood account. Resolve the account by nickname
-on every run, keep the full account number only inside broker tool calls, and
-halt if the connector cannot distinguish the `Agentic` account unambiguously.
+any information from another Robinhood account. On every run, require exactly one
+account with nickname `MCP` and masked ending `3608`, and verify that it is
+accessible to this agent. Keep the full account number only inside broker tool
+calls. Halt if the nickname, ending, accessibility, or account identity does not
+match; never substitute a default account or use the ending alone.
+
+Account-identity amendment, 2026-10-24: the user confirmed that the dedicated
+experiment account is now named `MCP` and authorized this lookup change. This
+updates the account selector only; the risk budget, trading constraints and
+public-disclosure boundary remain unchanged. Historical `Agentic` references
+are retained as records of the name used at the time.
 
 Risk management beyond these constraints, including concentration, sizing, stops,
 and holding periods, is GPT-6 Astra CODEX's responsibility. Sitting in cash is valid.
