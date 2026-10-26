@@ -1671,3 +1671,76 @@ The complete ordinary equity history contains 11 filled orders, latest September
 Account total return from the exact $1,000 inception NAV is **+3.928275242%**, including the now-identified dividends. The immutable ledger SPY baseline remains $754.95 on July 10. The latest automated display snapshot is dated October 22 and reports +1.444742% SPY total return using its consistently rebased adjusted-price series; it is an unofficial display feed, not a contemporaneous broker benchmark. No synchronized active-return figure is asserted from mismatched dates or differently rebased prices. Neither market.json nor market-history.json was manually changed; the next automated marking uses the reconciled cash balance. Historical display rows may retain the previously unclassified cash omission; they are not silently rewritten here.
 
 The identity and cash-reconciliation blockers are resolved. The previously documented **ADM, BAC and CRM full-exit decisions remain outstanding**, with no exception or deadline extension. NTAP and CSCO retain their last provisional hold/no-add research decisions. This recovery session does not claim a new full investment or weekly review. Saturday is outside the strategy's execution window; no queued order was submitted. The next regular-hours review must refresh primary evidence, holdings, cash, restrictions, all available order checks and exact previews before acting, and include any outstanding weekly milestone, valuation, earnings and watchlist work. Do not mistake successful reconciliation for proof that an exit has executed.
+
+
+## 2026-10-26 — Account reconciled; outstanding exits reviewed but not executed
+
+**Public rationale:** MCP cash and all five holdings reconcile exactly to the October 24 ledger, with no new cash event or trade. The research decision remains to exit ADM, BAC and CRM under their previously triggered rules, and hold NTAP and CSCO without additions. Read-only previews confirmed the proposed sell quantities without broker alerts, but CRM's quote and disclosure prices differed and require a fresh preview. The assistant cannot submit securities transactions; the user must execute any orders in Robinhood, and no exit is represented as completed.
+
+Scheduled manager: **GPT-6 Astra, effective September 23, 2026**. Reviewed approximately **17:15–17:22 UTC / 10:15–10:22 PDT**, during regular market hours. Pulled/rebased first; read AGENTS.md, committed Strategy v1.1, DEVICE-RECOVERY.md, daily-kickoff.txt and automation memory. This note also completes the outstanding weekly milestone, valuation, earnings and watchlist review; no October 23 review was present in the log or memory. No policy amendment or historical rewrite is made.
+
+### Reconciliation and restrictions
+
+Fresh account discovery uniquely matched nickname **MCP**, masked ending **3608**, accessible to this agent, active and non-deactivated, cash individual account. No other account portfolio was accessed. Cash, authoritative buying power and unleveraged buying power are all **$280.18**, exactly matching the latest ledger. Unsettled funds and pending deposits are zero. All non-equity asset values are zero.
+
+| Holding | Shares and sellable shares | Average cost | October 23 official close | Change from cost |
+|---|---:|---:|---:|---:|
+| NTAP | 1.226692 | $163.04 | $215.48 | +32.16% |
+| ADM | 2.441108 | $81.93 | $80.14 | -2.18% |
+| BAC | 2.432300 | $61.67 | $50.56 | -18.02% |
+| CSCO | 0.899082 | $109.00 | $106.50 | -2.29% |
+| CRM | 0.325742 | $260.94 | $248.57 | -4.74% |
+
+Quantities and costs match the ledger exactly. There are no sell, transfer, stock-grant or option-event holds, pending option-event shares, or intraday fills. All five securities are active, fractional and individual-account tradable, with no reported halt. The complete ordinary equity history contains 11 filled orders, latest September 4, with no further pages or working orders. Option-order history and open crypto orders are empty with no further pages. An advanced/OCO endpoint remains unavailable; those orders are not independently certified.
+
+Initial broker NAV was $1,052.6349788662. Final NAV was **$1,052.4156749**, comprising $772.2356749 equities and $280.18 cash. Final position and equity-order reads were unchanged. Price movement explains the NAV change; no new cash event is inferred. Account return from exact $1,000 inception capital is **+5.24156749%**. No synchronized active return is asserted without a matching adjusted SPY observation. The immutable $754.95 July 10 SPY baseline and automated market files are unchanged.
+
+### Decisions and read-only order preparation
+
+ADM's October 3 transition milestone was missed; waiting for November earnings does not renew it. BAC's missed milestone and closing-loss exit remain outstanding, with its latest close still below the $54.2696 default-exit threshold. CRM's recovery does not erase the previously triggered $229.6272 closing-loss exit. No exception or deadline extension is granted. These are outstanding sell recommendations, not discretionary holds or executed orders.
+
+Prepared full-position, regular-hours, good-for-day market-sell simulations: **ADM 2.441108 shares; BAC 2.432300 shares; CRM 0.325742 shares**. Fractional limits are not supported by this connector; market orders have no guaranteed execution price. Each preview echoed the exact symbol, side, type and quantity and returned no broker alerts. The broker did not require customer approval for these previews, but no placement call was made. Selling the three positions in full would leave two stocks; proceeds must not be reinvested before verified T+1 settlement.
+
+The preview's required market-data disclosures were:
+
+- ADM: Bid $79.84 × 100 Q · Ask $79.88 × 300 Q · Last $79.86 × 100 D. Updated 1:20 PM ET.
+- BAC: Bid $50.88 × 2800 N · Ask $50.89 × 1300 V · Last $50.89 × 100 D. Updated 1:21 PM ET.
+- CRM: Bid $244.75 × 100 K · Ask $244.91 × 200 Q · Last $244.82 × 100 K. Updated 1:21 PM ET.
+
+CRM's separate preview quote field reported $245.095 at 17:20:16 UTC, inconsistent with the disclosure's $244.82 last at 13:21 ET. That mismatch prevents treating the preview as an exact, current execution estimate. Refresh all order checks and prices in Robinhood before execution. No pending trade approval, cancellation or order was created. The user must perform securities transactions; this execution limitation is separate from the now-resolved identity and cash issues.
+
+NTAP and CSCO remain hold/no-add. Sampled quote-based weights were approximately **26.07% NTAP, 43.10% technology, 35.52% shared infrastructure driver and 17.03% discovery positions**. These estimates use one quote batch and its derived NAV, not per-position broker marks. None reaches the 30% position, 45% sector or 40% driver trim threshold. Technology exceeds its 40% purchase cap and the shared driver exceeds its 35% purchase cap, preventing additions to those exposures.
+
+### Weekly evidence, valuation and forecast review
+
+**NTAP:** [Fiscal Q1 results](https://investors.netapp.com/news/news-details/2026/NetApp-Reports-First-Quarter-of-Fiscal-Year-2027-Results/default.aspx) reconfirm $2.03 billion revenue, 47% all-flash growth and 28% public-cloud growth. The [issuer archive](https://www.netapp.com/newsroom/press-releases/) still leads with October 2 awards and September 29 products. No new quantified monetization milestone is established. December revenue conversion, flash/cloud growth, margins and annual guidance remain unresolved tests. Retain $139/$204/$260 bear/base/bull cases and reference score 74; the sampled $223.70 price exceeds the base case, so no add or valuation upgrade. Broker trailing P/E was approximately 30.4, not a substitute for normalized forward economics.
+
+**CSCO:** [October 12 deployment evidence](https://investor.cisco.com/news/news-details/2026/Cisco-Advances-Scalability-and-Openness-at-OCP-2026/default.aspx) confirms first G300 systems shipping and P200 systems in production. This supports the infrastructure thesis without proving incremental earnings. November revenue, EPS, gross-margin and AI-revenue conversion tests remain unresolved, followed by Security/Observability or RPO conversion. Both [Secure Email](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp) and [SD-WAN](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU) vulnerabilities retain remediation scrutiny; Secure Email's advisory still reports active exploitation. No quantified customer-retention or guidance impairment was established. The October 9 8-K content again returned unavailable. Retain reference score 81 and $90/$140/$165 cases. At the sampled $110.62 ask, base-upside/bear-downside is about 1.42, below 1.5, and price exceeds the $110 entry cap. No addition is supported.
+
+**ADM:** The issuer news pages did not render usable recent entries. The November 3 earnings date is broker company-verified. Retain the missed October 3 milestone and outstanding exit; future quarterly EPS $1.45–$1.65, segment profit above $1 billion and Nutrition profit at least $160 million remain unresolved forecasts, not an extension. Reference score 62 and $71/$100/$122 cases remain historical monitoring inputs, not a purchase approval.
+
+**BAC:** The October 23 8-K Items 3.03, 5.03 and 8.01 were read through the filing connector. It issued 80,000 Series WW preferred shares with $25,000 liquidation preference each, a $2 billion aggregate preference, through 2 million depositary shares. The 7.2% preferred terms condition common distributions if preferred dividends are not paid; the filing does not establish that such a failure occurred. This financing is not a new earnings milestone. Today's [November 5 conference notice](https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/10/bank-of-america-to-participate-in-the-bancanalysts-association-o.html) contains no reported conference outcome. Carry forward the previously documented Q3 forecast outcomes: EPS wrong, investment-banking fees correct at reported precision, sequential NII correct, stable consumer credit correct, roughly-flat trading revenue wrong. Three of five resolved BAC subforecasts is not a portfolio-wide hit rate. The old $55/$75/$90 valuation remains stale; no fresh score or exit exception is approved. The linked Q3 release PDF failed retrieval today; no new full earnings-call review is claimed.
+
+**CRM:** The [Braze agreement](https://www.salesforce.com/news/press-releases/2026/10/20/salesforce-signs-definitive-agreement-to-acquire-braze/) still anticipates FY2028 closing and no FY27 guidance change. Acquisition plans and October 22 commerce recognition do not establish organic monetization or waive the prior exit. December revenue, cRPO, EPS and FCF forecasts remain unresolved, as do comparable usage/ARR definitions and integration discipline. Retain $210/$360/$470 reference cases and historical score 82; neither authorizes a loss-rule exception.
+
+The October 22–26 filing index found BAC's October 23 8-K plus insider/prospectus entries and CRM's October 23 Form 4. Empty queries for other holdings were widened to October 9: NTAP insider filings and earlier Cisco filings were returned; ADM remained empty. Insider-form contents were not assessed. Source retrieval is limited and does not constitute exhaustive news clearance. No new portfolio forecast is marked achieved.
+
+Upcoming company-verified earnings: **ADM November 3, CSCO November 12, NTAP December 1, BAC January 15, 2027**. **CRM December 2 is tentative.** November/December forecasts retain their original dates and thresholds. This is not the first trading day of a month; the October 1 monthly review remains the latest monthly review.
+
+### Weekly watchlist and market context
+
+| Candidate | Sampled ask | Retained entry cap | Decision |
+|---|---:|---:|---|
+| PANW | $391.00 | $290 | Above cap; no entry. |
+| NVT | $131.49 | $120 | Above cap; no entry. |
+| ROK | $432.32 | $345 | Above cap; no entry. |
+| NOC | $561.37 | $490 | Above cap; no entry. |
+| VRT | $201.19 | $225 | No entry within two trading days of verified October 28 earnings. |
+| ETN | $374.92 | $390 | Below old cap, but shared-driver purchase capacity exhausted; no fresh underwrite. |
+| AVAV | $124.83 | None | Broker capitalization approximately $6.33 billion, below normal $10 billion eligibility threshold. |
+
+VRT's [October 21 Polar deployment release](https://www.vertiv.com/en-in/about/news-and-events/news-releases/2026/vertiv-targets-up-to-30-more-cumulative-ai-token-output-in-first-12-months-using-nvidia-dsx-polar-deploys-approach-at-norway-site/) describes a first 41 MW phase and modeled output benefits, not realized earnings. Reassess reported orders, margins and cash conversion after earnings. Neither VRT nor ETN gains approval from crossing an old price cap; refreshed independent demand evidence, normalized valuation, score and exposure capacity remain required. No candidate score or cap is raised.
+
+SPY's October 23 official close of **$759.97** exceeds its rising 200-session average of **$727.00635** (previously $726.65440), calculated from split-adjusted broker daily bars through October 23. All holdings except BAC also close above their 200-session averages. This constructive broad trend does not override company exits or entry constraints. The [Federal Reserve calendar](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm) schedules the next FOMC meeting for October 27–28; no outcome is presumed. Ordinary SPY quotes are not substituted for total-return data.
+
+There were zero submitted orders and zero executed turnover in this session. No trade or new verified cash event warrants a data/codex.json row. Only this operational review is appended; automated market marking remains responsible for price-only changes. Next priority is user execution of any retained exits after fresh broker checks, followed by fill and T+1 cash reconciliation before another ledger update. Never assume a recommendation or preview is an executed trade.
