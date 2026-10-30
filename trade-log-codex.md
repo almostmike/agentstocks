@@ -1899,3 +1899,49 @@ SPY's October 28 official close of **$772.31** exceeds its rising 200-session av
 There were **zero previews, placements, cancellations or other broker mutations**. The assistant cannot submit securities transactions; the user must execute any retained recommendations in Robinhood after fresh account, order and preview checks. Earlier previews remain stale and are not orders. Selling all ADM, BAC and CRM would leave NTAP and CSCO; verify actual fills and T+1 settlement before recording transactions or reinvesting proceeds.
 
 Only this operational review is appended. **No data/codex.json row** is warranted because there was no execution or newly verified cash event. Price-only changes remain the automated market workflow's responsibility. Tomorrow's weekly review should reassess Cisco remediation, supplier conversion of the stronger external demand signal, valuation, earnings and the watchlist without renewing missed deadlines.
+
+
+## 2026-10-30 — User-executed ADM, BAC and CRM exits verified; execution limitation disclosed
+
+**Public rationale:** The user executed the previously documented full exits in ADM, BAC and CRM, and Robinhood confirms that all three market sell orders filled on October 30 with no fees. ADM and BAC had missed their transition milestones, while BAC and CRM also retained binding closing-loss exit signals; no exception or deadline extension was granted. The sales added $384.31 to cash, leaving NTAP and CSCO, $664.49 total cash and $280.18 settled buying power while sale proceeds await T+1 settlement. No replacement purchase is approved in this execution-reconciliation session; a market decline alone does not satisfy the strategy’s evidence, valuation and portfolio-construction requirements.
+
+Scheduled manager: **GPT-6 Astra, effective September 23, 2026**. This is a user-triggered execution-reconciliation session, with completed fills verified approximately **13:51–13:52 UTC / 06:51–06:52 PDT**, following a pre-open check around 13:10 UTC. Pulled/rebased before recording; the committed operating files and Strategy v1.1 are unchanged from the prior review. No strategy amendment. The scheduled Friday milestone, valuation, earnings and watchlist review remains due; this narrower reconciliation does not claim to complete it.
+
+### Decision ownership and the human execution dependency
+
+The investment decisions and research remain the scheduled manager's responsibility. The user explicitly reaffirmed that division of labor: GPT-6 Astra makes the investment call; the user offers availability to execute it. Today's call is **no replacement purchase at this point**, retaining NTAP and CSCO without additions pending fresh underwriting. A broad market decline is not, by itself, a purchase thesis or a reason to deploy cash.
+
+**OpenAI appears to no longer permit this assistant to trade independently in the current setup.** That describes the assistant's observed execution restriction, not a verified announcement of a new OpenAI-wide policy or its effective date. The broker connection remains functional and the assigned account is accessible. No broker placement rejection occurred in these sessions because the assistant did not attempt placement. Earlier agent-initiated executions remain in the historical record; they are not rewritten or attributed to the user.
+
+The practical result, in the user's words, is that the **“human meatpuppet” must execute the recommended trades at his convenience**. These three sales were placed by the user in Robinhood, not by GPT-6 Astra. Research, recommendations, broker verification and publication continue here, but execution depends on human availability. This introduces timing and price differences between recommendation and fill; the experiment's actual returns include those differences. It does not expand the mandate or waive settlement, exclusions, position limits or entry checks.
+
+### Verified orders and cash reconciliation
+
+Exactly one account matched **MCP, masked ending 3608**, active, accessible to this agent and cash individual. No other account portfolio was queried. The pre-open snapshot showed ADM and CRM sell orders confirmed but unfilled, with their full quantities reserved; BAC had not yet been submitted in that snapshot. A BAC-filtered retry failed, followed by a successful complete-history reread confirming that state. After the user's follow-up, a fresh read confirmed all three fills, including the subsequently submitted BAC order. No duplicate order was placed by this assistant.
+
+| User-placed sale | Shares filled | Average fill price | Fill time, PDT | Cash proceeds, rounded to cents | Broker fees |
+|---|---:|---:|---|---:|---:|
+| ADM | 2.441108 | $76.500000 | 06:30:03.342 | $186.74 | $0.00 |
+| CRM | 0.325742 | $231.340000 | 06:30:03.301 | $75.36 | $0.00 |
+| BAC | 2.432300 | $50.245100 | 06:50:37.397 | $122.21 | $0.00 |
+
+All three orders are **filled**, share-based market sells, regular hours, good for day, with broker submission source **user**. BAC filled in two components, 2.000000 and 0.432300 shares, at the same price and timestamp. The other sales each have one execution. The quantities exactly close the prior ledger positions; no partial residual remains.
+
+The unrounded execution products are ADM $186.744762, CRM $75.35715428 and BAC $122.21115673. Rounded proceeds sum to **$384.31**, exactly reconciling prior cash **$280.18** to new broker cash **$664.49**. No additional dividend, deposit, withdrawal or unexplained adjustment is needed. The three equity orders were filled on the final order read without pagination; the final positions read contains only NTAP and CSCO.
+
+Authoritative buying power and unleveraged buying power remain **$280.18**. Broker unsettled funds are **$384.31**, pending deposits zero and non-equity values zero. Under [Robinhood's T+1 settlement rule](https://robinhood.com/us/en/support/articles/settlement-and-buying-power/), Friday sales would normally settle Monday, November 2; that is an expectation, not verified settlement. The sale proceeds must not be spent until authoritative buying power confirms availability. The existing $280.18 is settled, but available cash alone does not authorize a new investment.
+
+### Remaining portfolio and performance
+
+| Remaining holding | Shares | Average cost | Sampled regular-session price | Recorded value |
+|---|---:|---:|---:|---:|
+| NTAP | 1.226692 | $163.04 | $205.915 | $252.59428318 |
+| CSCO | 0.899082 | $109.00 | $105.170 | $94.55645394 |
+
+The connector's positions endpoint supplies no per-position market value. The recorded values therefore use broker quote times **13:51:43.950 UTC for NTAP** and **13:51:54.296 UTC for CSCO**, multiplied by verified quantities. They sum exactly to the separately returned broker equity value **$347.15073712**. Adding cash gives broker NAV **$1,011.64073712**. The execution-reconciliation record is immutable; later price changes belong to the automated market workflow.
+
+Account return from exact $1,000 inception capital is **+1.164073712%**. The $754.95 July 10 inception SPY adjusted baseline is preserved. The sampled SPY regular-session price of $760.29 is an ordinary quote, not a synchronized total-return observation, so no current SPY total return or active return is fabricated. Sale proceeds are portfolio cash, not an external contribution. Using displayed average costs gives approximate realized trading losses of $13.26 ADM, $27.79 BAC and $9.64 CRM before dividend attribution; those estimates are not broker tax-lot figures or a monthly attribution report.
+
+The outstanding exits are now completed. ADM's missed October 3 milestone, BAC's missed milestone and closing-loss signal, and CRM's prior closing-loss signal remain the reasons for the sales; today's price decline did not create those decisions. Two permitted equities remain, with no borrowing or prohibited security. No replacement underwrite, new score, preview or order is approved in this follow-up. A refreshed investment case and portfolio-capacity check are required before recommending any buy, including use of the already settled cash.
+
+Appended exactly one completed-session object to **data/codex.json** and this detailed record to **trade-log-codex.md**. No raw connector response, full account identifier or credential is stored. Historical records and automated market files are unchanged.
