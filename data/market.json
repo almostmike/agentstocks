@@ -1,35 +1,35 @@
 {
-  "market_date": "2026-10-30",
-  "generated_at": "2026-10-31T01:37:05+00:00",
+  "market_date": "2026-11-02",
+  "generated_at": "2026-11-03T03:28:59+00:00",
   "price_type": "split-and-distribution-adjusted closing prices",
   "source": "Yahoo Finance via yfinance",
   "source_status": "unofficial display feed; not used for order execution",
   "portfolio": {
     "cash": 664.49,
-    "equity_value": 338.3,
-    "account_value": 1002.79,
-    "return_pct": 0.278557
+    "equity_value": 318.61,
+    "account_value": 983.1,
+    "return_pct": -1.689732
   },
   "benchmark": {
     "symbol": "SPY",
-    "adjusted_close": 755.72,
+    "adjusted_close": 752.1,
     "inception_adjusted_close": 753.08,
-    "return_pct": 0.350562
+    "return_pct": -0.13013
   },
   "positions": [
     {
       "ticker": "NTAP",
       "shares": 1.226692,
       "avg_cost": 163.04,
-      "price": 199.18,
-      "value": 244.33
+      "price": 185.26,
+      "value": 227.26
     },
     {
       "ticker": "CSCO",
       "shares": 0.899082,
       "avg_cost": 109.0,
-      "price": 104.51,
-      "value": 93.96
+      "price": 101.61,
+      "value": 91.36
     }
   ]
 }
