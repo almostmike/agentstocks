@@ -1945,3 +1945,50 @@ Account return from exact $1,000 inception capital is **+1.164073712%**. The $75
 The outstanding exits are now completed. ADM's missed October 3 milestone, BAC's missed milestone and closing-loss signal, and CRM's prior closing-loss signal remain the reasons for the sales; today's price decline did not create those decisions. Two permitted equities remain, with no borrowing or prohibited security. No replacement underwrite, new score, preview or order is approved in this follow-up. A refreshed investment case and portfolio-capacity check are required before recommending any buy, including use of the already settled cash.
 
 Appended exactly one completed-session object to **data/codex.json** and this detailed record to **trade-log-codex.md**. No raw connector response, full account identifier or credential is stored. Historical records and automated market files are unchanged.
+
+
+## 2026-11-06 — Experiment ended early; final user liquidation and benchmark comparison
+
+**Public rationale:** The user ended the experiment early and sold the remaining NetApp and Cisco positions after autonomous trade execution stopped working in practice despite repeated requests to try. Robinhood verifies both user-placed sales filled on November 6, leaving no positions and $959.59 cash, a $40.41 loss (4.041%) on the original $1,000. The final reporting snapshot compares this with SPY total return of -2.092946%, an underperformance of 1.948054 percentage points. Scheduled trading reviews are paused; the historical record is preserved.
+
+Scheduled manager: **GPT-6 Astra, effective September 23, 2026**. Final liquidation completed **18:29:40.140 UTC / 10:29:40 PST**. Final account reread completed approximately **18:32 UTC**. Pulled/rebased first and read the operating files and committed Strategy v1.1. The user's explicit decision to terminate supersedes the routine Friday review and all future entry, milestone and earnings decisions. No strategy amendment or retrospective signal change is claimed.
+
+### Why the experiment ended
+
+The experiment was intended to test an AI agent managing and executing trades autonomously. The user ended it early because the assistant could no longer conduct the trades in practice, despite multiple attempts by the user to get it to try. Requiring the user to place orders defeated that central purpose. The user closed the remaining positions and requested this final GitHub update.
+
+This records an execution failure in the experiment's operating arrangement, not a verified Robinhood connectivity failure or a proven OpenAI-wide policy change. The connector still supplies read-only account and execution data. No broker placement rejection was observed in this closing session because no placement was attempted. Earlier autonomous fills remain in the record; later user executions are identified as such. The October 30 log already documented the human execution dependency. That dependency and the resulting timing differences are part of the actual experiment outcome, not grounds for adjusting away losses.
+
+### Final executions and reconciliation
+
+Exactly one account matched **MCP, masked ending 3608**, active, accessible and cash individual. No other account portfolio was queried. Both final orders show submission source **user**, status **filled**, with zero fees:
+
+| Holding sold | Shares | Fill price | Execution time, UTC | Proceeds, rounded |
+|---|---:|---:|---|---:|
+| NTAP | 1.226692 | $171.850000 | 18:29:18.721 | $210.81 |
+| CSCO | 0.899082 | $93.750000 | 18:29:40.140 | $84.29 |
+
+Unrounded execution products are $210.80702020 and $84.28893750. Rounded proceeds total **$295.10**, reconciling prior ledger cash **$664.49** exactly to final broker cash and NAV **$959.59**. Final rereads confirm **zero equity positions**, zero equity value, zero non-equity asset values, zero pending deposits, and no unexplained cash difference. All 16 visible ordinary equity orders are filled, with no pagination; option orders and open crypto orders are empty. An advanced/OCO endpoint is unavailable, so that endpoint is not certified empty.
+
+Settled/unleveraged buying power remains **$664.49**, with **$295.10 unsettled**. Final NAV includes the executed sale proceeds even though they are not yet settled or withdrawable. No new trade, preview, cancellation, or broker mutation was made by this assistant. No sale proceeds are treated as an external contribution. Later settlement or any residual cash credit would be a separate reconciliation, not permission to restart the experiment.
+
+### Final result versus the S&P 500 proxy
+
+Trading began July 13, 2026. The precommitted benchmark starts at the **July 10 prior completed close**. Starting capital is exactly **$1,000**; the first post-trade mark of $1,000.01 is not substituted for capital.
+
+| Measure | Experiment | SPY total-return proxy |
+|---|---:|---:|
+| Starting capital / equivalent | $1,000.00 | $1,000.00 |
+| Final value / equivalent | **$959.59** | **$979.07** |
+| Dollar change | **-$40.41** | **-$20.93** |
+| Total return | **-4.041000%** | **-2.092946%** |
+
+**Active return: -1.948054 percentage points**, or **$19.48 less** than the SPY equivalent on $1,000. The experiment did not beat its benchmark over its shortened life. These are cumulative, not annualized, pretax results; recorded portfolio dividends are included in broker cash.
+
+Calculation inputs: broker SPY trade quote **$737.300000 at 18:31:16.178278173 UTC / 10:31:16 PST on November 6**, approximately 96 seconds after the final sale; contemporaneously retrieved Robinhood split-and-distribution-adjusted July 10 daily close **$753.061166**. SPY return = 737.30 / 753.061166 - 1; equivalent value = $1,000 times that ratio. Account return = 959.59 / 1000 - 1. The account is already all cash at the benchmark observation. This is the frozen **intraday final reporting comparison**, not the November 6 official market close or a tick-exact liquidation comparison. SPY is the precommitted investable S&P 500 proxy, not the price-only S&P 500 index; [State Street describes its price-and-yield tracking objective](https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-500-etf-trust-spy).
+
+The ledger's original **$754.95** inception field remains immutable. Distribution-adjusted histories are rescaled after distributions, so the final ratio uses numerator and baseline on the **same current adjustment basis**. Dividing today's unadjusted quote by the stale original field would omit distributions. The automated display feed's November 5 adjusted baseline was $753.08; its slight vendor difference from Robinhood is disclosed rather than mixed into the final calculation. Final sanitized inputs and full calculated precision are frozen in **data/closure.json**. No raw response or full account identifier is stored.
+
+### Closing the public record
+
+Appended one executed-session object to **data/codex.json** and this log entry. README and the dashboard identify the early termination and final outcome. The dashboard uses the separate frozen closing snapshot; historical trade rows and automated market files are preserved. Scheduled trading review is **PAUSED**. A tested closure guard makes both scheduled and manual market refreshes exit before fetching or writing data, so post-experiment SPY moves do not extend the comparison. GitHub rejected the initial publication because the current OAuth login lacks workflow-edit scope; the workflow schedule is therefore preserved and its runs exit without refreshing data. The final report was republished without a workflow-file change. Historical strategy and operating instructions remain as records; reopening requires a new explicit user instruction.

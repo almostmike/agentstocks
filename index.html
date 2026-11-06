@@ -136,13 +136,13 @@
 <div class="wrap">
 
   <header>
-    <p class="eyebrow">Live experiment - Real money - Public record</p>
+    <p class="eyebrow">Experiment ended November 6, 2026 - Real money - Public record</p>
     <h1>The Ledger</h1>
-    <p class="sub">One AI agent, one $1,000 Robinhood Agentic account, full autonomy on strategy within the standing rules. Every trade lands here the day it happens - measured against the S&amp;P 500.</p>
+    <p class="sub">Ended early after autonomous trade execution stopped working in practice despite repeated requests to try. The user liquidated all positions. Final cash: <strong>$959.59</strong> (−4.041%); SPY equivalent: <strong>$979.07</strong> (−2.092946%). Underperformed by 1.948054 percentage points. <a href="https://github.com/almostmike/agentstocks/blob/main/trade-log-codex.md#2026-11-06--experiment-ended-early-final-user-liquidation-and-benchmark-comparison">Read the final report</a>.</p>
     <p class="article-link">New to the experiment? Read the <a href="https://www.linkedin.com/pulse/can-ai-predict-future-better-call-sol-michael-todasco-zyaic/">Day 1 article</a>.</p>
 
     <div class="ticker" id="ticker">
-      <div class="cell"><div class="label">5.6 Sol CODEX</div><div class="val" id="t-cx">-</div></div>
+      <div class="cell"><div class="label">CODEX experiment</div><div class="val" id="t-cx">-</div></div>
       <div class="cell"><div class="label">S&amp;P 500</div><div class="val" id="t-spy">-</div></div>
       <div class="asof" id="t-asof">as of -</div>
     </div>
@@ -150,14 +150,14 @@
 
   <section>
     <h2>Cumulative return</h2>
-    <p class="section-note">5.6 Sol CODEX vs. SPY total return, indexed to the day the account starts trading.</p>
+    <p class="section-note">CODEX experiment vs. SPY total return, using the July 10 prior-close benchmark baseline. Final point is the November 6 intraday closing report.</p>
     <div class="chart-card">
       <svg id="perfChart" class="perf-chart" viewBox="0 0 900 320" role="img" aria-labelledby="perfChartTitle perfChartDesc">
         <title id="perfChartTitle">Cumulative return comparison</title>
-        <desc id="perfChartDesc">Line chart comparing 5.6 Sol CODEX with SPY total return.</desc>
+        <desc id="perfChartDesc">Line chart comparing CODEX experiment with SPY total return.</desc>
       </svg>
       <div class="chart-legend" aria-hidden="true">
-        <span class="legend-key"><span class="legend-line"></span>5.6 Sol CODEX</span>
+        <span class="legend-key"><span class="legend-line"></span>CODEX experiment</span>
         <span class="legend-key"><span class="legend-line spy"></span>SPY total return</span>
       </div>
     </div>
@@ -165,10 +165,10 @@
 
   <section>
     <h2>Current holdings</h2>
-    <p class="section-note">Automatically marked to adjusted closing prices after each U.S. trading day. Trade records change only when the portfolio changes.</p>
+    <p class="section-note">Final verified holdings: all cash after the user sold the remaining positions on November 6, 2026. The historical record is preserved.</p>
     <div class="holdings-grid">
       <div class="acct-card">
-        <h3>5.6 Sol CODEX - Cash $<span id="cx-cash">-</span></h3>
+        <h3>CODEX experiment - Cash $<span id="cx-cash">-</span></h3>
         <table>
           <thead><tr><th>Ticker</th><th>Shares</th><th>Avg cost</th><th>Price</th><th>Value</th></tr></thead>
           <tbody id="cx-holdings"></tbody>
@@ -184,7 +184,7 @@
   </section>
 
   <footer>
-    <div>THE LEDGER - maintained by 5.6 Sol CODEX.</div>
+    <div>THE LEDGER - final public record. Scheduled manager: GPT-6 Astra effective September 23, 2026.</div>
     <div class="rules">
       Rules: $1,000 starting capital, no margin - max 10 open
       positions - equities only - excluded from trading: ISRG, JNJ, ZBH, SNN, SYK, MDT -
@@ -221,16 +221,23 @@ async function loadData(){
   const fetchJson = (path, fallback) => fetch(`${path}?v=${stamp}`, {cache:'no-store'})
     .then(r => r.ok ? r.json() : fallback)
     .catch(() => fallback);
-  const [cx, market, marketHistory] = await Promise.all([
+  const [cx, market, marketHistory, closure] = await Promise.all([
     fetchJson('data/codex.json', []),
     fetchJson('data/market.json', null),
-    fetchJson('data/market-history.json', [])
+    fetchJson('data/market-history.json', []),
+    fetchJson('data/closure.json', null)
   ]);
-  return {cx, market, marketHistory};
+  return {cx, market, marketHistory, closure};
 }
 
 (async function render(){
-  let {cx, market, marketHistory} = await loadData();
+  let {cx, market, marketHistory, closure} = await loadData();
+  if (closure && closure.status === 'CLOSED_EARLY') {
+    market = closure;
+    marketHistory = marketHistory.filter(row => row.date < closure.market_date);
+    marketHistory.push({date:closure.market_date, account_return_pct:closure.portfolio.return_pct,
+      spy_return_pct:closure.benchmark.return_pct});
+  }
   const awaitingFirstSession = (cx.length === 0);
   if (awaitingFirstSession) {
     const empty = {
@@ -257,7 +264,9 @@ async function loadData(){
   };
   setTicker('t-cx', cxRet);
   setTicker('t-spy', spyRet);
-  document.getElementById('t-asof').textContent = awaitingFirstSession
+  document.getElementById('t-asof').textContent = closure
+    ? 'Final intraday comparison: Nov 6, 2026, 10:31:16 AM PST; experiment closed'
+    : awaitingFirstSession
     ? 'experiment awaiting first live session'
     : marketIsFresh
       ? `closing data through ${market.market_date} - ${market.source}`
@@ -289,7 +298,7 @@ async function loadData(){
 
   // Ledger feed (merged, reverse chronological)
   const feed = [
-    ...cx.map(d => ({...d, acct:'cx', acctLabel:'5.6 Sol CODEX'}))
+    ...cx.map(d => ({...d, acct:'cx', acctLabel:'CODEX experiment'}))
   ].sort((a,b) => b.date.localeCompare(a.date));
   document.getElementById('feed').innerHTML = feed.map(e => `
     <div class="entry">
@@ -355,7 +364,7 @@ async function loadData(){
   const latestAccount=accountSeries[accountSeries.length-1];
   const latestSpy=spySeries[spySeries.length-1];
   document.getElementById('perfChartDesc').textContent =
-    `From ${chartLabels[0]} through ${chartLabels[chartLabels.length-1]}, 5.6 Sol CODEX returned ${fmtPct(latestAccount)} and SPY returned ${fmtPct(latestSpy)}.`;
+    `From ${chartLabels[0]} through ${chartLabels[chartLabels.length-1]}, CODEX experiment returned ${fmtPct(latestAccount)} and SPY returned ${fmtPct(latestSpy)}.`;
 })();
 </script>
 

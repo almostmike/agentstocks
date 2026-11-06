@@ -1,5 +1,7 @@
 import importlib.util
 import unittest
+import tempfile
+from unittest.mock import patch
 from pathlib import Path
 
 
@@ -11,6 +13,15 @@ SPEC.loader.exec_module(MODULE)
 
 
 class MarketSnapshotTests(unittest.TestCase):
+    def test_closed_experiment_does_not_read_or_refresh_market_data(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "data").mkdir()
+            (root / "data" / "closure.json").write_text('{"status":"CLOSED_EARLY"}')
+            with patch.object(MODULE, "ROOT", root), patch.object(MODULE, "read_json") as read:
+                MODULE.main()
+                read.assert_not_called()
+
     def test_build_snapshot_marks_positions_and_benchmark(self):
         state = {
             "cash": 400,

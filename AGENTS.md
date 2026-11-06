@@ -1,3 +1,8 @@
+> **EXPERIMENT CLOSED — November 6, 2026.** The user terminated the experiment
+> and liquidated all positions. The standing trading authority below is historical
+> and no longer active. Do not resume trading or scheduled reviews without new
+> explicit user direction. See `data/closure.json` and the final trade-log entry.
+
 # agentstocks - GPT-6 Astra CODEX standing mandate
 
 This repository is the public record for a real-money trading experiment.

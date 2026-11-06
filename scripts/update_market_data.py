@@ -185,6 +185,9 @@ def build_snapshot(
 
 
 def main() -> None:
+    if (ROOT / "data" / "closure.json").exists():
+        print("Experiment closed; preserving the final reporting snapshot.")
+        return
     ledger = read_json(LEDGER_PATH, [])
     state = latest_ledger_state(ledger)
     inception_date = str(ledger[0]["date"])

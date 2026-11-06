@@ -3,9 +3,18 @@
 New to the experiment? Read the Day 1 article:
 [Can AI Predict the Future? Better Call Sol](https://www.linkedin.com/pulse/can-ai-predict-future-better-call-sol-michael-todasco-zyaic/).
 
-Public ledger for a live-money AI trading experiment. GPT-6 Astra CODEX manages a
-$1,000 Robinhood Agentic account under hard constraints, with results benchmarked
-against SPY total return.
+Public record of a real-money AI trading experiment, **July 13–November 6, 2026**.
+The user ended the experiment early after autonomous execution stopped working
+in practice despite repeated requests to try, and personally liquidated the final holdings.
+
+**Final account: $959.59 (−4.041%). SPY total-return equivalent: $979.07 (−2.092946%).**
+The experiment underperformed by **1.948054 percentage points ($19.48 per $1,000)**.
+The SPY comparison is frozen at November 6, 10:31:16 AM PST, shortly after liquidation,
+using a consistently distribution-adjusted July 10 baseline. It is an intraday
+comparison, not the November 6 closing price.
+
+See the [final report](trade-log-codex.md#2026-11-06--experiment-ended-early-final-user-liquidation-and-benchmark-comparison)
+and [reproducible closing inputs](data/closure.json).
 
 The repository is intentionally public for transparency. It contains decisions,
 positions, performance data, and reproducible rules, but never brokerage account
@@ -24,37 +33,19 @@ AGENTS.md                  standing mandate and safety constraints
 daily-kickoff.txt           scheduled-run prompt
 ```
 
-## Current status
+## Final status
 
-- Scheduled management moved from 5.6 Sol CODEX to GPT-6 Astra CODEX on
-  2026-09-23; the model migration did not alter the strategy or trade history.
-- The Codex review runs at 10:15 AM America/Los_Angeles on weekdays. Friday runs
-  include the weekly review, and the first trading day of each month includes
-  the monthly attribution and process review.
-- Robinhood Agentic account and cash-only status were verified at inception;
-  every trade still requires a fresh broker reconciliation.
-- Local Git repository initialized on `main`.
-- GitHub repository: <https://github.com/almostmike/agentstocks> (public).
-- First live trading session completed on 2026-07-13.
-- Latest trade-ledger change: bought NUE on 2026-08-20.
-- Latest public ledger holdings: NTAP, ADM, BAC, PNC, and NUE, with $97.22 cash
-  at that session's broker-verified snapshot.
-- Forward Inflection strategy v1.1 is documented in [STRATEGY.md](STRATEGY.md)
-  and was adopted prospectively on 2026-08-31.
-- The dashboard shows the newest ledger holdings immediately after a trade, then
-  switches to adjusted closing values once the after-close market workflow catches
-  up.
-
-## Automatic market marking
-
-The public dashboard values the latest logged cash and share counts automatically
-after each U.S. trading day. A GitHub Actions workflow downloads adjusted closing
-prices, updates `data/market.json` and `data/market-history.json`, and commits only
-when a completed market session changes the snapshot. No API key or brokerage
-credential is stored in the repository.
-
-This is an unofficial presentation feed, not an execution feed. Robinhood account
-state and quotes remain authoritative for every trading decision and order check.
+- **Ended early November 6, 2026. No positions; $959.59 cash.** Of that, $295.10
+  is unsettled sale proceeds and $664.49 is settled buying power at verification.
+- Final user sales: NTAP 1.226692 shares at $171.85; CSCO 0.899082 shares at $93.75.
+- Scheduled manager: GPT-6 Astra effective September 23, 2026; earlier management
+  and execution history are preserved.
+- Recurring review paused; automatic market marking stopped. The dashboard
+  displays the frozen closing snapshot, with historical data retained.
+- The failure was autonomous execution in this setup. A broker rejection or
+  platform-wide policy change was not established by the closing verification.
+- Strategy v1.1 and recovery/setup instructions below are historical records,
+  not authorization to resume trading. Reopening requires explicit user direction.
 
 ## Connect and publish from Windows
 
